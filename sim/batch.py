@@ -10,6 +10,68 @@ from netpyne import specs
 import numpy as np
 
 # ----------------------------------------------------------------------------------------------
+# Joao - M1+thalamus batch sims
+# ----------------------------------------------------------------------------------------------
+def projectionWeights():
+    
+    # ----- Batch Variables ------ #
+    params = specs.ODict()
+    
+    params['weightLong_thalM1']=[0.1,0.25,0.5,0.75,1.0,1.5,1.75]
+    params['weightLong_M1thal']=[0.1,0.25,0.5,0.75,1.0,1.5,1.75]
+    
+    # ----- Simulation Parameters ------ #
+    initCfg = {}
+    initCfg['duration']         = 0.1
+    initCfg['savePickle']       = True
+    initCfg['saveJson']         = False
+    initCfg['saveCellSecs']     = False
+    initCfg['saveCellConns']    = True
+
+    # ----- Population Parameters ------ #
+    initCfg['M1_pops']  =[	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2', 'IT4', 'SOM4', 'PV4', 'VIP4', 'NGF4', 'IT5A', 
+                            'SOM5A', 'PV5A', 'VIP5A', 'NGF5A', 'IT5B', 'PT5B', 'SOM5B', 'PV5B', 'VIP5B', 'NGF5B', 
+                            'IT6', 'CT6', 'SOM6', 'PV6', 'VIP6', 'NGF6',]
+    initCfg['S1_pops']  =[	
+                            # ADD S1 POPS HERE
+                            ]
+    initCfg['Th_pops']  =[	
+                            'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
+                            'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
+                            'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i']
+
+    # ----- Network Parameters ------ #
+    initCfg['removeM1']         = 0 # removes M1 pops
+    initCfg['removeS1']         = 0 # removes M1 pops
+    initCfg['removeTh']         = 0 # removes Th pops
+    
+    initCfg['scaleDensity']     = 0.02 # 1.0
+    # initCfg['scaleDensity']     = 1.0 # 1.0
+
+    initCfg['addThalSs']        =1
+    initCfg['addThalMt']        =1
+
+    # ----- Network Connections ----- #
+    initCfg['addConn']   		        = 1
+    initCfg['addSubConn']    	        = 1
+    initCfg['addLongConn']   	        = 1
+    initCfg['connectThalamusNetwork']   = 1
+
+    # Connections under cfg.connectThalamusNetwork
+    initCfg['connect_RTN_RTN']  = 1
+    initCfg['connect_TC_RTN']   = 1
+    initCfg['connect_RTN_TC']   = 1
+    initCfg['connect_TC_CTX']   = 1
+    initCfg['connect_CTX_TC']   = 1
+    # ------------------------------- #
+
+    groupedParams = []
+
+    b = Batch(params=params, netParamsFile='netParams.py', cfgFile='cfg.py', initCfg=initCfg, groupedParams=groupedParams)
+
+    return b
+
+# ----------------------------------------------------------------------------------------------
 # Weight Normalization Exc
 # ----------------------------------------------------------------------------------------------
 def weightNorm(pops=['IT2', 'IT4', 'IT5A', 'IT5B', 'PT5B', 'IT6', 'CT6', 'PV2', 'SOM2'], 
@@ -1226,13 +1288,23 @@ def setRunCfg(b, type='mpi_bulletin'):
 # Main code
 # ----------------------------------------------------------------------------------------------
 
+# if __name__ == '__main__': 
+#     #b = custom() 
+#     b = optunaRatesCellTypes()
+#     b.batchLabel = 'v104_batch3'  
+#     b.saveFolder = '../data/'+b.batchLabel
+#     #b.method = 'grid'
+#     setRunCfg(b, 'hpc_slurm_gcp')
+#     b.run() # run batch
+
 if __name__ == '__main__': 
     #b = custom() 
-    b = optunaRatesCellTypes()
-    b.batchLabel = 'v104_batch3'  
-    b.saveFolder = '../data/'+b.batchLabel
+    b = projectionWeights()
+    b.batchLabel = '2021_12_29_fullModel_Th_M1_density002_batch00'
+    b.saveFolder = '../data/batch_sims_joao/'+b.batchLabel
     #b.method = 'grid'
-    setRunCfg(b, 'hpc_slurm_gcp')
+    setRunCfg(b, 'mpi_bulletin')
+    # setRunCfg(b, 'hpc_slurm_gcp')
     b.run() # run batch
 
 """  """
@@ -1248,6 +1320,10 @@ mpiexec -n 8 nrniv -python -mpi init.py
 mpiexec -n 80 nrniv -python -mpi init.py 
 
 sudo git commit -a -m " "; sudo git push; sudo git pull
+
+
+mpiexec -n 8 nrniv -python -mpi batch.py
+mpiexec -n 80 nrniv -python -mpi batch.py
 
 
 # ---       Git update                --- #
