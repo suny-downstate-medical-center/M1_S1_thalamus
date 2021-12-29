@@ -1,1 +1,0 @@
-../kdrolmkop.mod

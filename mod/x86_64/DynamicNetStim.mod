@@ -1,1 +1,0 @@
-../DynamicNetStim.mod
