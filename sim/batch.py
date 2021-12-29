@@ -1283,7 +1283,6 @@ def setRunCfg(b, type='mpi_bulletin'):
             'mpiCommand': 'mpirun', # comet='ibrun', bridges='mpirun'
             'skip': True}
 
-4
 # ----------------------------------------------------------------------------------------------
 # Main code
 # ----------------------------------------------------------------------------------------------
@@ -1300,7 +1299,15 @@ def setRunCfg(b, type='mpi_bulletin'):
 if __name__ == '__main__': 
     #b = custom() 
     b = projectionWeights()
-    b.batchLabel = '2021_12_29_fullModel_Th_M1_density002_batch00'
+
+    b.dataFolder    = '../data/batch_sims'
+    simDate         = '2021_12_29'
+    b.date          = simDate
+
+    b.batchLabel    = simDate + '_fullModel_Th_M1_density002_batch00'
+    b.saveFolder    = b.dataFolder + '/' +  b.batchLabel
+
+
     b.saveFolder = '../data/batch_sims_joao/'+b.batchLabel
     #b.method = 'grid'
     setRunCfg(b, 'mpi_bulletin')
