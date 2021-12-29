@@ -17,7 +17,7 @@ cfg = specs.SimConfig()
 #
 #------------------------------------------------------------------------------
 
-cfg.simType='network_setup'
+cfg.simType='M1_initSim'
 
 #------------------------------------------------------------------------------
 # Run parameters
@@ -90,11 +90,16 @@ cfg.recordStep = cfg.dt
 #------------------------------------------------------------------------------
 # Saving
 #------------------------------------------------------------------------------
-simNum='sim_09'
-simFlag='fullModel_density_100_conn_00'
-simLabel='tm1_joao_12_29_2021_'+simNum
-cfg.simLabel = 'init_sims_joao/'+simLabel+'/'+simNum+simFlag
-cfg.saveFolder = '../data'
+
+cfg.simLabel 	= 'tm1_joao_12_29_2021_sim_09_'+cfg.simType
+cfg.saveFolder 	= '../data/init_sims_joao'
+
+# simNum='sim_09'
+# simFlag='fullModel_density_100_conn_00'
+# simLabel='tm1_joao_12_29_2021_'+simNum
+# cfg.simLabel = 'init_sims_joao/'+simLabel+'/'+simNum+simFlag
+# cfg.saveFolder = '../data'
+
 cfg.savePickle = True
 cfg.saveJson = False
 cfg.saveDataInclude = ['simData', 'simConfig', 'netParams', 'net']
@@ -111,11 +116,11 @@ cfg.compactConnFormat = 0
 #------------------------------------------------------------------------------
 with open('../cells/popColors.pkl', 'rb') as fileObj: popColors = pickle.load(fileObj)['popColors']
 # cfg.analysis['plotRaster'] = {'include': allpops, 'orderBy': ['pop', 'y'], 'timeRange': [0,cfg.duration], 'saveFig': True, 'showFig': False, 'labels': 'overlay', 'popRates': True, 'orderInverse': True, 'popColors': popColors, 'figSize': (12,10), 'lw': 0.3, 'markerSize':3, 'marker': '.', 'dpi': 300} 
-cfg.analysis['plotRaster'] = {	'include': allpops, 			'orderBy': ['pop', 'y'], 
-								'timeRange': [0,cfg.duration], 	'saveFig': True, 			'showFig': False, 
-								'labels': 'overlay', 			'popRates': True, 			'orderInverse': True, 
-								'popColors': popColors, 		'figSize': (12,10), 		'lw': 0.3, 
-								'markerSize':2, 				'marker': '.', 				'dpi': 300} 
+# cfg.analysis['plotRaster'] = {	'include': allpops, 			'orderBy': ['pop', 'y'], 
+# 								'timeRange': [0,cfg.duration], 	'saveFig': True, 			'showFig': False, 
+# 								'labels': 'overlay', 			'popRates': True, 			'orderInverse': True, 
+# 								'popColors': popColors, 		'figSize': (12,10), 		'lw': 0.3, 
+# 								'markerSize':2, 				'marker': '.', 				'dpi': 300} 
 
 
 # cfg.analysis['plotSpikeHist'] = {'include': ['IT2','IT4','IT5A','IT5B','PT5B','IT6','CT6'], 'timeRange': [1000,6000], 'yaxis':'rate', 'binSize':5, 'graphType':'bar',

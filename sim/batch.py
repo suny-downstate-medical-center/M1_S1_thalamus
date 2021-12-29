@@ -18,6 +18,7 @@ def projectionWeights():
     params = specs.ODict()
     
     params['weightLong_thalM1']=[0.1,0.25]
+    params['weightLong_M1thal']=[0.1,0.25]
     # params['weightLong_thalM1']=[0.1,0.25,0.5,0.75,1.0,1.5,1.75]
     # params['weightLong_M1thal']=[0.1,0.25,0.5,0.75,1.0,1.5,1.75]
     
@@ -29,9 +30,9 @@ def projectionWeights():
     initCfg['saveCellSecs']     = False
     initCfg['saveCellConns']    = True
     
-    initCfg['saveFolder'] = '../data/batch_sims_joao/'
-    simDate                     = '2021_12_29'
-    initCfg['batchLabel']       = simDate + '_fullModel_Th_M1_density'
+    # initCfg['saveFolder'] = '../data/batch_sims_joao/'
+    # simDate                     = '2021_12_29'
+    # initCfg['batchLabel']       = simDate + '_fullModel_Th_M1_density'
 
     # ----- Population Parameters ------ #
     initCfg['M1_pops']  =[	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2', 'IT4', 'SOM4', 'PV4', 'VIP4', 'NGF4', 'IT5A', 
@@ -1237,6 +1238,11 @@ def setRunCfg(b, type='mpi_bulletin'):
             'script': 'init_cell.py',
             'mpiCommand': 'mpirun',
             'skip': True}
+    
+    elif type=='mpi_jv':
+        b.runCfg = {'type': 'mpi_bulletin', 
+            'script': init_script, 
+            'skip': True} # skip sims that already exist
 
     elif type=='hpc_torque':
         b.runCfg = {'type': 'hpc_torque',
@@ -1292,32 +1298,62 @@ def setRunCfg(b, type='mpi_bulletin'):
 # Main code
 # ----------------------------------------------------------------------------------------------
 
-# if __name__ == '__main__': 
-#     #b = custom() 
-#     b = optunaRatesCellTypes()
-#     b.batchLabel = 'v104_batch3'  
-#     b.saveFolder = '../data/'+b.batchLabel
-#     #b.method = 'grid'
-#     setRunCfg(b, 'hpc_slurm_gcp')
-#     b.run() # run batch
+# # if __name__ == '__main__': 
+# #     #b = custom() 
+# #     b = optunaRatesCellTypes()
+# #     b.batchLabel = 'v104_batch3'  
+# #     b.saveFolder = '../data/'+b.batchLabel
+# #     #b.method = 'grid'
+# #     setRunCfg(b, 'hpc_slurm_gcp')
+# #     b.run() # run batch
 
-# if __name__ == '__main__': 
-#b = custom() 
+# # if __name__ == '__main__': 
+# #b = custom() 
+# b = projectionWeights()
+
+# # b.dataFolder    = '../data/batch_sims/'
+# simDate         = '2021_12_29'
+# b.date          = simDate
+
+# b.batchLabel    = simDate + '_fullModel_Th_M1_density'
+# # b.saveFolder    = b.dataFolder + b.batchLabel
+
+
+# b.saveFolder = '../data/batch_sims_joao/'+b.batchLabel
+# b.method = 'grid'
+# setRunCfg(b, 'mpi_bulletin')
+# # setRunCfg(b, 'hpc_slurm_gcp')
+# b.run() # run batch
+
+
+# initCfg['saveFolder'] = '../data/batch_sims_joao/'
+# simDate                     = '2021_12_29'
+# initCfg['batchLabel']       = simDate + '_fullModel_Th_M1_density'
+
+
+
+simDate = '2021_12_29'
+simCode = simDate
+
 b = projectionWeights()
+simType     = 'testingProjectionWeights'
 
-# b.dataFolder    = '../data/batch_sims/'
-simDate         = '2021_12_29'
+mpi_type 		= 'mpi_jv'
+
+init_script 	= 'init.py'
+
 b.date          = simDate
-
-b.batchLabel    = simDate + '_fullModel_Th_M1_density'
-# b.saveFolder    = b.dataFolder + b.batchLabel
-
-
-b.saveFolder = '../data/batch_sims_joao/'+b.batchLabel
-b.method = 'grid'
-setRunCfg(b, 'mpi_bulletin')
-# setRunCfg(b, 'hpc_slurm_gcp')
+b.dataFolder    = '../data/batch_sims_joao'
+b.batchLabel    = simDate+'fullModel_Th_M1_density'+'_'+simCode+'_'+simType
+b.saveFolder    = b.dataFolder + '/' +  b.batchLabel
+# b.saveFolder    = b.dataFolder + '/' + b.date + '/' +  b.batchLabel
+b.method        = 'grid'
+setRunCfg(b, mpi_type)
 b.run() # run batch
+
+
+
+
 
 """  """
 
