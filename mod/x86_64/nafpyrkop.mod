@@ -1,1 +1,0 @@
-../nafpyrkop.mod

@@ -1,1 +1,0 @@
-../ntt_int.mod

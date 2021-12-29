@@ -1,1 +1,0 @@
-../nafolmkop.mod
