@@ -387,8 +387,10 @@ cfg.ratesLong = {	'POm_sTC_m1': [0,0.005],
 # cfg.startLong = 0  # start at 0 ms
 # cfg.ratesLong = {'POm_sTC_m1': [0,0.005], 'VL_sTC': [0,0.005], 'S1': [0,5], 'S2': [0,5], 'cM1': [0,5], 'M2': [0,5], 'OC': [0,5]}
 
-cfg.weightLong_thalM1=0.01
-# cfg.weightLong_thalM1=0.5
+# cfg.weightLong_thalM1=0.01
+cfg.weightLong_thalM1=0.5
+
+cfg.weightLong_M1thal=0.5
 
 # cfg.weightLong_thalM1 = {	
 # 							# 'POm_sTC_m1': 0.0*factor, 

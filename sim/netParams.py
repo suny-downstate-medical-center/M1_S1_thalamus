@@ -778,7 +778,7 @@ if cfg.connectThalamusNetwork:
                                                                 'postConds':    {'pop': post}, 
                                                                 'synMech':      syns[synType],
                                                                 'convergence':  5,                                                       #dummy value for now
-                                                                'weight':       cfg.weightLong_thalM1 / cfg.synsperconn[cellModel]*conn_strength_shepherd,      #dummy value for now
+                                                                'weight':       cfg.weightLong_M1thal / cfg.synsperconn[cellModel]*conn_strength_shepherd,      #dummy value for now
                                                                 # 'weight': 0.5 / cfg.synsperconn[cellModel]*conn_strength_shepherd,      #dummy value for now
                                                                 # 'weight': cfg.weightLong[pre] / cfg.synsperconn[cellModel], 
                                                                 'synMechWeightFactor': synFracs[synType],
