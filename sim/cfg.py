@@ -116,29 +116,17 @@ cfg.compactConnFormat = 0
 #------------------------------------------------------------------------------
 with open('../cells/popColors.pkl', 'rb') as fileObj: popColors = pickle.load(fileObj)['popColors']
 # cfg.analysis['plotRaster'] = {'include': allpops, 'orderBy': ['pop', 'y'], 'timeRange': [0,cfg.duration], 'saveFig': True, 'showFig': False, 'labels': 'overlay', 'popRates': True, 'orderInverse': True, 'popColors': popColors, 'figSize': (12,10), 'lw': 0.3, 'markerSize':3, 'marker': '.', 'dpi': 300} 
-# cfg.analysis['plotRaster'] = {	'include': allpops, 			'orderBy': ['pop', 'y'], 
-# 								'timeRange': [0,cfg.duration], 	'saveFig': True, 			'showFig': False, 
-# 								'labels': 'overlay', 			'popRates': True, 			'orderInverse': True, 
-# 								'popColors': popColors, 		'figSize': (12,10), 		'lw': 0.3, 
-# 								'markerSize':2, 				'marker': '.', 				'dpi': 300} 
-
-
-# cfg.analysis['plotSpikeHist'] = {'include': ['IT2','IT4','IT5A','IT5B','PT5B','IT6','CT6'], 'timeRange': [1000,6000], 'yaxis':'rate', 'binSize':5, 'graphType':'bar',
-#  								'saveFig': True, 'showFig': False, 'popColors': popColors, 'figSize': (10,4), 'dpi': 300} 
-
-# cfg.analysis['plotLFP'] = {'plots': ['spectrogram'], 'figSize': (6,10), 'timeRange': [1000,6000], 'NFFT': 256*20, 'noverlap': 128*20, 'nperseg': 132*20, 
-# 							'saveFig': True, 'showFig':False} 
-
-
-# cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.duration], 'ylim': [-100,55],'overlay': False, 'oneFigPer': 'cell', 'figSize': (10,4), 'saveFig': True, 'showFig': False} 
-
-#cfg.analysis['plotShape'] = {'includePre': ['all'], 'includePost': [('PT5B',100)], 'cvar':'numSyns','saveFig': True, 'showFig': False, 'includeAxon': False}
-#cfg.analysis['plotConn'] = {'include': ['allCells']}
-# cfg.analysis['calculateDisynaptic'] = True
+cfg.analysis['plotRaster'] = {	'include': allpops, 			'orderBy': ['pop', 'y'], 
+								'timeRange': [0,cfg.duration], 	'saveFig': True, 			'showFig': False, 
+								'labels': 'overlay', 			'popRates': True, 			'orderInverse': True, 
+								'popColors': popColors, 		'figSize': (12,10), 		'lw': 0.3, 
+								'markerSize':2, 				'marker': '.', 				'dpi': 300} 
 
 cfg.analysis['plotConn'] = {'includePre': allpops, 
 							'includePost': allpops, 
-							'feature': 'probability', 
+							'feature': 'weight', 
+							# 'feature': 'strength', 
+							# 'feature': 'probability', 
 							'figSize': (20,20), 
 							'groupBy': 'pop', \
  							# 'graphType': 'bar', 
@@ -148,6 +136,20 @@ cfg.analysis['plotConn'] = {'includePre': allpops,
 							'saveFig': 1, 
 							'showFig': 0
 							}
+
+# cfg.analysis['plotSpikeHist'] = {'include': ['IT2','IT4','IT5A','IT5B','PT5B','IT6','CT6'], 'timeRange': [1000,6000], 'yaxis':'rate', 'binSize':5, 'graphType':'bar',
+#  								'saveFig': True, 'showFig': False, 'popColors': popColors, 'figSize': (10,4), 'dpi': 300} 
+
+# cfg.analysis['plotLFP'] = {'plots': ['spectrogram'], 'figSize': (6,10), 'timeRange': [1000,6000], 'NFFT': 256*20, 'noverlap': 128*20, 'nperseg': 132*20, 
+# 							'saveFig': True, 'showFig':False} 
+
+
+cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.duration], 'ylim': [-100,55],'overlay': False, 'oneFigPer': 'cell', 'figSize': (10,4), 'saveFig': True, 'showFig': False} 
+
+#cfg.analysis['plotShape'] = {'includePre': ['all'], 'includePost': [('PT5B',100)], 'cvar':'numSyns','saveFig': True, 'showFig': False, 'includeAxon': False}
+#cfg.analysis['plotConn'] = {'include': ['allCells']}
+# cfg.analysis['calculateDisynaptic'] = True
+
 
 # cfg.analysis['plotConn'] = {'includePre': allpops, 
 # 							'includePost': allpops, 

@@ -17,10 +17,10 @@ def projectionWeights():
     # ----- Batch Variables ------ #
     params = specs.ODict()
     
-    params['weightLong_thalM1']=[0.1,0.25]
-    params['weightLong_M1thal']=[0.1,0.25]
-    # params['weightLong_thalM1']=[0.1,0.25,0.5,0.75,1.0,1.5,1.75]
-    # params['weightLong_M1thal']=[0.1,0.25,0.5,0.75,1.0,1.5,1.75]
+    # params['weightLong_thalM1']=[0.1,0.25]
+    # params['weightLong_M1thal']=[0.1,0.25]
+    params['weightLong_thalM1']=[0.1,0.25,0.5,0.75,1.0,1.5,1.75]
+    params['weightLong_M1thal']=[0.1,0.25,0.5,0.75,1.0,1.5,1.75]
     
     # ----- Simulation Parameters ------ #
     initCfg = {}
@@ -1332,11 +1332,11 @@ def setRunCfg(b, type='mpi_bulletin'):
 
 
 
-simDate = '2021_12_29'
+simDate = '2021_12_30'
 simCode = simDate
 
 b = projectionWeights()
-simType     = 'testingProjectionWeights'
+simType     = 'testingProjectionWeights_density002'
 
 mpi_type 		= 'mpi_jv'
 
