@@ -23,9 +23,6 @@ cfg.simType='network_setup'
 # Run parameters
 #------------------------------------------------------------------------------
 cfg.duration = 0.1 
-# cfg.duration = 0.4*1e3 
-# cfg.duration = 2.0*1e3 
-# cfg.duration = 5.0*1e3 
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
 cfg.hParams = {'celsius': 34, 'v_init': -80}  
@@ -37,7 +34,6 @@ cfg.cvode_active = False
 cfg.cvode_atol = 1e-6
 cfg.cache_efficient = True
 cfg.printRunTime = 0.01
-# cfg.printRunTime = 0.1
 cfg.printSynsAfterRule = False
 cfg.pt3dRelativeToCellLocation = True
 cfg.oneSynPerNetcon = False  # only affects conns not in subconnParams; produces identical results
@@ -68,19 +64,9 @@ allpops = ['NGF1', 	'IT2', 	'PV2', 	 'SOM2',  'VIP2', 	'NGF2',
 
 cfg.cellsrec = 1
 if cfg.cellsrec == 0:  cfg.recordCells = ['all'] # record all cells
-elif cfg.cellsrec == 1: cfg.recordCells = [(pop,0) for pop in allpops] # record one cell of each pop
-elif cfg.cellsrec == 2: cfg.recordCells = [('IT2',10), ('IT5A',10), ('PT5B',10), ('PV5B',10), ('SOM5B',10)] # record selected cells
-elif cfg.cellsrec == 3: cfg.recordCells = [(pop,50) for pop in ['IT5A', 'PT5B']]+[('PT5B',x) for x in [393,579,19,104]] #,214,1138,799]] # record selected cells # record selected cells
-elif cfg.cellsrec == 4: cfg.recordCells = [(pop,50) for pop in ['IT2', 'IT4', 'IT5A', 'PT5B']] \
-										+ [('IT5A',x) for x in [393,447,579,19,104]] \
-										+ [('PT5B',x) for x in [393,447,579,19,104,214,1138,979,799]] # record selected cells
-cfg.recordTraces = {'V_soma': {'sec':'soma', 'loc':0.5, 'var':'v'}}#,
-					# 'V_apic_23': {'sec':'apic_23', 'loc':0.5, 'var':'v', 'conds':{'pop': 'PT5B'}},
-					# 'V_apic_26': {'sec':'apic_26', 'loc':0.5, 'var':'v', 'conds':{'pop': 'PT5B'}},
-					# 'V_dend_5': {'sec':'dend_5', 'loc':0.5, 'var':'v', 'conds':{'pop': 'PT5B'}}}
-					#'I_AMPA_Adend2': {'sec':'Adend2', 'loc':0.5, 'synMech': 'AMPA', 'var': 'i'}}
+elif cfg.cellsrec == 1: cfg.recordCells = [(pop,0) for pop in allpops] # record one cell of each pop record selected cells
 
-#cfg.recordLFP = [[150, y, 150] for y in range(200,1300,100)]
+cfg.recordTraces = {'V_soma': {'sec':'soma', 'loc':0.5, 'var':'v'}}
 
 cfg.recordStim = False
 cfg.recordTime = False  
@@ -95,16 +81,12 @@ simFlag='fullModel_density_100_conn_00'
 simLabel='tm1_joao_12_28_2021_'+simNum
 cfg.simLabel = simLabel+'/'+simNum+simFlag
 cfg.saveFolder = '../data/init_sims_joao/'
-cfg.savePickle = True
-cfg.saveJson = False
-cfg.saveDataInclude = ['simData', 'simConfig', 'netParams', 'net']
-cfg.backupCfgFile = None #['cfg.py', 'backupcfg/'] 
+cfg.savePickle = False
+cfg.saveJson = True
+cfg.saveDataInclude = ['simData']
 cfg.gatherOnlySimData = False
-# cfg.saveCellSecs = 1
-# cfg.saveCellConns = 1
 cfg.saveCellSecs = 0
-cfg.saveCellConns = 1
-cfg.compactConnFormat = 0
+cfg.saveCellConns = 0
 
 #------------------------------------------------------------------------------
 # Analysis and plotting 
@@ -125,53 +107,7 @@ cfg.analysis['plotRaster'] = {	'include': allpops, 			'orderBy': ['pop', 'y'],
 # 							'saveFig': True, 'showFig':False} 
 
 
-# cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.duration], 'ylim': [-100,55],'overlay': False, 'oneFigPer': 'cell', 'figSize': (10,4), 'saveFig': True, 'showFig': False} 
-
-#cfg.analysis['plotShape'] = {'includePre': ['all'], 'includePost': [('PT5B',100)], 'cvar':'numSyns','saveFig': True, 'showFig': False, 'includeAxon': False}
-#cfg.analysis['plotConn'] = {'include': ['allCells']}
-# cfg.analysis['calculateDisynaptic'] = True
-
-cfg.analysis['plotConn'] = {'includePre': allpops, 
-							'includePost': allpops, 
-							'feature': 'probability', 
-							'figSize': (20,20), 
-							'groupBy': 'pop', \
- 							# 'graphType': 'bar', 
-							'synOrConn': 'conn', 
-							'synMech': None, 
-							'saveData': None, 
-							'saveFig': 1, 
-							'showFig': 0
-							}
-
-# cfg.analysis['plotConn'] = {'includePre': allpops, 
-# 							'includePost': allpops, 
-# 							'feature': 'probability', 
-# 							'figSize': (20,20), 
-# 							'groupBy': 'pop', \
-#  							# 'graphType': 'bar', 
-# 							'synOrConn': 'conn', 
-# 							'synMech': None, 
-# 							'saveData': None, 
-# 							'saveFig': 1, 
-# 							'showFig': 0
-# 							}
-
-# cfg.analysis['plotConn'] = {'includePre': allpops, 
-# 							'includePost': allpops, 
-# 							'feature': 'weight', 
-# 							'figSize': (20,20), 
-# 							'groupBy': 'pop', \
-#  							# 'graphType': 'bar', 
-# 							'synOrConn': 'conn', 
-# 							'synMech': None, 
-# 							'saveData': None, 
-# 							'saveFig': 1, 
-# 							'showFig': 0
-# 							}
-
-# cfg.analysis['plot2Dnet']   = { 'saveFig': True, 'showConns':True, 'figSize': (20,15)}   # Plot 2D net cells and connections
-
+cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.duration], 'ylim': [-100,55],'overlay': False, 'oneFigPer': 'cell', 'figSize': (10,4), 'saveFig': True, 'showFig': False} 
 
 #------------------------------------------------------------------------------
 # Cells
@@ -301,15 +237,6 @@ cfg.EICellTypeGain= {'PV': 2.588295268601415, 'SOM': 0.6568380849927258, 'VIP': 
 
 cfg.IEdisynapticBias = None  # increase prob of I->Ey conns if Ex->I and Ex->Ey exist 
 
-# # Don paramters
-# cfg.yConnFactor             = 10
-# cfg.connProb_RTN_RTN        = 1.0
-# cfg.connWeight_RTN_RTN      = 2.0
-# cfg.connProb_TC_RTN         = 0.75
-# cfg.connWeight_TC_RTN       = 1.5
-# cfg.connProb_RTN_TC         = 0.75
-# cfg.connWeight_RTN_TC       = 0.25
-
 # t_allpops joao parameters
 cfg.yConnFactor             = 10
 cfg.connProb_RTN_RTN        = 0.5
@@ -383,19 +310,8 @@ cfg.ratesLong = {	'POm_sTC_m1': [0,0.005],
 					'cM1': [0,5], 
 					'M2': [0,5], 
 					'OC': [0,5]}
-# cfg.weightLong = {'POm_sTC_m1': 0.5*factor, 'VL_sTC': 0.5*factor, 'S1': 0.5*factor, 'S2': 0.5*factor, 'cM1': 0.5*factor, 'M2': 0.5*factor, 'OC': 0.5*factor}  # corresponds to unitary connection somatic EPSP (mV)
-# cfg.startLong = 0  # start at 0 ms
-# cfg.ratesLong = {'POm_sTC_m1': [0,0.005], 'VL_sTC': [0,0.005], 'S1': [0,5], 'S2': [0,5], 'cM1': [0,5], 'M2': [0,5], 'OC': [0,5]}
 
 cfg.weightLong_thalM1=0.01
-# cfg.weightLong_thalM1=0.5
-
-# cfg.weightLong_thalM1 = {	
-# 							# 'POm_sTC_m1': 0.0*factor, 
-# 							# 'VL_sTC': 0.0*factor, 
-# 							'POm_sTC_m1': 0.5*factor, 
-# 							'VL_sTC': 0.5*factor, 
-							# }
 
 cfg.ratesLong_thalM1 = {	
 							'POm_sTC_m1': [0,0.005], 
