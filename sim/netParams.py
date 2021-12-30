@@ -772,7 +772,7 @@ if cfg.connectThalamusNetwork:
                         if pop.startswith(pre):
                             # print(pop,post)
                             ruleLabel=pop+'_'+post+'_'+synType+'_'+cellModel
-                            print(ruleLabel,conn_strength_shepherd)
+                            #print(ruleLabel,conn_strength_shepherd)
                             netParams.connParams[ruleLabel] = { 
                                                                 'preConds':     {'pop':pop},
                                                                 'postConds':    {'pop': post}, 

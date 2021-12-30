@@ -25,7 +25,7 @@ cfg.simType='M1_initSim'
 # cfg.duration = 0.1 
 # cfg.duration = 0.4*1e3 
 # cfg.duration = 2.0*1e3 
-cfg.duration = 5.0*1e3 
+cfg.duration = 5.0*1e1 
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
 cfg.hParams = {'celsius': 34, 'v_init': -80}  
@@ -102,13 +102,13 @@ cfg.saveFolder 	= '../data/init_sims_joao'
 
 cfg.savePickle = True
 cfg.saveJson = False
-cfg.saveDataInclude = ['simData', 'simConfig', 'netParams', 'net']
+cfg.saveDataInclude = ['simData']
 cfg.backupCfgFile = None #['cfg.py', 'backupcfg/'] 
 cfg.gatherOnlySimData = False
 # cfg.saveCellSecs = 1
 # cfg.saveCellConns = 1
 cfg.saveCellSecs = 0
-cfg.saveCellConns = 1
+cfg.saveCellConns = 0
 cfg.compactConnFormat = 0
 
 #------------------------------------------------------------------------------
@@ -122,20 +122,20 @@ cfg.analysis['plotRaster'] = {	'include': allpops, 			'orderBy': ['pop', 'y'],
 								'popColors': popColors, 		'figSize': (12,10), 		'lw': 0.3, 
 								'markerSize':2, 				'marker': '.', 				'dpi': 300} 
 
-cfg.analysis['plotConn'] = {'includePre': allpops, 
-							'includePost': allpops, 
-							'feature': 'weight', 
-							# 'feature': 'strength', 
-							# 'feature': 'probability', 
-							'figSize': (20,20), 
-							'groupBy': 'pop', \
- 							# 'graphType': 'bar', 
-							'synOrConn': 'conn', 
-							'synMech': None, 
-							'saveData': None, 
-							'saveFig': 1, 
-							'showFig': 0
-							}
+# cfg.analysis['plotConn'] = {'includePre': allpops, 
+# 							'includePost': allpops, 
+# 							'feature': 'weight', 
+# 							# 'feature': 'strength', 
+# 							# 'feature': 'probability', 
+# 							'figSize': (20,20), 
+# 							'groupBy': 'pop', \
+#  							# 'graphType': 'bar', 
+# 							'synOrConn': 'conn', 
+# 							'synMech': None, 
+# 							'saveData': None, 
+# 							'saveFig': 1, 
+# 							'showFig': 0
+# 							}
 
 # cfg.analysis['plotSpikeHist'] = {'include': ['IT2','IT4','IT5A','IT5B','PT5B','IT6','CT6'], 'timeRange': [1000,6000], 'yaxis':'rate', 'binSize':5, 'graphType':'bar',
 #  								'saveFig': True, 'showFig': False, 'popColors': popColors, 'figSize': (10,4), 'dpi': 300} 
