@@ -91,7 +91,7 @@ cfg.recordStep = cfg.dt
 # Saving
 #------------------------------------------------------------------------------
 
-cfg.simLabel 	= 'tm1_joao_12_29_2021_sim_09_'+cfg.simType
+cfg.simLabel 	= 'tm1_joao_12_30_2021_sim_10_'+cfg.simType
 cfg.saveFolder 	= '../data/init_sims_joao'
 
 # simNum='sim_09'
@@ -264,9 +264,9 @@ cfg.Th_pops=[
 cfg.removeM1=0 # removes M1 pops
 cfg.removeS1=0 # removes M1 pops
 cfg.removeTh=0 # removes Th pops
-cfg.scaleDensity = 0.02 # 1.0
+# cfg.scaleDensity = 0.02 # 1.0
 # cfg.scaleDensity = 0.5 # 1.0
-# cfg.scaleDensity = 1.0 # 1.0
+cfg.scaleDensity = 1.0 # 1.0
 
 cfg.addThalSs=1
 cfg.addThalMt=1

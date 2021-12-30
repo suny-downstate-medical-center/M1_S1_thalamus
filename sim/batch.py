@@ -1336,7 +1336,7 @@ simDate = '2021_12_30'
 simCode = simDate
 
 b = projectionWeights()
-simType     = 'testingProjectionWeights_density002'
+simType     = 'testingProjectionWeights_density100'
 
 mpi_type 		= 'mpi_jv'
 
