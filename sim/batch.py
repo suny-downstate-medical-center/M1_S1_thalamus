@@ -1466,7 +1466,7 @@ pkill screen
 # ----------------------------------------------------------------------------------------------
 '''
 # Queue alias
-alias sq=‘squeue -u $USER; squeue -u $USER | wc -l’
+alias sq='squeue -u $USER; squeue -u $USER | wc -l'
 
 # Check queue
 sq
