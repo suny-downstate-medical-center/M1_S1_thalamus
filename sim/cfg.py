@@ -22,7 +22,7 @@ cfg.simType='network_setup'
 #------------------------------------------------------------------------------
 # Run parameters
 #------------------------------------------------------------------------------
-cfg.duration = 0.1 
+cfg.duration = 2.0 
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
 cfg.hParams = {'celsius': 34, 'v_init': -80}  
@@ -76,11 +76,8 @@ cfg.recordStep = cfg.dt
 #------------------------------------------------------------------------------
 # Saving
 #------------------------------------------------------------------------------
-simNum='sim_09'
-simFlag='fullModel_density_100_conn_00'
-simLabel='tm1_joao_12_28_2021_'+simNum
-cfg.simLabel = simLabel+'/'+simNum+simFlag
-cfg.saveFolder = '../data/init_sims_joao/'
+cfg.simLabel = 'v0_batch0'
+cfg.saveFolder = '../data/fernando/'
 cfg.savePickle = False
 cfg.saveJson = True
 cfg.saveDataInclude = ['simData']
