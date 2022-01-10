@@ -24,7 +24,7 @@ def projectionWeights():
     
     # ----- Simulation Parameters ------ #
     initCfg = {}
-    initCfg['duration']         = 0.1
+    initCfg['duration']         = 2.5
     initCfg['savePickle']       = True
     initCfg['saveJson']         = False
     initCfg['saveCellSecs']     = False
