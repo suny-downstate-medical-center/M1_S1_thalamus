@@ -19,8 +19,8 @@ def projectionWeights():
     
     # params['weightLong_thalM1']=[0.1,0.25]
     # params['weightLong_M1thal']=[0.1,0.25]
-    params['weightLong_thalM1']=[0.1,0.25,0.5,0.75,1.0,1.5,1.75]
-    params['weightLong_M1thal']=[0.1,0.25,0.5,0.75,1.0,1.5,1.75]
+    params['weightLong_thalM1']=[0.25,0.5,0.75,1.0,1.5]
+    params['weightLong_M1thal']=[0.25,0.5,0.75,1.0,1.5]
     
     # ----- Simulation Parameters ------ #
     initCfg = {}
