@@ -15,8 +15,8 @@ import numpy as np
 def custom():
     params = specs.ODict()
     
-    params['weightLong_thalM1']=[0.1,0.25,0.5,1.5]
-    params['weightLong_M1thal']=[0.5]
+    params['weightLong_thalM1']=[0.0]
+    params['weightLong_M1thal']=[0.0]
 
     b = Batch(params=params, netParamsFile='netParams.py', cfgFile='cfg.py')
 
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     b.batchLabel    = simDate+'fullModel_Th_M1_density'+'_'+simCode+'_'+simType
     b.saveFolder    = b.dataFolder + '/' +  b.batchLabel
 
-    b.batchLabel = 'v100_batch0'  
+    b.batchLabel = 'v0_batch0'  
     b.saveFolder = '../data/'+b.batchLabel
     b.method = 'grid'
     setRunCfg(b, 'mpi_direct')

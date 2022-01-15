@@ -25,7 +25,7 @@ cfg.simType='M1_initSim'
 # cfg.duration = 0.1 
 # cfg.duration = 0.4*1e3 
 # cfg.duration = 2.0*1e3 
-cfg.duration = 2.5*1e3 
+cfg.duration = 2.5*1e0 
 # cfg.duration = 5.0*1e3
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
@@ -59,15 +59,12 @@ allpops = ['NGF1', 	'IT2', 	'PV2', 	 'SOM2',  'VIP2', 	'NGF2',
            'IT5A', 	'PV5A', 'SOM5A', 'VIP5A', 'NGF5A',
            'IT5B', 	'PT5B', 'PV5B',  'SOM5B', 'VIP5B',	'NGF5B',
            'IT6',	'CT6',	'PV6',	 'SOM6',  'VIP6',	'NGF6',
-
 			'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
 			'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
-
 			'mt_RTN',	'ss_RTN_o',		'ss_RTN_m',		'ss_RTN_i'
-
 	   ]
 
-cfg.cellsrec = 1
+cfg.cellsrec = 5
 if cfg.cellsrec == 0:  cfg.recordCells = ['all'] # record all cells
 elif cfg.cellsrec == 1: cfg.recordCells = [(pop,0) for pop in allpops] # record one cell of each pop
 elif cfg.cellsrec == 2: cfg.recordCells = [('IT2',10), ('IT5A',10), ('PT5B',10), ('PV5B',10), ('SOM5B',10)] # record selected cells
@@ -75,6 +72,12 @@ elif cfg.cellsrec == 3: cfg.recordCells = [(pop,50) for pop in ['IT5A', 'PT5B']]
 elif cfg.cellsrec == 4: cfg.recordCells = [(pop,50) for pop in ['IT2', 'IT4', 'IT5A', 'PT5B']] \
 										+ [('IT5A',x) for x in [393,447,579,19,104]] \
 										+ [('PT5B',x) for x in [393,447,579,19,104,214,1138,979,799]] # record selected cells
+elif cfg.cellsrec == 5: 
+	cfg.recordCells = [] # record 5 cells of each pop
+	for pop in allpops:
+		for x in range(5):
+			cfg.recordCells.append((pop,x))
+
 cfg.recordTraces = {'V_soma': {'sec':'soma', 'loc':0.5, 'var':'v'}}#,
 					# 'V_apic_23': {'sec':'apic_23', 'loc':0.5, 'var':'v', 'conds':{'pop': 'PT5B'}},
 					# 'V_apic_26': {'sec':'apic_26', 'loc':0.5, 'var':'v', 'conds':{'pop': 'PT5B'}},
@@ -102,7 +105,7 @@ cfg.saveFolder 	= '../data/init_sims_joao'
 # cfg.saveFolder = '../data'
 
 cfg.savePickle = True
-cfg.saveJson = False
+cfg.saveJson = True
 cfg.saveDataInclude = ['simData']
 cfg.backupCfgFile = None #['cfg.py', 'backupcfg/'] 
 cfg.gatherOnlySimData = False
@@ -120,7 +123,7 @@ with open('../cells/popColors.pkl', 'rb') as fileObj: popColors = pickle.load(fi
 cfg.analysis['plotRaster'] = {	'include': allpops, 			'orderBy': ['pop', 'y'], 
 								'timeRange': [0,cfg.duration], 	'saveFig': True, 			'showFig': False, 
 								'labels': 'overlay', 			'popRates': True, 			'orderInverse': True, 
-								'popColors': popColors, 		'figSize': (12,10), 		'lw': 0.3, 
+								'popColors': popColors, 		'figSize': (24,20), 		'lw': 0.3, 
 								'markerSize':2, 				'marker': '.', 				'dpi': 300} 
 
 # cfg.analysis['plotConn'] = {'includePre': allpops, 
