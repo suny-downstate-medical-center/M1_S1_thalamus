@@ -17,16 +17,14 @@ cfg = specs.SimConfig()
 #
 #------------------------------------------------------------------------------
 
-cfg.simType='M1_initSim'
+cfg.simType='Test_coreneuron'
+cfg.coreneuron = False
+
 
 #------------------------------------------------------------------------------
 # Run parameters
 #------------------------------------------------------------------------------
-# cfg.duration = 0.1 
-# cfg.duration = 0.4*1e3 
-# cfg.duration = 2.0*1e3 
-cfg.duration = 2.5*1e0 
-# cfg.duration = 5.0*1e3
+cfg.duration = 0.5*1e2
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
 cfg.hParams = {'celsius': 34, 'v_init': -80}  
@@ -37,9 +35,7 @@ cfg.connRandomSecFromList = False  # set to false for reproducibility
 cfg.cvode_active = False
 cfg.cvode_atol = 1e-6
 cfg.cache_efficient = True
-cfg.printRunTime = 0.01
-# cfg.printRunTime = 0.1
-cfg.printSynsAfterRule = False
+cfg.printRunTime = 0.1
 cfg.pt3dRelativeToCellLocation = True
 cfg.oneSynPerNetcon = False  # only affects conns not in subconnParams; produces identical results
 
@@ -64,7 +60,7 @@ allpops = ['NGF1', 	'IT2', 	'PV2', 	 'SOM2',  'VIP2', 	'NGF2',
 			'mt_RTN',	'ss_RTN_o',		'ss_RTN_m',		'ss_RTN_i'
 	   ]
 
-cfg.cellsrec = 5
+cfg.cellsrec = 1
 if cfg.cellsrec == 0:  cfg.recordCells = ['all'] # record all cells
 elif cfg.cellsrec == 1: cfg.recordCells = [(pop,0) for pop in allpops] # record one cell of each pop
 elif cfg.cellsrec == 2: cfg.recordCells = [('IT2',10), ('IT5A',10), ('PT5B',10), ('PV5B',10), ('SOM5B',10)] # record selected cells
@@ -78,42 +74,24 @@ elif cfg.cellsrec == 5:
 		for x in range(5):
 			cfg.recordCells.append((pop,x))
 
-cfg.recordTraces = {'V_soma': {'sec':'soma', 'loc':0.5, 'var':'v'}}#,
-					# 'V_apic_23': {'sec':'apic_23', 'loc':0.5, 'var':'v', 'conds':{'pop': 'PT5B'}},
-					# 'V_apic_26': {'sec':'apic_26', 'loc':0.5, 'var':'v', 'conds':{'pop': 'PT5B'}},
-					# 'V_dend_5': {'sec':'dend_5', 'loc':0.5, 'var':'v', 'conds':{'pop': 'PT5B'}}}
-					#'I_AMPA_Adend2': {'sec':'Adend2', 'loc':0.5, 'synMech': 'AMPA', 'var': 'i'}}
-
-#cfg.recordLFP = [[150, y, 150] for y in range(200,1300,100)]
-
-cfg.recordStim = False
-cfg.recordTime = False  
-cfg.recordStep = cfg.dt
-
+cfg.recordTraces = {'V_soma': {'sec':'soma', 'loc':0.5, 'var':'v'}}  ## Dict with traces to record
+cfg.recordStim = False			
+cfg.recordTime = False  		
+cfg.recordStep = 0.1    
 
 #------------------------------------------------------------------------------
 # Saving
 #------------------------------------------------------------------------------
-
-cfg.simLabel 	= 'tm1_joao_12_30_2021_sim_10_'+cfg.simType
-cfg.saveFolder 	= '../data/init_sims_joao'
-
-# simNum='sim_09'
-# simFlag='fullModel_density_100_conn_00'
-# simLabel='tm1_joao_12_29_2021_'+simNum
-# cfg.simLabel = 'init_sims_joao/'+simLabel+'/'+simNum+simFlag
-# cfg.saveFolder = '../data'
-
-cfg.savePickle = True
-cfg.saveJson = True
-cfg.saveDataInclude = ['simData']
-cfg.backupCfgFile = None #['cfg.py', 'backupcfg/'] 
-cfg.gatherOnlySimData = False
-# cfg.saveCellSecs = 1
-# cfg.saveCellConns = 1
-cfg.saveCellSecs = 0
-cfg.saveCellConns = 0
-cfg.compactConnFormat = 0
+cfg.simLabel = 'v0_batch0'
+cfg.saveFolder = '../data/'+cfg.simLabel
+# cfg.filename =                	## Set file output name
+cfg.savePickle = True	        	## Save pkl file
+cfg.saveJson = False           	## Save json file
+cfg.saveDataInclude = ['simData'] ## , 'simConfig', 'netParams'
+cfg.backupCfgFile = None 		##  
+cfg.gatherOnlySimData = False	##  
+cfg.saveCellSecs = False			
+cfg.saveCellConns = False	
 
 #------------------------------------------------------------------------------
 # Analysis and plotting 

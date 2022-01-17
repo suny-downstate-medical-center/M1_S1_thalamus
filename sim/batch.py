@@ -38,6 +38,13 @@ def setRunCfg(b, type='mpi_bulletin'):
             'skip': True}
 
 
+    elif type=='mpi_direct2':
+        b.runCfg = {'type': 'mpi_direct',
+            'cores': 20,
+            'script': 'init.py',
+            'mpiCommand': 'mpiexec',
+            'skip': True}
+
     elif type=='hpc_slurm_gcp':
         b.runCfg = {'type': 'hpc_slurm', 
             'allocation': 'default',
@@ -55,16 +62,6 @@ def setRunCfg(b, type='mpi_bulletin'):
 # ----------------------------------------------------------------------------------------------
 if __name__ == '__main__': 
     b = custom() #
-
-    simDate = '2021_12_30'
-    simCode = simDate
-
-    simType     = 'testingProjectionWeights_density100'
-
-    b.date          = simDate
-    b.dataFolder    = '../data/batch_sims_joao'
-    b.batchLabel    = simDate+'fullModel_Th_M1_density'+'_'+simCode+'_'+simType
-    b.saveFolder    = b.dataFolder + '/' +  b.batchLabel
 
     b.batchLabel = 'v0_batch0'  
     b.saveFolder = '../data/'+b.batchLabel

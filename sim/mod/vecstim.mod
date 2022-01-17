@@ -160,4 +160,3 @@ static void bbcore_read(double* xarray, int* iarray, int* xoffset, int* ioffset,
 }
 
 ENDVERBATIM
-
