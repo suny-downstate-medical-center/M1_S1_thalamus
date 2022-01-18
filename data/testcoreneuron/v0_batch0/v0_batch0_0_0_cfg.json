@@ -1,0 +1,835 @@
+{
+    "simConfig": {
+        "AMPATau2Factor": 1.0,
+        "EEGain": 0.530860873959182,
+        "EICellTypeGain": {
+            "NGF": 3.355557614291127,
+            "PV": 2.588295268601415,
+            "SOM": 0.6568380849927258,
+            "VIP": 1.4582025338644486
+        },
+        "EIGain": 1.0,
+        "EPVGain": 1.0,
+        "ESOMGain": 1.0,
+        "IClamp1": {
+            "amp": 0.5,
+            "dur": 1000,
+            "loc": 0.5,
+            "pop": "POm_sTC_m1",
+            "sec": "soma",
+            "start": 0
+        },
+        "IEGain": 1.0,
+        "IEdisynapticBias": null,
+        "IEweights": [
+            0.5175411466399648,
+            0.7434834613857577,
+            1.0101817500320014
+        ],
+        "IFullGain": 1.0,
+        "IIGain": 1.0,
+        "IIweights": [
+            1.449601171855032,
+            0.7831317900654744,
+            1.141724408254077
+        ],
+        "IPTGain": 1.0,
+        "ITinterFactor": 1.0,
+        "L5BrecurrentFactor": 1.0,
+        "M1_pops": [
+            "NGF1",
+            "IT2",
+            "SOM2",
+            "PV2",
+            "VIP2",
+            "NGF2",
+            "IT4",
+            "SOM4",
+            "PV4",
+            "VIP4",
+            "NGF4",
+            "IT5A",
+            "SOM5A",
+            "PV5A",
+            "VIP5A",
+            "NGF5A",
+            "IT5B",
+            "PT5B",
+            "SOM5B",
+            "PV5B",
+            "VIP5B",
+            "NGF5B",
+            "IT6",
+            "CT6",
+            "SOM6",
+            "PV6",
+            "VIP6",
+            "NGF6"
+        ],
+        "NetStim1": {
+            "delay": 0,
+            "interval": 16.666666666666668,
+            "loc": 0.5,
+            "noise": 0.0,
+            "number": 60.0,
+            "pop": "IT2",
+            "sec": "soma",
+            "start": 500,
+            "synMech": [
+                "AMPA"
+            ],
+            "synMechWeightFactor": [
+                1.0
+            ],
+            "weight": 30.0,
+            "ynorm": [
+                0,
+                1
+            ]
+        },
+        "PVEGain": 1.0,
+        "PVPVGain": null,
+        "PVSOMGain": null,
+        "S1_pops": [],
+        "SOMEGain": 1.0,
+        "SOMPVGain": null,
+        "SOMSOMGain": null,
+        "Th_pops": [
+            "VPL_sTC",
+            "VPM_sTC",
+            "POm_sTC_s1",
+            "VL_sTC",
+            "VM_sTC_m1",
+            "POm_sTC_m1",
+            "mt_RTN",
+            "ss_RTN_o",
+            "ss_RTN_m",
+            "ss_RTN_i"
+        ],
+        "addBicuculline": false,
+        "addConn": 1,
+        "addIClamp": 0,
+        "addIntraThalamicConn": 0,
+        "addLongConn": 1,
+        "addNetStim": 0,
+        "addPulses": 0,
+        "addSubConn": 1,
+        "addSynMechs": true,
+        "addThalMt": 1,
+        "addThalSs": 1,
+        "addTopographicalConn": 1,
+        "allowConnsWithWeight0": true,
+        "allowSelfConns": false,
+        "analysis": {
+            "plotRaster": {
+                "dpi": 300,
+                "figSize": [
+                    24,
+                    20
+                ],
+                "include": [
+                    "NGF1",
+                    "IT2",
+                    "PV2",
+                    "SOM2",
+                    "VIP2",
+                    "NGF2",
+                    "IT4",
+                    "PV4",
+                    "SOM4",
+                    "VIP4",
+                    "NGF4",
+                    "IT5A",
+                    "PV5A",
+                    "SOM5A",
+                    "VIP5A",
+                    "NGF5A",
+                    "IT5B",
+                    "PT5B",
+                    "PV5B",
+                    "SOM5B",
+                    "VIP5B",
+                    "NGF5B",
+                    "IT6",
+                    "CT6",
+                    "PV6",
+                    "SOM6",
+                    "VIP6",
+                    "NGF6",
+                    "VPL_sTC",
+                    "VPM_sTC",
+                    "POm_sTC_s1",
+                    "VL_sTC",
+                    "VM_sTC_m1",
+                    "POm_sTC_m1",
+                    "mt_RTN",
+                    "ss_RTN_o",
+                    "ss_RTN_m",
+                    "ss_RTN_i"
+                ],
+                "labels": "overlay",
+                "lw": 0.3,
+                "marker": ".",
+                "markerSize": 2,
+                "orderBy": [
+                    "pop",
+                    "y"
+                ],
+                "orderInverse": true,
+                "popColors": {
+                    "CT6": [
+                        0.08984375,
+                        0.6328125,
+                        0.2578125
+                    ],
+                    "IT2": [
+                        0.984375,
+                        0.44140625,
+                        0.49609375
+                    ],
+                    "IT4": [
+                        0.984375,
+                        0.24609375,
+                        0.30078125
+                    ],
+                    "IT5A": [
+                        0.984375,
+                        0.05078125,
+                        0.10546875
+                    ],
+                    "IT5B": [
+                        0.7890625,
+                        0.05078125,
+                        0.10546875
+                    ],
+                    "IT6": [
+                        0.59375,
+                        0.05078125,
+                        0.10546875
+                    ],
+                    "PT5B": [
+                        0.04296875,
+                        0.140625,
+                        0.98046875
+                    ],
+                    "PT5B_1": [
+                        0.04296875,
+                        0.140625,
+                        0.98046875
+                    ],
+                    "PT5B_ZD": [
+                        0.04296875,
+                        0.140625,
+                        0.98046875
+                    ],
+                    "PV2": [
+                        0.96484375,
+                        0.859375,
+                        0.43359375
+                    ],
+                    "PV5A": [
+                        0.953125,
+                        0.8125,
+                        0.24609375
+                    ],
+                    "PV5B": [
+                        0.94140625,
+                        0.765625,
+                        0.05859375
+                    ],
+                    "PV6": [
+                        0.828125,
+                        0.671875,
+                        0.05078125
+                    ],
+                    "SOM2": [
+                        0.96875,
+                        0.765625,
+                        0.44140625
+                    ],
+                    "SOM5A": [
+                        0.95703125,
+                        0.6875,
+                        0.25390625
+                    ],
+                    "SOM5B": [
+                        0.94921875,
+                        0.609375,
+                        0.0703125
+                    ],
+                    "SOM6": [
+                        0.8359375,
+                        0.53515625,
+                        0.0625
+                    ]
+                },
+                "popRates": true,
+                "saveFig": true,
+                "showFig": false,
+                "timeRange": [
+                    0,
+                    50.0
+                ]
+            },
+            "plotTraces": {
+                "figSize": [
+                    10,
+                    4
+                ],
+                "include": [
+                    [
+                        "NGF1",
+                        0
+                    ],
+                    [
+                        "IT2",
+                        0
+                    ],
+                    [
+                        "PV2",
+                        0
+                    ],
+                    [
+                        "SOM2",
+                        0
+                    ],
+                    [
+                        "VIP2",
+                        0
+                    ],
+                    [
+                        "NGF2",
+                        0
+                    ],
+                    [
+                        "IT4",
+                        0
+                    ],
+                    [
+                        "PV4",
+                        0
+                    ],
+                    [
+                        "SOM4",
+                        0
+                    ],
+                    [
+                        "VIP4",
+                        0
+                    ],
+                    [
+                        "NGF4",
+                        0
+                    ],
+                    [
+                        "IT5A",
+                        0
+                    ],
+                    [
+                        "PV5A",
+                        0
+                    ],
+                    [
+                        "SOM5A",
+                        0
+                    ],
+                    [
+                        "VIP5A",
+                        0
+                    ],
+                    [
+                        "NGF5A",
+                        0
+                    ],
+                    [
+                        "IT5B",
+                        0
+                    ],
+                    [
+                        "PT5B",
+                        0
+                    ],
+                    [
+                        "PV5B",
+                        0
+                    ],
+                    [
+                        "SOM5B",
+                        0
+                    ],
+                    [
+                        "VIP5B",
+                        0
+                    ],
+                    [
+                        "NGF5B",
+                        0
+                    ],
+                    [
+                        "IT6",
+                        0
+                    ],
+                    [
+                        "CT6",
+                        0
+                    ],
+                    [
+                        "PV6",
+                        0
+                    ],
+                    [
+                        "SOM6",
+                        0
+                    ],
+                    [
+                        "VIP6",
+                        0
+                    ],
+                    [
+                        "NGF6",
+                        0
+                    ],
+                    [
+                        "VPL_sTC",
+                        0
+                    ],
+                    [
+                        "VPM_sTC",
+                        0
+                    ],
+                    [
+                        "POm_sTC_s1",
+                        0
+                    ],
+                    [
+                        "VL_sTC",
+                        0
+                    ],
+                    [
+                        "VM_sTC_m1",
+                        0
+                    ],
+                    [
+                        "POm_sTC_m1",
+                        0
+                    ],
+                    [
+                        "mt_RTN",
+                        0
+                    ],
+                    [
+                        "ss_RTN_o",
+                        0
+                    ],
+                    [
+                        "ss_RTN_m",
+                        0
+                    ],
+                    [
+                        "ss_RTN_i",
+                        0
+                    ]
+                ],
+                "oneFigPer": "cell",
+                "overlay": false,
+                "saveFig": true,
+                "showFig": false,
+                "timeRange": [
+                    0,
+                    50.0
+                ],
+                "ylim": [
+                    -100,
+                    55
+                ]
+            }
+        },
+        "axonNa": 7,
+        "axonRa": 0.005,
+        "backupCfgFile": null,
+        "cache_efficient": true,
+        "cellmod": {
+            "CT6": "HH_reduced",
+            "IT2": "HH_reduced",
+            "IT4": "HH_reduced",
+            "IT5A": "HH_full",
+            "IT5B": "HH_reduced",
+            "IT6": "HH_reduced",
+            "PT5B": "HH_full"
+        },
+        "cellsrec": 1,
+        "checkErrors": false,
+        "checkErrorsVerbose": false,
+        "compactConnFormat": false,
+        "connLenghtConst": 200,
+        "connProb_RTN_RTN": 0.5,
+        "connProb_RTN_TC": 1.0,
+        "connProb_TC_RTN": 1.0,
+        "connRandomSecFromList": false,
+        "connWeight_RTN_RTN": 1.0,
+        "connWeight_RTN_TC": 0.5,
+        "connWeight_TC_RTN": 1.5,
+        "connectThalamusNetwork": 1,
+        "connect_CTX_TC": 1,
+        "connect_RTN_RTN": 1,
+        "connect_RTN_TC": 1,
+        "connect_TC_CTX": 1,
+        "connect_TC_RTN": 1,
+        "coreneuron": false,
+        "correctBorderThreshold": 150.0,
+        "createNEURONObj": true,
+        "createPyStruct": true,
+        "cvode_active": false,
+        "cvode_atol": 1e-06,
+        "delayLong": 5.0,
+        "dendNa": 0.3,
+        "distributeSynsUniformly": true,
+        "divergenceHO": 10,
+        "dt": 0.025,
+        "duration": 50.0,
+        "epas": 0.9,
+        "filename": "model_output",
+        "gatherOnlySimData": false,
+        "gpas": 0.5,
+        "gpu": false,
+        "hParams": {
+            "celsius": 34,
+            "v_init": -80
+        },
+        "ihGbar": 1.0,
+        "ihGbarBasal": 1.0,
+        "ihGbarZD": null,
+        "ihModel": "migliore",
+        "ihSlope": 28,
+        "ihlkc": 0.2,
+        "ihlkcBasal": 1.0,
+        "ihlkcBelowSoma": 0.01,
+        "ihlke": -86,
+        "includeParamsLabel": false,
+        "intraThalamicGain": 1.0,
+        "invertedYCoord": true,
+        "noiseLong": 0.0,
+        "nothing": false,
+        "numCellsLong": 1000,
+        "oneSynPerNetcon": false,
+        "printPopAvgRates": [
+            0,
+            50.0
+        ],
+        "printRunTime": 0.1,
+        "printSynsAfterRule": false,
+        "pt3dRelativeToCellLocation": true,
+        "pulse": {
+            "end": 1100,
+            "noise": 0.8,
+            "pop": "None",
+            "rate": 20,
+            "start": 1000
+        },
+        "pulse2": {
+            "duration": null,
+            "end": 1200,
+            "noise": 0.5,
+            "pop": "None",
+            "rate": 20,
+            "start": 1000
+        },
+        "rand123GlobalIndex": null,
+        "random123": false,
+        "ratesLong": {
+            "M2": [
+                0,
+                5
+            ],
+            "OC": [
+                0,
+                5
+            ],
+            "POm_sTC_m1": [
+                0,
+                0.005
+            ],
+            "S1": [
+                0,
+                5
+            ],
+            "S2": [
+                0,
+                5
+            ],
+            "VL_sTC": [
+                0,
+                0.005
+            ],
+            "cM1": [
+                0,
+                5
+            ]
+        },
+        "ratesLong_thalM1": {
+            "POm_sTC_m1": [
+                0,
+                0.005
+            ],
+            "VL_sTC": [
+                0,
+                0.005
+            ]
+        },
+        "recordCells": [
+            [
+                "NGF1",
+                0
+            ],
+            [
+                "IT2",
+                0
+            ],
+            [
+                "PV2",
+                0
+            ],
+            [
+                "SOM2",
+                0
+            ],
+            [
+                "VIP2",
+                0
+            ],
+            [
+                "NGF2",
+                0
+            ],
+            [
+                "IT4",
+                0
+            ],
+            [
+                "PV4",
+                0
+            ],
+            [
+                "SOM4",
+                0
+            ],
+            [
+                "VIP4",
+                0
+            ],
+            [
+                "NGF4",
+                0
+            ],
+            [
+                "IT5A",
+                0
+            ],
+            [
+                "PV5A",
+                0
+            ],
+            [
+                "SOM5A",
+                0
+            ],
+            [
+                "VIP5A",
+                0
+            ],
+            [
+                "NGF5A",
+                0
+            ],
+            [
+                "IT5B",
+                0
+            ],
+            [
+                "PT5B",
+                0
+            ],
+            [
+                "PV5B",
+                0
+            ],
+            [
+                "SOM5B",
+                0
+            ],
+            [
+                "VIP5B",
+                0
+            ],
+            [
+                "NGF5B",
+                0
+            ],
+            [
+                "IT6",
+                0
+            ],
+            [
+                "CT6",
+                0
+            ],
+            [
+                "PV6",
+                0
+            ],
+            [
+                "SOM6",
+                0
+            ],
+            [
+                "VIP6",
+                0
+            ],
+            [
+                "NGF6",
+                0
+            ],
+            [
+                "VPL_sTC",
+                0
+            ],
+            [
+                "VPM_sTC",
+                0
+            ],
+            [
+                "POm_sTC_s1",
+                0
+            ],
+            [
+                "VL_sTC",
+                0
+            ],
+            [
+                "VM_sTC_m1",
+                0
+            ],
+            [
+                "POm_sTC_m1",
+                0
+            ],
+            [
+                "mt_RTN",
+                0
+            ],
+            [
+                "ss_RTN_o",
+                0
+            ],
+            [
+                "ss_RTN_m",
+                0
+            ],
+            [
+                "ss_RTN_i",
+                0
+            ]
+        ],
+        "recordCellsSpikes": -1,
+        "recordDipoles": false,
+        "recordLFP": [],
+        "recordStep": 0.1,
+        "recordStim": false,
+        "recordTime": false,
+        "recordTraces": {
+            "V_soma": {
+                "loc": 0.5,
+                "sec": "soma",
+                "var": "v"
+            }
+        },
+        "removeM1": 0,
+        "removeNa": false,
+        "removeS1": 0,
+        "removeTh": 0,
+        "removeWeightNorm": 0,
+        "sRE_model": "../cells/sRE_jv_00.json",
+        "sTC_model": "../cells/sTC_jv_00.json",
+        "saveCSV": false,
+        "saveCellConns": false,
+        "saveCellSecs": false,
+        "saveDat": false,
+        "saveDataInclude": [
+            "simData"
+        ],
+        "saveDpk": false,
+        "saveFolder": "../data/v0_batch0",
+        "saveHDF5": false,
+        "saveJson": false,
+        "saveLFPCells": false,
+        "saveLFPPops": false,
+        "saveMat": false,
+        "savePickle": true,
+        "saveTiming": false,
+        "scale": 1.0,
+        "scaleDensity": 1.0,
+        "seeds": {
+            "conn": 4321,
+            "loc": 4321,
+            "stim": 1234
+        },
+        "simLabel": "v0_batch0_0_0",
+        "simType": "Test_coreneuron",
+        "singleCellPops": 0,
+        "singlePop": 0,
+        "sizeX": 300.0,
+        "sizeY": 1350.0,
+        "sizeZ": 300.0,
+        "somaNa": 5,
+        "startLong": 0,
+        "strengthFactor": 1.0,
+        "synWeightFractionEE": [
+            0.5,
+            0.5
+        ],
+        "synWeightFractionEI": [
+            0.5,
+            0.5
+        ],
+        "synWeightFractionIE": [
+            0.9,
+            0.1
+        ],
+        "synWeightFractionII": [
+            0.9,
+            0.1
+        ],
+        "synWeightFractionNGF": [
+            0.5,
+            0.5
+        ],
+        "synWeightFractionSOME": [
+            0.9,
+            0.1
+        ],
+        "synsperconn": {
+            "HH_full": 5,
+            "HH_reduced": 1,
+            "HH_simple": 1
+        },
+        "timestampFilename": false,
+        "timing": true,
+        "tstop": 1000.0,
+        "use_fast_imem": false,
+        "verbose": 0,
+        "weightLong": {
+            "M2": 0.5,
+            "OC": 0.5,
+            "POm_sTC_m1": 0.0,
+            "S1": 0.5,
+            "S2": 0.5,
+            "VL_sTC": 0.0,
+            "cM1": 0.5
+        },
+        "weightLong_M1thal": 0.0,
+        "weightLong_thalM1": 0.0,
+        "weightNorm": 1,
+        "weightNormThreshold": 4.0,
+        "yConnFactor": 10
+    }
+}

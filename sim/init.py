@@ -15,7 +15,10 @@ Contributors: salvadordura@gmail.com, fernandodasilvaborges@gmail.com, joaovvito
 import matplotlib; matplotlib.use('Agg')  # to avoid graphics error in servers
 from netpyne import sim
 
-cfg, netParams = sim.readCmdLineArgs()
+# cfg, netParams = sim.readCmdLineArgs()
+
+cfg, netParams = sim.readCmdLineArgs(simConfigDefault='cfg.py', netParamsDefault='netParams.py')
+
 sim.initialize(
     simConfig = cfg, 	
     netParams = netParams)  				# create network object and set cfg and net params
