@@ -1,0 +1,412 @@
+numprocs=20
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+	0 
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+ num_mpi=20
+ num_omp_thread=1
+
+ Memory (MBs) :             After mk_mech : Max 3463.2500, Min 3388.7031, Avg 3417.5898 
+ Memory (MBs) :            After MPI_Init : Max 3463.2500, Min 3388.7031, Avg 3417.6143 
+ Memory (MBs) :          Before nrn_setup : Max 3463.3320, Min 3388.7031, Avg 3417.6697 
+ Setup Done   : 2.83 seconds 
+ Model size   : 7.41 GB
+ Memory (MBs) :          After nrn_setup  : Max 3924.3047, Min 3841.0898, Avg 3874.1672 
+GENERAL PARAMETERS
+--mpi=true
+--mpi-lib=
+--gpu=false
+--dt=0.025
+--tstop=2500
+
+GPU
+--nwarp=65536
+--cell-permute=0
+--cuda-interface=false
+
+INPUT PARAMETERS
+--voltage=1000
+--seed=-1
+--datpath=.
+--filesdat=files.dat
+--pattern=
+--report-conf=
+--restore=     
+
+PARALLEL COMPUTATION PARAMETERS
+--threading=false
+--skip_mpi_finalize=true
+
+SPIKE EXCHANGE
+--ms_phases=2
+--ms_subintervals=2
+--multisend=false
+--spk_compress=0
+--binqueue=false
+
+CONFIGURATION
+--spikebuf=100000
+--prcellgid=-1
+--forwardskip=0
+--celsius=34
+--mindelay=2.00266
+--report-buffer-size=4
+
+OUTPUT PARAMETERS
+--dt_io=0.1
+--outpath=.
+--checkpoint=
+
+ Start time (t) = 0
+
+ Memory (MBs) :  After mk_spikevec_buffer : Max 3924.5625, Min 3841.0898, Avg 3874.1801 
+ Memory (MBs) :     After nrn_finitialize : Max 3924.5742, Min 3841.1016, Avg 3874.3066 
+
+psolve |                                                         | t: 0.00   ETA: 0h00m00spsolve |                                                         | t: 2.00   ETA: 4h51m26spsolve |                                                         | t: 11.87  ETA: 5h35m14spsolve |                                                         | t: 23.75  ETA: 5h44m04spsolve |                                                         | t: 33.62  ETA: 5h52m04spsolve |=                                                        | t: 45.50  ETA: 5h43m27spsolve |=                                                        | t: 55.38  ETA: 5h39m11spsolve |=                                                        | t: 67.25  ETA: 5h41m51spsolve |=                                                        | t: 79.13  ETA: 5h36m33spsolve |==                                                       | t: 89.00  ETA: 5h36m49spsolve |==                                                       | t: 100.88 ETA: 5h34m32spsolve |==                                                       | t: 110.75 ETA: 5h36m11spsolve |==                                                       | t: 122.63 ETA: 5h35m04spsolve |===                                                      | t: 134.50 ETA: 5h31m48spsolve |===                                                      | t: 144.38 ETA: 5h28m13spsolve |===                                                      | t: 156.25 ETA: 5h26m15spsolve |===                                                      | t: 166.12 ETA: 5h23m35spsolve |====                                                     | t: 178.00 ETA: 5h22m12spsolve |====                                                     | t: 189.87 ETA: 5h20m47spsolve |====                                                     | t: 199.75 ETA: 5h18m35spsolve |====                                                     | t: 211.62 ETA: 5h15m01spsolve |=====                                                    | t: 221.50 ETA: 5h13m54spsolve |=====                                                    | t: 233.37 ETA: 5h12m05spsolve |=====                                                    | t: 245.25 ETA: 5h10m35spsolve |=====                                                    | t: 255.12 ETA: 5h10m18spsolve |======                                                   | t: 267.00 ETA: 5h08m11spsolve |======                                                   | t: 276.87 ETA: 5h07m23spsolve |======                                                   | t: 288.75 ETA: 5h05m56spsolve |======                                                   | t: 300.62 ETA: 5h03m44spsolve |=======                                                  | t: 310.50 ETA: 5h01m41spsolve |=======                                                  | t: 322.37 ETA: 4h59m41spsolve |=======                                                  | t: 332.25 ETA: 4h57m37spsolve |=======                                                  | t: 344.12 ETA: 4h55m23spsolve |========                                                 | t: 356.00 ETA: 4h53m17spsolve |========                                                 | t: 365.87 ETA: 4h52m07spsolve |========                                                 | t: 377.75 ETA: 4h49m53spsolve |========                                                 | t: 387.62 ETA: 4h48m38spsolve |=========                                                | t: 399.50 ETA: 4h46m59spsolve |=========                                                | t: 411.37 ETA: 4h45m50spsolve |=========                                                | t: 421.25 ETA: 4h44m58spsolve |=========                                                | t: 433.12 ETA: 4h43m51spsolve |==========                                               | t: 443.00 ETA: 4h43m19spsolve |==========                                               | t: 454.87 ETA: 4h42m34spsolve |==========                                               | t: 466.75 ETA: 4h41m42spsolve |==========                                               | t: 476.62 ETA: 4h40m40spsolve |===========                                              | t: 488.50 ETA: 4h38m54spsolve |===========                                              | t: 498.37 ETA: 4h37m43spsolve |===========                                              | t: 510.25 ETA: 4h35m22spsolve |===========                                              | t: 522.12 ETA: 4h33m56spsolve |============                                             | t: 532.00 ETA: 4h32m41spsolve |============                                             | t: 543.87 ETA: 4h30m53spsolve |============                                             | t: 553.75 ETA: 4h28m41spsolve |============                                             | t: 565.62 ETA: 4h26m34spsolve |=============                                            | t: 575.50 ETA: 4h25m21spsolve |=============                                            | t: 587.37 ETA: 4h23m48spsolve |=============                                            | t: 599.25 ETA: 4h22m37spsolve |=============                                            | t: 609.13 ETA: 4h21m07spsolve |==============                                           | t: 621.00 ETA: 4h19m15spsolve |==============                                           | t: 630.88 ETA: 4h17m21spsolve |==============                                           | t: 642.75 ETA: 4h15m17spsolve |==============                                           | t: 654.63 ETA: 4h13m39spsolve |===============                                          | t: 664.50 ETA: 4h12m33spsolve |===============                                          | t: 676.38 ETA: 4h10m55spsolve |===============                                          | t: 686.25 ETA: 4h09m21spsolve |===============                                          | t: 698.13 ETA: 4h07m44spsolve |================                                         | t: 710.00 ETA: 4h05m46spsolve |================                                         | t: 719.88 ETA: 4h04m28spsolve |================                                         | t: 731.75 ETA: 4h03m08spsolve |================                                         | t: 741.63 ETA: 4h01m45spsolve |=================                                        | t: 753.50 ETA: 3h59m49spsolve |=================                                        | t: 765.38 ETA: 3h58m23spsolve |=================                                        | t: 775.25 ETA: 3h57m14spsolve |=================                                        | t: 787.13 ETA: 3h56m02spsolve |==================                                       | t: 797.00 ETA: 3h54m54spsolve |==================                                       | t: 808.88 ETA: 3h53m19spsolve |==================                                       | t: 820.75 ETA: 3h51m38spsolve |==================                                       | t: 830.63 ETA: 3h49m59spsolve |===================                                      | t: 842.50 ETA: 3h48m08spsolve |===================                                      | t: 852.38 ETA: 3h46m36spsolve |===================                                      | t: 864.25 ETA: 3h45m06spsolve |===================                                      | t: 876.13 ETA: 3h43m26spsolve |====================                                     | t: 886.00 ETA: 3h42m00spsolve |====================                                     | t: 897.88 ETA: 3h40m25spsolve |====================                                     | t: 907.75 ETA: 3h39m11spsolve |====================                                     | t: 919.63 ETA: 3h37m30spsolve |=====================                                    | t: 931.50 ETA: 3h35m57spsolve |=====================                                    | t: 941.38 ETA: 3h34m42spsolve |=====================                                    | t: 953.25 ETA: 3h33m25spsolve |=====================                                    | t: 963.13 ETA: 3h32m21spsolve |======================                                   | t: 975.00 ETA: 3h30m37spsolve |======================                                   | t: 986.88 ETA: 3h29m14spsolve |======================                                   | t: 996.75 ETA: 3h27m50spsolve |======================                                   | t: 1008.63 ETA: 3h25m59spsolve |=======================                                  | t: 1018.50 ETA: 3h24m19spsolve |=======================                                  | t: 1030.38 ETA: 3h22m39spsolve |=======================                                  | t: 1042.25 ETA: 3h21m03spsolve |=======================                                  | t: 1052.13 ETA: 3h19m50spsolve |========================                                 | t: 1064.00 ETA: 3h18m26spsolve |========================                                 | t: 1073.88 ETA: 3h16m55spsolve |========================                                 | t: 1085.75 ETA: 3h15m25spsolve |========================                                 | t: 1095.63 ETA: 3h13m58spsolve |=========================                                | t: 1107.50 ETA: 3h12m13spsolve |=========================                                | t: 1119.38 ETA: 3h10m37spsolve |=========================                                | t: 1129.25 ETA: 3h09m08spsolve |==========================                               | t: 1141.13 ETA: 3h07m16spsolve |==========================                               | t: 1151.00 ETA: 3h05m48spsolve |==========================                               | t: 1162.88 ETA: 3h04m04spsolve |==========================                               | t: 1174.75 ETA: 3h02m28spsolve |===========================                              | t: 1184.63 ETA: 3h01m02spsolve |===========================                              | t: 1196.50 ETA: 2h59m17spsolve |===========================                              | t: 1206.38 ETA: 2h57m48spsolve |===========================                              | t: 1218.25 ETA: 2h56m07spsolve |============================                             | t: 1230.13 ETA: 2h54m31spsolve |============================                             | t: 1240.00 ETA: 2h53m16spsolve |============================                             | t: 1251.88 ETA: 2h51m20spsolve |============================                             | t: 1261.75 ETA: 2h49m57spsolve |=============================                            | t: 1273.63 ETA: 2h48m26spsolve |=============================                            | t: 1285.50 ETA: 2h46m49spsolve |=============================                            | t: 1295.38 ETA: 2h45m28spsolve |=============================                            | t: 1307.25 ETA: 2h43m50spsolve |==============================                           | t: 1317.13 ETA: 2h42m33spsolve |==============================                           | t: 1329.00 ETA: 2h40m51spsolve |==============================                           | t: 1340.88 ETA: 2h39m02spsolve |==============================                           | t: 1350.75 ETA: 2h37m27spsolve |===============================                          | t: 1362.63 ETA: 2h35m50spsolve |===============================                          | t: 1372.50 ETA: 2h34m27spsolve |===============================                          | t: 1384.38 ETA: 2h32m59spsolve |===============================                          | t: 1396.25 ETA: 2h31m17spsolve |================================                         | t: 1406.13 ETA: 2h29m46spsolve |================================                         | t: 1418.00 ETA: 2h27m59spsolve |================================                         | t: 1427.88 ETA: 2h26m37spsolve |================================                         | t: 1439.75 ETA: 2h24m56spsolve |=================================                        | t: 1451.63 ETA: 2h23m25spsolve |=================================                        | t: 1461.50 ETA: 2h22m10spsolve |=================================                        | t: 1473.38 ETA: 2h20m42spsolve |=================================                        | t: 1483.25 ETA: 2h19m20spsolve |==================================                       | t: 1495.13 ETA: 2h17m31spsolve |==================================                       | t: 1507.00 ETA: 2h15m46spsolve |==================================                       | t: 1516.88 ETA: 2h14m11spsolve |==================================                       | t: 1528.75 ETA: 2h12m20spsolve |===================================                      | t: 1538.63 ETA: 2h10m45spsolve |===================================                      | t: 1550.50 ETA: 2h08m55spsolve |===================================                      | t: 1562.38 ETA: 2h07m04spsolve |===================================                      | t: 1572.25 ETA: 2h05m35spsolve |====================================                     | t: 1584.13 ETA: 2h03m57spsolve |====================================                     | t: 1594.00 ETA: 2h02m30spsolve |====================================                     | t: 1605.88 ETA: 2h00m50spsolve |====================================                     | t: 1615.75 ETA: 1h59m27spsolve |=====================================                    | t: 1627.63 ETA: 1h57m56spsolve |=====================================                    | t: 1639.50 ETA: 1h56m21spsolve |=====================================                    | t: 1649.38 ETA: 1h55m06spsolve |=====================================                    | t: 1661.25 ETA: 1h53m26spsolve |======================================                   | t: 1671.13 ETA: 1h52m05spsolve |======================================                   | t: 1683.00 ETA: 1h50m29spsolve |======================================                   | t: 1694.88 ETA: 1h48m58spsolve |======================================                   | t: 1704.75 ETA: 1h47m42spsolve |=======================================                  | t: 1716.63 ETA: 1h46m05spsolve |=======================================                  | t: 1726.50 ETA: 1h44m47spsolve |=======================================                  | t: 1728.50 ETA: 1h44m31spsolve |=======================================                  | t: 1738.38 ETA: 1h43m14spsolve |=======================================                  | t: 1750.25 ETA: 1h41m36spsolve |========================================                 | t: 1760.13 ETA: 1h40m14spsolve |========================================                 | t: 1772.00 ETA: 1h38m36spsolve |========================================                 | t: 1781.88 ETA: 1h37m13spsolve |========================================                 | t: 1793.75 ETA: 1h35m37spsolve |=========================================                | t: 1805.63 ETA: 1h34m01spsolve |=========================================                | t: 1815.50 ETA: 1h32m43spsolve |=========================================                | t: 1827.38 ETA: 1h31m05spsolve |=========================================                | t: 1837.25 ETA: 1h29m45spsolve |=========================================                | t: 1839.25 ETA: 1h29m29spsolve |==========================================               | t: 1849.13 ETA: 1h28m09spsolve |==========================================               | t: 1861.00 ETA: 1h26m34spsolve |==========================================               | t: 1870.88 ETA: 1h25m15spsolve |==========================================               | t: 1882.75 ETA: 1h23m41spsolve |===========================================              | t: 1892.63 ETA: 1h22m21spsolve |===========================================              | t: 1894.63 ETA: 1h22m05spsolve |===========================================              | t: 1904.50 ETA: 1h20m45spsolve |===========================================              | t: 1916.38 ETA: 1h19m09spsolve |===========================================              | t: 1926.25 ETA: 1h17m47spsolve |============================================             | t: 1938.13 ETA: 1h16m12spsolve |============================================             | t: 1948.00 ETA: 1h14m53spsolve |============================================             | t: 1959.88 ETA: 1h13m15spsolve |============================================             | t: 1971.75 ETA: 1h11m39spsolve |=============================================            | t: 1981.63 ETA: 1h10m20spsolve |=============================================            | t: 1993.50 ETA: 1h08m45spsolve |=============================================            | t: 2003.38 ETA: 1h07m24spsolve |=============================================            | t: 2015.25 ETA: 1h05m48spsolve |==============================================           | t: 2027.13 ETA: 1h04m10spsolve |==============================================           | t: 2037.00 ETA: 1h02m51spsolve |==============================================           | t: 2048.88 ETA: 1h01m13spsolve |==============================================           | t: 2058.75 ETA: 0h59m54spsolve |===============================================          | t: 2070.63 ETA: 0h58m19spsolve |===============================================          | t: 2082.50 ETA: 0h56m41spsolve |===============================================          | t: 2092.38 ETA: 0h55m20spsolve |===============================================          | t: 2104.25 ETA: 0h53m43spsolve |================================================         | t: 2114.13 ETA: 0h52m23spsolve |================================================         | t: 2126.00 ETA: 0h50m46spsolve |================================================         | t: 2135.88 ETA: 0h49m27spsolve |================================================         | t: 2137.88 ETA: 0h49m10spsolve |================================================         | t: 2147.75 ETA: 0h47m49spsolve |=================================================        | t: 2159.63 ETA: 0h46m12spsolve |=================================================        | t: 2169.50 ETA: 0h44m52spsolve |=================================================        | t: 2181.38 ETA: 0h43m16spsolve |=================================================        | t: 2191.25 ETA: 0h41m56spsolve |==================================================       | t: 2193.25 ETA: 0h41m39spsolve |==================================================       | t: 2203.13 ETA: 0h40m19spsolve |==================================================       | t: 2215.00 ETA: 0h38m41spsolve |==================================================       | t: 2224.88 ETA: 0h37m21spsolve |==================================================       | t: 2236.75 ETA: 0h35m44spsolve |===================================================      | t: 2246.63 ETA: 0h34m23spsolve |===================================================      | t: 2248.63 ETA: 0h34m07spsolve |===================================================      | t: 2258.50 ETA: 0h32m47spsolve |===================================================      | t: 2270.38 ETA: 0h31m10spsolve |===================================================      | t: 2280.25 ETA: 0h29m49spsolve |====================================================     | t: 2292.13 ETA: 0h28m13spsolve |====================================================     | t: 2302.00 ETA: 0h26m53spsolve |====================================================     | t: 2304.00 ETA: 0h26m36spsolve |====================================================     | t: 2313.88 ETA: 0h25m16spsolve |=====================================================    | t: 2325.75 ETA: 0h23m39spsolve |=====================================================    | t: 2335.63 ETA: 0h22m19spsolve |=====================================================    | t: 2347.50 ETA: 0h20m42spsolve |=====================================================    | t: 2357.38 ETA: 0h19m22spsolve |=====================================================    | t: 2359.38 ETA: 0h19m06spsolve |======================================================   | t: 2369.25 ETA: 0h17m46spsolve |======================================================   | t: 2381.13 ETA: 0h16m09spsolve |======================================================   | t: 2391.00 ETA: 0h14m49spsolve |======================================================   | t: 2402.88 ETA: 0h13m12spsolve |=======================================================  | t: 2412.75 ETA: 0h11m51spsolve |=======================================================  | t: 2414.75 ETA: 0h11m35spsolve |=======================================================  | t: 2424.62 ETA: 0h10m14spsolve |=======================================================  | t: 2436.50 ETA: 0h08m37spsolve |=======================================================  | t: 2446.37 ETA: 0h07m17spsolve |======================================================== | t: 2458.25 ETA: 0h05m40spsolve |======================================================== | t: 2468.12 ETA: 0h04m19spsolve |======================================================== | t: 2480.00 ETA: 0h02m42spsolve |======================================================== | t: 2491.87 ETA: 0h01m06spsolve |=========================================================| t: 2500.00 ETA: 5h38m28spsolve |=========================================================| t: 2500.00 ETA: 5h38m28s
+
+Solver Time : 20307.4
+
+
+ Simulation Statistics
+ Number of cells: 18151
+ Number of compartments: 1656015
+ Number of presyns: 23151
+ Number of input presyns: 394250
+ Number of synapses: 37261530
+ Number of point processes: 23217118
+ Number of transfer sources: 0
+ Number of transfer targets: 0
+ Number of spikes: 641585
+ Number of spikes with non negative gid-s: 641585
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 1: 1158 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 1: 461439 
+  Number of synaptic contacts on node 1: 1842945 
+  Number of stims on node 1: 0 
+Recording 2 traces of 1 types on node 1
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 10: 1158 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 10: 462803 
+  Number of synaptic contacts on node 10: 1856060 
+  Number of stims on node 10: 0 
+Recording 2 traces of 1 types on node 10
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 13: 1157 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 13: 464186 
+  Number of synaptic contacts on node 13: 1874754 
+  Number of stims on node 13: 0 
+Recording 0 traces of 0 types on node 13
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 9: 1158 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 9: 461516 
+  Number of synaptic contacts on node 9: 1850563 
+  Number of stims on node 9: 0 
+Recording 2 traces of 1 types on node 9
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 8: 1158 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 8: 463175 
+  Number of synaptic contacts on node 8: 1849225 
+  Number of stims on node 8: 0 
+Recording 0 traces of 0 types on node 8
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 7: 1158 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 7: 465869 
+  Number of synaptic contacts on node 7: 1880814 
+  Number of stims on node 7: 0 
+Recording 2 traces of 1 types on node 7
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 11: 1157 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 11: 463666 
+  Number of synaptic contacts on node 11: 1869634 
+  Number of stims on node 11: 0 
+Recording 3 traces of 1 types on node 11
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 15: 1157 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 15: 459904 
+  Number of synaptic contacts on node 15: 1843935 
+  Number of stims on node 15: 0 
+Recording 4 traces of 1 types on node 15
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 3: 1158 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 3: 466218 
+  Number of synaptic contacts on node 3: 1889408 
+  Number of stims on node 3: 0 
+Recording 1 traces of 1 types on node 3
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 2: 1158 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 2: 463938 
+  Number of synaptic contacts on node 2: 1864031 
+  Number of stims on node 2: 0 
+Recording 3 traces of 1 types on node 2
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 16: 1157 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 16: 463212 
+  Number of synaptic contacts on node 16: 1859831 
+  Number of stims on node 16: 0 
+Recording 1 traces of 1 types on node 16
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 17: 1157 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 17: 459898 
+  Number of synaptic contacts on node 17: 1857017 
+  Number of stims on node 17: 0 
+Recording 0 traces of 0 types on node 17
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 12: 1157 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 12: 463962 
+  Number of synaptic contacts on node 12: 1870196 
+  Number of stims on node 12: 0 
+Recording 3 traces of 1 types on node 12
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 14: 1157 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 14: 459850 
+  Number of synaptic contacts on node 14: 1852030 
+  Number of stims on node 14: 0 
+Recording 0 traces of 0 types on node 14
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 5: 1158 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 5: 461557 
+  Number of synaptic contacts on node 5: 1852753 
+  Number of stims on node 5: 0 
+Recording 3 traces of 1 types on node 5
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 18: 1157 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 18: 461937 
+  Number of synaptic contacts on node 18: 1863090 
+  Number of stims on node 18: 0 
+Recording 0 traces of 0 types on node 18
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 4: 1158 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 4: 462380 
+  Number of synaptic contacts on node 4: 1868232 
+  Number of stims on node 4: 0 
+Recording 2 traces of 1 types on node 4
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 19: 1157 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 19: 464350 
+  Number of synaptic contacts on node 19: 1875907 
+  Number of stims on node 19: 0 
+Recording 2 traces of 1 types on node 19
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+  Number of cells on node 6: 1158 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 6: 462669 
+  Number of synaptic contacts on node 6: 1849072 
+  Number of stims on node 6: 0 
+Recording 4 traces of 1 types on node 6
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v0_batch1/v0_batch1_0_2_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v0_batch1/v0_batch1_netParams.py
+
+Start time:  2022-01-18 00:29:29.903803
+
+Creating network of 43 cell populations on 20 hosts...
+  Number of cells on node 0: 1158 
+  Done; cell creation time = 24.01 s.
+Making connections...
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 0: 467199 
+  Number of synaptic contacts on node 0: 1892033 
+  Done; cell connection time = 1714.74 s.
+  Number of stims on node 0: 0 
+  Done; cell stims creation time = 0.01 s.
+Recording 4 traces of 1 types on node 0
+0.0s
+
+Running simulation using CoreNEURON for 2500.0 ms...
+  Done; run time = 20322.57 s; real-time ratio: 0.00.
+
+Gathering data...
+  Done; gather time = 19.92 s.
+
+Analyzing...
+  Cells: 23151
+  Connections: 0 (0.00 per cell)
+  Spikes: 646182 (11.16 Hz)
+  Simulated time: 2.5 s; 20 workers
+  Run time: 20322.57 s
+   NGF1 : 6.472 Hz
+   IT2 : 0.907 Hz
+   SOM2 : 0.000 Hz
+   PV2 : 0.000 Hz
+   VIP2 : 7.656 Hz
+   NGF2 : 22.763 Hz
+   IT4 : 1.240 Hz
+   SOM4 : 0.000 Hz
+   PV4 : 0.000 Hz
+   VIP4 : 9.000 Hz
+   NGF4 : 85.600 Hz
+   IT5A : 11.024 Hz
+   SOM5A : 0.000 Hz
+   PV5A : 0.000 Hz
+   VIP5A : 78.215 Hz
+   NGF5A : 132.640 Hz
+   IT5B : 30.326 Hz
+   PT5B : 31.008 Hz
+   SOM5B : 0.000 Hz
+   PV5B : 0.000 Hz
+   VIP5B : 27.387 Hz
+   NGF5B : 99.006 Hz
+   IT6 : 8.312 Hz
+   CT6 : 0.672 Hz
+   SOM6 : 0.000 Hz
+   PV6 : 0.000 Hz
+   VIP6 : 20.425 Hz
+   NGF6 : 27.245 Hz
+   VPL_sTC : 1.867 Hz
+   VPM_sTC : 1.791 Hz
+   POm_sTC_s1 : 2.554 Hz
+   VL_sTC : 0.401 Hz
+   VM_sTC_m1 : 53.577 Hz
+   POm_sTC_m1 : 1.224 Hz
+   mt_RTN : 42.682 Hz
+   ss_RTN_o : 10.147 Hz
+   ss_RTN_m : 10.387 Hz
+   ss_RTN_i : 13.106 Hz
+   S1 : 2.265 Hz
+   S2 : 2.286 Hz
+   cM1 : 2.360 Hz
+   M2 : 2.300 Hz
+   OC : 2.364 Hz
+Saving output as ../data/v0_batch1/v0_batch1_0_2_data.pkl ... 
+Finished saving!
+Saving output as ../data/v0_batch1/v0_batch1_0_2_data.json  ... 
+Finished saving!
+  Done; saving time = 6.28 s.
+Preparing spike data...
+Plotting raster...
+Plotting recorded cell traces ... cell
+  Done; plotting time = 531.47 s
+
+Total time = 22678.92 s

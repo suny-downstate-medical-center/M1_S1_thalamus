@@ -1,0 +1,35 @@
+{
+    "batch": {
+        "batchLabel": "v0_batch1",
+        "cfgFile": "cfg.py",
+        "evolCfg": {
+            "fitnessFunc": "removed"
+        },
+        "initCfg": {},
+        "method": "grid",
+        "netParamsFile": "netParams.py",
+        "params": [
+            {
+                "label": "weightLong_thalM1",
+                "values": [
+                    0.25
+                ]
+            },
+            {
+                "label": "weightLong_M1thal",
+                "values": [
+                    0.25,
+                    0.5,
+                    0.75
+                ]
+            }
+        ],
+        "runCfg": {
+            "mpiCommand": "mpirun -n 20 ./x86_64/special -mpi -python init.py",
+            "skip": true,
+            "type": "mpi_direct"
+        },
+        "saveFolder": "../data/v0_batch1",
+        "seed": null
+    }
+}
