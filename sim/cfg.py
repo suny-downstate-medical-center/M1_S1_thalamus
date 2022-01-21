@@ -17,13 +17,13 @@ cfg = specs.SimConfig()
 #
 #------------------------------------------------------------------------------
 
-cfg.simType='Test_coreneuron'
-cfg.coreneuron = True
+cfg.simType='gridTHM1'
+cfg.coreneuron = False
 
 #------------------------------------------------------------------------------
 # Run parameters
 #------------------------------------------------------------------------------
-cfg.duration = 2.5*1e3
+cfg.duration = 5.0*1e3
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
 cfg.hParams = {'celsius': 34, 'v_init': -80}  
@@ -85,8 +85,8 @@ cfg.simLabel = 'v0_batch0'
 cfg.saveFolder = '../data/'+cfg.simLabel
 # cfg.filename =                	## Set file output name
 cfg.savePickle = True	        	## Save pkl file
-cfg.saveJson = True           	## Save json file
-cfg.saveDataInclude = ['simData'] ## , 'simConfig', 'netParams'
+cfg.saveJson = False           	## Save json file
+cfg.saveDataInclude = ['simData', 'simConfig', 'netParams', 'net'] ## , 'simConfig', 'netParams'
 cfg.backupCfgFile = None 		##  
 cfg.gatherOnlySimData = False	##  
 cfg.saveCellSecs = False			

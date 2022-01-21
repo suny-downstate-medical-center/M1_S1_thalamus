@@ -14,9 +14,9 @@ import numpy as np
 # ----------------------------------------------------------------------------------------------
 def custom():
     params = specs.ODict()
-
-    params['weightLong_thalM1']=[0.25, 0.5]
-    params['weightLong_M1thal']=[1.0, 1.5]
+    
+    params['weightLong_thalM1']=[0.25,0.5,0.75,1.0,1.5]
+    params['weightLong_M1thal']=[0.25,0.5,0.75,1.0,1.5]
 
     b = Batch(params=params, netParamsFile='netParams.py', cfgFile='cfg.py')
 
@@ -32,15 +32,15 @@ def setRunCfg(b, type='mpi_bulletin'):
             'skip': True}
 
 
-    elif type=='mpi_direct':
+    elif type=='mpi_direct2':
         b.runCfg = {'type': 'mpi_direct',
-            'mpiCommand': 'mpirun -n 20 ./x86_64/special -mpi -python init.py', # --use-hwthread-cpus
+            'mpiCommand': 'mpirun -n 80 ./x86_64/special -mpi -python init.py', # --use-hwthread-cpus
             'skip': True}
 
 
-    elif type=='mpi_direct2':
+    elif type=='mpi_direct':
         b.runCfg = {'type': 'mpi_direct',
-            'cores': 20,
+            'cores': 40,
             'script': 'init.py',
             'mpiCommand': 'mpiexec',
             'skip': True}
@@ -50,12 +50,12 @@ def setRunCfg(b, type='mpi_bulletin'):
             'allocation': 'default',
             'walltime': '72:00:00', 
             'nodes': 1,
-            'coresPerNode': 40,
+            'coresPerNode': 80,
             'email': 'fernandodasilvaborges@gmail.com',
-            'folder': '/home/ext_fernandodasilvaborges_gmail_/S1_netpyne/sim/', 
+            'folder': '/home/ext_fernandodasilvaborges_gmail_/ecas_model/sim/', 
             'script': 'init.py', 
             'mpiCommand': 'mpirun',
-            'skipCustom': '_raster_gid.png'}
+            'skipCustom': '_raster.png'}
 
 # ----------------------------------------------------------------------------------------------
 # Main code
@@ -66,5 +66,5 @@ if __name__ == '__main__':
     b.batchLabel = 'v0_batch2'  
     b.saveFolder = '../data/'+b.batchLabel
     b.method = 'grid'
-    setRunCfg(b, 'mpi_direct')
+    setRunCfg(b, 'hpc_slurm_gcp')
     b.run() # run batch
