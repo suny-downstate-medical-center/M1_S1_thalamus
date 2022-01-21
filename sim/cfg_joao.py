@@ -273,9 +273,9 @@ cfg.addThalSs=1
 cfg.addThalMt=1
 
 # ----- Network Connections ----- #
-cfg.addConn 				= 1
-cfg.addSubConn 				= 1
-cfg.addLongConn 			= 1
+cfg.addConn 				= 0
+cfg.addSubConn 				= 0
+cfg.addLongConn 			= 0
 cfg.connectThalamusNetwork 	= 1
 
 # Connections under cfg.connectThalamusNetwork
@@ -284,6 +284,10 @@ cfg.connect_TC_RTN      = 1
 cfg.connect_RTN_TC      = 1
 cfg.connect_TC_CTX      = 1
 cfg.connect_CTX_TC      = 1
+
+# Cortico-cortical connections - 2022_01_21
+cfg.connect_M1_S1		= 1
+cfg.connect_S1_M1		= 1
 # ------------------------------- #
 
 
