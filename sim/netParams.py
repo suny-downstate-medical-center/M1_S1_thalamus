@@ -2,9 +2,9 @@
 """
 netParams.py 
 
-High-level specifications for M1 network model using NetPyNE
+High-level specifications for M1 + Th + S1 network model using NetPyNE
 
-Contributors: salvadordura@gmail.com
+Contributors: salvadordura@gmail.com, fernandodasilvaborges@gmail.com, joaovvitor@gmail.com
 """
 
 from netpyne import specs
@@ -12,12 +12,11 @@ import pickle, json
 
 netParams = specs.NetParams()   # object of class NetParams to store the network parameters
 
-netParams.version = 103
+netParams.version = 1
 
 try:
     from __main__ import cfg  # import SimConfig object with params from parent module
 except:
-    # from cfg_joao import cfg
     from cfg import cfg
 
 #------------------------------------------------------------------------------
@@ -40,10 +39,10 @@ netParams.shape = 'cylinder' # cylindrical (column-like) volume
 #------------------------------------------------------------------------------
 netParams.scaleConnWeight = 1.0 # Connection weight scale factor (default if no model specified)
 netParams.scaleConnWeightModels = {'HH_simple': 1.0, 'HH_reduced': 1.0, 'HH_full': 1.0} #scale conn weight factor for each cell model
-netParams.scaleConnWeightNetStims = 1.0 #0.5  # scale conn weight factor for NetStims
+netParams.scaleConnWeightNetStims = 1.0 # scale conn weight factor for NetStims
 netParams.defaultThreshold = 0.0 # spike threshold, 10 mV is NetCon default, lower it for all cells
-netParams.defaultDelay = 2.0 # default conn delay (ms)
-netParams.propVelocity = 500.0 # propagation velocity (um/ms)
+netParams.defaultDelay = 0.1 # default conn delay (ms)
+netParams.propVelocity = 300.0 # propagation velocity (um/ms)
 netParams.probLambda = 100.0  # length constant (lambda) for connection probability decay (um)
 netParams.defineCellShapes = True  # convert stylized geoms to 3d points
 
@@ -108,9 +107,6 @@ layer = {   '1':                [0.0,   0.1],
             'longM2':           [2.5,   2.6], 
             'longOC':           [2.6,   2.7]
             }  # normalized layer boundaries
-
-netParams.correctBorder = {'threshold': [cfg.correctBorderThreshold, cfg.correctBorderThreshold, cfg.correctBorderThreshold], 
-                        'yborders': [layer['2'][0], layer['5A'][0], layer['6'][0], layer['6'][1]]}  # correct conn border effect
 
 # Thalamocortical Relay cell model 
 netParams.loadCellParamsRule(label='sTC_cell', fileName=cfg.sTC_model)

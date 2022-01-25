@@ -1,9 +1,10 @@
 """
 cfg.py 
 
-Simulation configuration for M1 model (using NetPyNE)
+Simulation configuration for S1 model (using NetPyNE)
+This file has sim configs as well as specification for parameterized values in netParams.py 
 
-Contributors: salvadordura@gmail.com
+Contributors: salvadordura@gmail.com, fernandodasilvaborges@gmail.com, joaovvitor@gmail.com
 """
 
 from netpyne import specs
@@ -17,7 +18,7 @@ cfg = specs.SimConfig()
 #
 #------------------------------------------------------------------------------
 
-cfg.simType='gridTHM1'
+cfg.simType='M1THS1'
 cfg.coreneuron = False
 
 #------------------------------------------------------------------------------
@@ -47,6 +48,56 @@ cfg.checkErrorsVerbose = False
 cfg.rand123GlobalIndex = None
 
 #------------------------------------------------------------------------------
+#
+# Cells
+#
+#------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------  
+# S1 Cells
+#------------------------------------------------------------------------------  
+# Load 55 Morphological Names and Cell pop numbers -> L1:6 L23:10 L4:12 L5:13 L6:14
+# Load 207 Morpho-electrical Names used to import the cells from 'cell_data/' -> L1:14 L23:43 L4:46 L5:52 L6:52
+
+cfg.poptypeNumberS1 = 55 # max 55
+cfg.celltypeNumberS1 = 207 # max 207
+
+# TO DEBUG - import and simulate only the Cell soma (to study only the Net)
+cfg.reducedtestS1 = True    
+
+with open('../info/anatomy/S1-cells-distributions-Mouse.txt') as mtype_file:
+    mtype_content = mtype_file.read()       
+
+cfg.popNumberS1 = {}
+cfg.cellNumberS1 = {} 
+cfg.popLabelS1 = {} 
+popParamS1 = []
+cellParamS1 = []
+cfg.meParamLabelsS1 = {} 
+cfg.popLabelElS1 = {} 
+cfg.cellLabelS1 = {}
+
+for line in mtype_content.split('\n')[:-1]:
+    cellname, mtype, etype, n, m = line.split()
+    metype = mtype + '_' + etype[0:3]
+    cfg.cellNumberS1[metype] = int(n)
+    cfg.popLabelS1[metype] = mtype
+    cfg.popNumberS1[mtype] = int(m)
+    cfg.cellLabelS1[metype] = cellname
+
+    if mtype not in popParamS1:
+        popParamS1.append(mtype)
+        cfg.popLabelElS1[mtype] = [] 
+               
+    cfg.popLabelElS1[mtype].append(metype)
+    
+    cellParamS1.append(mtype + '_' + etype[0:3])
+    
+cfg.S1pops = popParamS1[0:55]
+cfg.S1cells = cellParamS1[0:207] # pop used in conns 
+
+#------------------------------------------------------------------------------
 # Recording 
 #------------------------------------------------------------------------------
 allpops = ['NGF1', 	'IT2', 	'PV2', 	 'SOM2',  'VIP2', 	'NGF2',
@@ -58,6 +109,9 @@ allpops = ['NGF1', 	'IT2', 	'PV2', 	 'SOM2',  'VIP2', 	'NGF2',
 			'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
 			'mt_RTN',	'ss_RTN_o',		'ss_RTN_m',		'ss_RTN_i'
 	   ]
+
+for metype in cfg.S1cells:
+	allpops.append(metype)
 
 cfg.cellsrec = 1
 if cfg.cellsrec == 0:  cfg.recordCells = ['all'] # record all cells
@@ -96,110 +150,22 @@ cfg.saveCellConns = False
 # Analysis and plotting 
 #------------------------------------------------------------------------------
 with open('../cells/popColors.pkl', 'rb') as fileObj: popColors = pickle.load(fileObj)['popColors']
-# cfg.analysis['plotRaster'] = {'include': allpops, 'orderBy': ['pop', 'y'], 'timeRange': [0,cfg.duration], 'saveFig': True, 'showFig': False, 'labels': 'overlay', 'popRates': True, 'orderInverse': True, 'popColors': popColors, 'figSize': (12,10), 'lw': 0.3, 'markerSize':3, 'marker': '.', 'dpi': 300} 
+
 cfg.analysis['plotRaster'] = {	'include': allpops, 			'orderBy': ['pop', 'y'], 
 								'timeRange': [0,cfg.duration], 	'saveFig': True, 			'showFig': False, 
 								'labels': 'overlay', 			'popRates': True, 			'orderInverse': True, 
 								'popColors': popColors, 		'figSize': (24,20), 		'lw': 0.3, 
 								'markerSize':2, 				'marker': '.', 				'dpi': 300} 
 
-# cfg.analysis['plotConn'] = {'includePre': allpops, 
-# 							'includePost': allpops, 
-# 							'feature': 'weight', 
-# 							# 'feature': 'strength', 
-# 							# 'feature': 'probability', 
-# 							'figSize': (20,20), 
-# 							'groupBy': 'pop', \
-#  							# 'graphType': 'bar', 
-# 							'synOrConn': 'conn', 
-# 							'synMech': None, 
-# 							'saveData': None, 
-# 							'saveFig': 1, 
-# 							'showFig': 0
-# 							}
-
-# cfg.analysis['plotSpikeHist'] = {'include': ['IT2','IT4','IT5A','IT5B','PT5B','IT6','CT6'], 'timeRange': [1000,6000], 'yaxis':'rate', 'binSize':5, 'graphType':'bar',
-#  								'saveFig': True, 'showFig': False, 'popColors': popColors, 'figSize': (10,4), 'dpi': 300} 
-
-# cfg.analysis['plotLFP'] = {'plots': ['spectrogram'], 'figSize': (6,10), 'timeRange': [1000,6000], 'NFFT': 256*20, 'noverlap': 128*20, 'nperseg': 132*20, 
-# 							'saveFig': True, 'showFig':False} 
-
-
 cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.duration], 'ylim': [-100,55],'overlay': False, 'oneFigPer': 'cell', 'figSize': (10,4), 'saveFig': True, 'showFig': False} 
 
-#cfg.analysis['plotShape'] = {'includePre': ['all'], 'includePost': [('PT5B',100)], 'cvar':'numSyns','saveFig': True, 'showFig': False, 'includeAxon': False}
-#cfg.analysis['plotConn'] = {'include': ['allCells']}
-# cfg.analysis['calculateDisynaptic'] = True
-
-
-# cfg.analysis['plotConn'] = {'includePre': allpops, 
-# 							'includePost': allpops, 
-# 							'feature': 'probability', 
-# 							'figSize': (20,20), 
-# 							'groupBy': 'pop', \
-#  							# 'graphType': 'bar', 
-# 							'synOrConn': 'conn', 
-# 							'synMech': None, 
-# 							'saveData': None, 
-# 							'saveFig': 1, 
-# 							'showFig': 0
-# 							}
-
-# cfg.analysis['plotConn'] = {'includePre': allpops, 
-# 							'includePost': allpops, 
-# 							'feature': 'weight', 
-# 							'figSize': (20,20), 
-# 							'groupBy': 'pop', \
-#  							# 'graphType': 'bar', 
-# 							'synOrConn': 'conn', 
-# 							'synMech': None, 
-# 							'saveData': None, 
-# 							'saveFig': 1, 
-# 							'showFig': 0
-# 							}
-
-# cfg.analysis['plot2Dnet']   = { 'saveFig': True, 'showConns':True, 'figSize': (20,15)}   # Plot 2D net cells and connections
-
-
-#------------------------------------------------------------------------------
-# Cells
-#------------------------------------------------------------------------------
-cfg.cellmod =  {'IT2': 'HH_reduced',
-				'IT4': 'HH_reduced',
-				'IT5A': 'HH_full',
-				'IT5B': 'HH_reduced',
-				'PT5B': 'HH_full',
-				'IT6': 'HH_reduced',
-				'CT6': 'HH_reduced'}
-
-cfg.ihModel = 'migliore'  # ih model
-cfg.ihGbar = 1.0  # multiplicative factor for ih gbar in PT cells - Joao 2021-12-14 - Restored the value from the M1 master branch
-# cfg.ihGbar = 0.75  # multiplicative factor for ih gbar in PT cells //// REVERTED CHANGE - Github commit comment: actionpotential  actionpotential, 9 months ago   (March 11th, 2021 12:17pm) - Inserted parameters from best trial (Trial_188)
-cfg.ihGbarZD = None # multiplicative factor for ih gbar in PT cells
-cfg.ihGbarBasal = 1.0 # 0.1 # multiplicative factor for ih gbar in PT cells
-cfg.ihlkc = 0.2 # ih leak param (used in Migliore)
-cfg.ihlkcBasal = 1.0
-cfg.ihlkcBelowSoma = 0.01
-cfg.ihlke = -86  # ih leak param (used in Migliore)
-cfg.ihSlope = 14*2
-
-cfg.removeNa = False  # simulate TTX; set gnabar=0s
-cfg.somaNa = 5
-cfg.dendNa = 0.3
-cfg.axonNa = 7
-cfg.axonRa = 0.005
-
-cfg.gpas = 0.5  # multiplicative factor for pas g in PT cells
-cfg.epas = 0.9  # multiplicative factor for pas e in PT cells
 
 #------------------------------------------------------------------------------
 # Synapses
 #------------------------------------------------------------------------------
 
-cfg.addIntraThalamicConn = 0  
 cfg.intraThalamicGain = 1.0
 cfg.addTopographicalConn = 1
-cfg.removeWeightNorm = 0 
 
 # Used for NetStim and GroupNetStim implementation 
 cfg.synWeightFractionEE = [0.5, 0.5] # E->E AMPA to NMDA ratio
@@ -214,6 +180,38 @@ cfg.AMPATau2Factor = 1.0
 
 cfg.addSynMechs = True
 cfg.distributeSynsUniformly = True
+
+#------------------------------------------------------------------------------
+# Connectivity
+#------------------------------------------------------------------------------
+## S1->S1
+cfg.addConnS1S1 = True
+#------------------------------------------------------------------------------
+## Th->S1
+cfg.connect_Th_S1 = True
+cfg.TC_S1 = {}
+cfg.TC_S1['VPL_sTC'] = True
+cfg.TC_S1['VPM_sTC'] = True
+cfg.TC_S1['POm_sTC_s1'] = True
+
+#------------------------------------------------------------------------------
+## S1->Th 
+cfg.connect_S1_Th = True
+
+cfg.connect_S1_RTN = True
+cfg.convergence_S1_RTN         = 30.0  # dist_2D<R
+cfg.connWeight_S1_RTN       = 0.500
+
+cfg.connect_S1_TC = True
+cfg.convergence_S1_TC         = 30.0  # dist_2D<R
+cfg.connWeight_S1_TC       = 0.250
+
+
+#------------------------------------------------------------------------------
+## Cortico-cortical connections - 2022_01_21
+
+cfg.connect_M1_S1		= 1
+cfg.connect_S1_M1		= 1
 
 #------------------------------------------------------------------------------
 # Network 
@@ -232,9 +230,7 @@ cfg.M1_pops=[	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2',
 				'PT5B', 'SOM5B', 'PV5B', 'VIP5B', 'NGF5B', 
 				'IT6', 'CT6', 'SOM6', 'PV6', 'VIP6', 'NGF6',]
 
-cfg.S1_pops=[	
-				# ADD S1 POPS HERE
-			]
+cfg.S1_pops= cfg.S1cells
 				
 cfg.Th_pops=[	
 				'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
@@ -245,8 +241,6 @@ cfg.Th_pops=[
 cfg.removeM1=0 # removes M1 pops
 cfg.removeS1=0 # removes M1 pops
 cfg.removeTh=0 # removes Th pops
-# cfg.scaleDensity = 0.02 # 1.0
-# cfg.scaleDensity = 0.5 # 1.0
 cfg.scaleDensity = 1.0 # 1.0
 
 cfg.addThalSs=1
@@ -273,7 +267,8 @@ cfg.scale = 1.0
 cfg.sizeY = 1350.0
 cfg.sizeX = 300.0
 cfg.sizeZ = 300.0
-cfg.correctBorderThreshold = 150.0
+
+cfg.sizeYS1 = 1378.8
 
 cfg.L5BrecurrentFactor = 1.0
 cfg.ITinterFactor = 1.0
@@ -288,15 +283,6 @@ cfg.IIGain = 1.0
 cfg.EICellTypeGain= {'PV': 2.588295268601415, 'SOM': 0.6568380849927258, 'VIP': 1.4582025338644486, 'NGF': 3.355557614291127}
 
 cfg.IEdisynapticBias = None  # increase prob of I->Ey conns if Ex->I and Ex->Ey exist 
-
-# # Don paramters
-# cfg.yConnFactor             = 10
-# cfg.connProb_RTN_RTN        = 1.0
-# cfg.connWeight_RTN_RTN      = 2.0
-# cfg.connProb_TC_RTN         = 0.75
-# cfg.connWeight_TC_RTN       = 1.5
-# cfg.connProb_RTN_TC         = 0.75
-# cfg.connWeight_RTN_TC       = 0.25
 
 # t_allpops joao parameters
 cfg.yConnFactor             = 10
@@ -316,23 +302,6 @@ cfg.sTC_model = '../cells/sTC_jv_00.json'
 
 cfg.nothing=False
 cfg.addBicuculline = False
-
-#------------------------------------------------------------------------------
-## (deprecated) E->I gains 
-cfg.EPVGain 	= 1.0
-cfg.ESOMGain 	= 1.0
-
-#------------------------------------------------------------------------------
-## (deprecated) I->E gains
-cfg.PVEGain 	= 1.0
-cfg.SOMEGain 	= 1.0
-
-#------------------------------------------------------------------------------
-## (deprecated) I->I gains
-cfg.PVSOMGain 	= None #0.25
-cfg.SOMPVGain 	= None #0.25
-cfg.PVPVGain 	= None # 0.75
-cfg.SOMSOMGain 	= None #0.75
 
 #------------------------------------------------------------------------------
 ## I->E/I layer weights (L2/3+4, L5, L6)
