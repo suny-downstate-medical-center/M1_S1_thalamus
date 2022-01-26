@@ -9,6 +9,10 @@ Contributors: salvadordura@gmail.com, fernandodasilvaborges@gmail.com, joaovvito
 
 from netpyne import specs
 import pickle, json
+import os
+import numpy as np
+import pandas as pd
+
 
 netParams = specs.NetParams()   # object of class NetParams to store the network parameters
 
@@ -108,24 +112,47 @@ layer = {   '1':                [0.0,   0.1],
             'longOC':           [2.6,   2.7]
             }  # normalized layer boundaries
 
+#------------------------------------------------------------------------------
 # Thalamocortical Relay cell model 
 netParams.loadCellParamsRule(label='sTC_cell', fileName=cfg.sTC_model)
 netParams.cellParams['sTC_cell']['conds']={} 
-
-# #     # --- VL - Inh --- #
-# netParams.loadCellParamsRule(label='sTI_cell', fileName='../cells/A1_sTI.json')
-# netParams.cellParams['sTI_cell']['conds']={}
 
 # Reticular Nucleus cell model
 netParams.loadCellParamsRule(label='sRE_cell', fileName=cfg.sRE_model)
 netParams.cellParams['sRE_cell']['conds']={}
 
-## CT5A cells  
-netParams.loadCellParamsRule(label='CT5A_reduced', fileName='../cells/CT5A_reduced_cellParams.json')
-netParams.cellParams['CT5A_reduced']['conds']={}
+#------------------------------------------------------------------------------
+## M1 rules 
+cfg.cellmod =  {'IT2': 'HH_reduced',
+				'IT4': 'HH_reduced',
+				'IT5A': 'HH_full',
+				'IT5B': 'HH_reduced',
+				'PT5B': 'HH_full',
+				'IT6': 'HH_reduced',
+				'CT6': 'HH_reduced'}
+
+cfg.ihModel = 'migliore'  # ih model
+cfg.ihGbar = 1.0  # multiplicative factor for ih gbar in PT cells - Joao 2021-12-14 - Restored the value from the M1 master branch
+# cfg.ihGbar = 0.75  # multiplicative factor for ih gbar in PT cells //// REVERTED CHANGE - Github commit comment: actionpotential  actionpotential, 9 months ago   (March 11th, 2021 12:17pm) - Inserted parameters from best trial (Trial_188)
+cfg.ihGbarZD = None # multiplicative factor for ih gbar in PT cells
+cfg.ihGbarBasal = 1.0 # 0.1 # multiplicative factor for ih gbar in PT cells
+cfg.ihlkc = 0.2 # ih leak param (used in Migliore)
+cfg.ihlkcBasal = 1.0
+cfg.ihlkcBelowSoma = 0.01
+cfg.ihlke = -86  # ih leak param (used in Migliore)
+cfg.ihSlope = 14*2
+
+cfg.removeNa = False  # simulate TTX; set gnabar=0s
+cfg.somaNa = 5
+cfg.dendNa = 0.3
+cfg.axonNa = 7
+cfg.axonRa = 0.005
+
+cfg.gpas = 0.5  # multiplicative factor for pas g in PT cells
+cfg.epas = 0.9  # multiplicative factor for pas e in PT cells
 
 #------------------------------------------------------------------------------
-## Load cell rules previously saved using netpyne format
+
 cellParamLabels = ['IT2_reduced', 'IT4_reduced', 'IT5A_reduced', 'IT5B_reduced', 'PT5B_reduced',
     'IT6_reduced', 'CT6_reduced', 'SOM_reduced', 'IT5A_full']#  'PV_reduced', 'VIP_reduced', 'NGF_reduced','PT5B_full'] #  # list of cell rules to load from file
 loadCellParams  = cellParamLabels
@@ -133,10 +160,6 @@ saveCellParams  = False #True
 
 for ruleLabel in loadCellParams:
     netParams.loadCellParamsRule(label=ruleLabel, fileName='../cells/' + ruleLabel + '_cellParams.pkl')
-
-#------------------------------------------------------------------------------
-# Specification of cell rules not previously loaded
-# Includes importing from hoc template or python class, and setting additional params
 
 #------------------------------------------------------------------------------
 # Reduced cell model params (6-comp) 
@@ -232,18 +255,6 @@ if 'IT5A_full' not in loadCellParams:
     cellRule['secLists']['apicdend'] = [sec for sec in cellRule.secs if ('apic' in sec)] # basal+apical
     cellRule['secLists']['spiny'] = [sec for sec in cellRule['secLists']['alldend'] if sec not in ['apic_0', 'apic_1']]
     if saveCellParams: netParams.saveCellParamsRule(label='IT5A_full', fileName='../cells/IT5A_full_cellParams.pkl')
-
-#------------------------------------------------------------------------------
-## IT5B full cell model params (700+ comps) - not used
-# if 'IT5B_full' not in loadCellParams:
-#   cellRule = netParams.importCellParams(label='IT5B_full', conds={'cellType': 'IT', 'cellModel': 'HH_full', 'ynorm': layer['5B']},
-#     fileName='cells/ITcell.py', cellName='ITcell', cellArgs={'params': 'BS1579'}, somaAtOrigin=True)
-#   netParams.addCellParamsSecList(label='IT5B_full', secListName='perisom', somaDist=[0, 50])  # sections within 50 um of soma
-#   cellRule['secLists']['alldend'] = [sec for sec in cellRule.secs if ('dend' in sec or 'apic' in sec)] # basal+apical
-#   cellRule['secLists']['apicdend'] = [sec for sec in cellRule.secs if ('apic' in sec)] # basal+apical
-#   cellRule['secLists']['spiny'] = [sec for sec in cellRule['secLists']['alldend'] if sec not in ['apic_0', 'apic_1']]
-#   netParams.addCellParamsWeightNorm('IT5B_full', 'conn/IT_full_BS1579_weightNorm.pkl')
-#   netParams.saveCellParamsRule(label='IT5B_full', fileName='cells/IT5B_full_cellParams.pkl')
 
 #------------------------------------------------------------------------------
 ## PV cell params (3-comp)
@@ -390,6 +401,77 @@ if cfg.addThalSs or cfg.addThalMt:
     netParams.popParams['ss_RTN_o']     =   {'cellModel': 'HH_full', 'cellType': 'sRE_cell',  'yRange': t_layer['ss_RTN_o'],     'xRange':[xmin['ss_RTN_o'],  xmax['ss_RTN_o']],   'zRange':[zmin,zmax],  'density': thal_density[('thal','sRE')][5]}   
     netParams.popParams['ss_RTN_m']     =   {'cellModel': 'HH_full', 'cellType': 'sRE_cell',  'yRange': t_layer['ss_RTN_m'],     'xRange':[xmin['ss_RTN_m'],  xmax['ss_RTN_m']],   'zRange':[zmin,zmax],  'density': thal_density[('thal','sRE')][5]}
     netParams.popParams['ss_RTN_i']     =   {'cellModel': 'HH_full', 'cellType': 'sRE_cell',  'yRange': t_layer['ss_RTN_i'],     'xRange':[xmin['ss_RTN_i'],  xmax['ss_RTN_i']],   'zRange':[zmin,zmax],  'density': thal_density[('thal','sRE')][5]}
+
+
+
+#------------------------------------------------------------------------------
+## S1 cells property rules
+#------------------------------------------------------------------------------
+
+cellModelsS1 = ['HH_full']
+EpopsS1 = ['L23_PC', 'L4_PC', 'L4_SS', 'L4_SP', 
+             'L5_TTPC1', 'L5_TTPC2', 'L5_STPC', 'L5_UTPC',
+             'L6_TPC_L1', 'L6_TPC_L4', 'L6_BPC', 'L6_IPC', 'L6_UTPC']
+IpopsS1 = []
+for popName in cfg.S1pops:
+    if popName not in EpopsS1:
+        IpopsS1.append(popName)
+
+layerS1 = {'1':[0.0, 0.089], '2': [0.089,0.159], '3': [0.159,0.286], '23': [0.089,0.286], '4':[0.286,0.421], 
+'5': [0.421,0.684], '6': [0.684,1.0]}  # normalized layer boundaries
+
+for cellName in cfg.S1cells:
+	layernumber = cellName[1:2]
+	if layernumber == '2':
+		netParams.popParams[cellName] = {'cellType': cellName, 'cellModel': 'HH_full', 'ynormRange': layerS1['23'], 'xRange':[300.0,600.0], 
+                                        'numCells': int(np.ceil(cfg.scaleDensity*cfg.cellNumberS1[cellName])), 'diversity': True}
+	else:
+		netParams.popParams[cellName] = {'cellType': cellName, 'cellModel': 'HH_full', 'ynormRange': layerS1[layernumber], 'xRange':[300.0,600.0], 
+                                        'numCells': int(np.ceil(cfg.scaleDensity*cfg.cellNumberS1[cellName])), 'diversity': True}
+
+for cellName in cfg.S1cells:
+    
+    if cfg.cellNumberS1[cellName] < 5:
+        morphoNumbers = cfg.cellNumberS1[cellName]
+    else:
+        morphoNumbers = 5
+    
+    cellFraction = 1.0/morphoNumbers
+    
+    for morphoNumber in range(morphoNumbers):
+        cellMe = cfg.cellLabelS1[cellName] + '_' + str(morphoNumber+1)
+        
+        netParams.loadCellParamsRule(label = cellMe, fileName = 'cellsS1/' + cellMe + '_cellParams.json')   
+        cellRule = {'conds': {'cellType': cellName}, 'diversityFraction': cellFraction, 'secs': {}}  # cell rule dict
+        cellRule['secs'] = netParams.cellParams[cellMe]['secs']     
+        cellRule['conds'] = netParams.cellParams[cellMe]['conds']    
+        cellRule['conds']['cellType'] = cellName
+        cellRule['globals'] = netParams.cellParams[cellMe]['globals']       
+        cellRule['secLists'] = netParams.cellParams[cellMe]['secLists']      
+        cellRule['secLists']['spiny'] = {}
+        cellRule['secLists']['spinyEE'] = {}
+        nonSpiny = ['axon_0', 'axon_1']
+        cellRule['secLists']['spiny'] = [sec for sec in cellRule['secLists']['all'] if sec not in nonSpiny]
+        nonSpinyEE = ['axon_0', 'axon_1', 'soma']
+        cellRule['secLists']['spinyEE'] = [sec for sec in cellRule['secLists']['all'] if sec not in nonSpinyEE]
+        netParams.cellParams[cellMe] = cellRule   # add dict to list of cell params  
+
+        #-----------------------------------------------------------------------------------#
+        if cfg.reducedtestS1:
+            cellRule = {'conds': {'cellType': cellName}, 'diversityFraction': cellFraction, 'secs': {}}  # cell rule dict
+            cellRule['conds'] = netParams.cellParams[cellMe]['conds']    
+            cellRule['secs'] = {}
+            cellRule['secs']['soma'] = netParams.cellParams[cellMe]['secs']['soma']
+            cellRule['secLists'] = {}
+            cellRule['secLists']['spiny'] = ['soma']
+            cellRule['secLists']['spinyEE'] = ['soma']
+            cellRule['secLists']['all'] = ['soma']
+            cellRule['secLists']['basal'] = ['soma']   
+            cellRule['secLists']['apical'] = ['soma']    
+            netParams.cellParams[cellMe] = cellRule   # add dict to list of cell params   
+        #-----------------------------------------------------------------------------------#
+       
+
 
 if cfg.singleCellPops:
     for pop in netParams.popParams.values(): pop['numCells'] = 1
@@ -1200,66 +1282,6 @@ if cfg.addSubConn:
 #------------------------------------------------------------------------------
 netParams.description = """ 
 - M1 net, 6 layers, 7 cell types 
-- NCD-based connectivity from  Weiler et al. 2008; Anderson et al. 2010; Kiritani et al. 2012; 
-  Yamawaki & Shepherd 2015; Apicella et al. 2012
-- Parametrized version based on Sam's code
-- Updated cell models and mod files
-- Added parametrized current inputs
-- Fixed bug: prev was using cell models in /usr/site/nrniv/local/python/ instead of cells 
-- Use 5 synsperconn for 5-comp cells (HH_reduced); and 1 for 1-comp cells (HH_simple)
-- Fixed bug: made global h params separate for each cell model
-- Fixed v_init for different cell models
-- New IT cell with same geom as PT
-- Cleaned cfg and moved background inputs here
-- Set EIGain and IEGain for each inh cell type
-- Added secLists for PT full
-- Fixed reduced CT (wrong vinit and file)
-- Added subcellular conn rules to distribute synapses
-- PT full model soma centered at 0,0,0 
-- Set cfg seeds here to ensure they get updated
-- Added PVSOMGain and SOMPVGain
-- PT subcellular distribution as a cfg param
-- Cylindrical volume
-- DefaultDelay (for local conns) = 2ms
-- Added long range connections based on Yamawaki 2015a,b; Suter 2015; Hooks 2013; Meyer 2011
-- Updated cell densities based on Tsai 2009; Lefort 2009; Katz 2011; Wall 2016; 
-- Separated PV and SOM of L5A vs L5B
-- Fixed bugs in local conn (PT, PV5, SOM5, L6)
-- Added perisom secList including all sections 50um from soma
-- Added subcellular conn rules (for both full and reduced models)
-- Improved cell models, including PV and SOM fI curves
-- Improved subcell conn rules based on data from Suter15, Hooks13 and others
-- Adapted Bdend L of reduced cell models
-- Made long pop rates a cfg param
-- Set threshold to 0.0 mV
-- Parametrized I->E/I layer weights
-- Added missing subconn rules (IT6->PT; S1,S2,cM1->IT/CT; long->SOM/PV)
-- Added threshold to weightNorm (PT threshold=10x)
-- weightNorm threshold as a cfg parameter
-- Separate PV->SOM, SOM->PV, SOM->SOM, PV->PV gains 
-- Conn changes: reduced IT2->IT4, IT5B->CT6, IT5B,6->IT2,4,5A, IT2,4,5A,6->IT5B; increased CT->PV6+SOM6
-- Parametrized PT ih gbar
-- Added IFullGain parameter: I->E gain for full detailed cell models
-- Replace PT ih with Migliore 2012
-- Parametrized ihGbar, ihGbarBasal, dendNa, axonNa, axonRa, removeNa
-- Replaced cfg list params with dicts
-- Parametrized ihLkcBasal and AMPATau2Factor
-- Fixed synMechWeightFactor
-- Parametrized PT ih slope
-- Added disynapticBias to I->E (Yamawaki&Shepherd,2015)
-- Fixed E->CT bin 0.9-1.0
-- Replaced GABAB with exp2syn and adapted synMech ratios
-- Parametrized somaNa
-- Added ynorm condition to NetStims
-- Added option to play back recorded spikes into long-range inputs
-- Fixed Bdend pt3d y location
-- Added netParams.convertCellShapes = True to convert stylized geoms to 3d points
-- New layer boundaries, cell densities, conn, FS+SOM L4 grouped with L2/3, low cortical input to L4
-- v53: Increased exc->L4 based on Yamawaki 2015 fig 5
-- v54: Moved from NetPyNE v0.7.9 to v0.9.1
-- v55: Added VIP and NGF cells; updated I->E/I conn (cell-type and layer specific; interlaminar) and long->I
-- v100: New numbering to separate from old model; dt=0.025; fixed L1 density
-- v101: Parameterized long-range weights for each pop to use this in batch evol
-- v102: Fixed bug in I->IT and I->VIP conn due to cell model; renamed _simple to _reduced 
-- v103: Increased E->NGF/VIP and decreased default I->I; increased NGF weightNorm x1.5
+- based in  M1 v103
+- v1_batch0: S1+M1+Th
 """

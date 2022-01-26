@@ -24,7 +24,7 @@ cfg.coreneuron = False
 #------------------------------------------------------------------------------
 # Run parameters
 #------------------------------------------------------------------------------
-cfg.duration = 5.0*1e3
+cfg.duration = 1.0*1e2
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
 cfg.hParams = {'celsius': 34, 'v_init': -80}  
@@ -159,6 +159,7 @@ cfg.analysis['plotRaster'] = {	'include': allpops, 			'orderBy': ['pop', 'y'],
 
 cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.duration], 'ylim': [-100,55],'overlay': False, 'oneFigPer': 'cell', 'figSize': (10,4), 'saveFig': True, 'showFig': False} 
 
+cfg.analysis['plot2Dnet']   = {'include': allpops, 'saveFig': True, 'showConns': False, 'figSize': (24,24), 'fontSize':16}   # Plot 2D cells xy
 
 #------------------------------------------------------------------------------
 # Synapses
@@ -210,14 +211,13 @@ cfg.connWeight_S1_TC       = 0.250
 #------------------------------------------------------------------------------
 ## Cortico-cortical connections - 2022_01_21
 
-cfg.connect_M1_S1		= 1
-cfg.connect_S1_M1		= 1
+cfg.connect_M1_S1 = 1
+cfg.connect_S1_M1 = 1
 
 #------------------------------------------------------------------------------
 # Network 
 #------------------------------------------------------------------------------
 cfg.singleCellPops = 0  # Create pops with 1 single cell (to debug)
-cfg.singlePop = 0 
 cfg.weightNorm = 1  # use weight normalization
 cfg.weightNormThreshold = 4.0  # weight normalization factor threshold
 
@@ -260,7 +260,6 @@ cfg.connect_TC_CTX      = 1
 cfg.connect_CTX_TC      = 1
 # ------------------------------- #
 
-
 cfg.allowConnsWithWeight0 = True
 cfg.allowSelfConns = False
 cfg.scale = 1.0
@@ -281,8 +280,6 @@ cfg.IIGain = 1.0
 
 ## E->I by target cell type
 cfg.EICellTypeGain= {'PV': 2.588295268601415, 'SOM': 0.6568380849927258, 'VIP': 1.4582025338644486, 'NGF': 3.355557614291127}
-
-cfg.IEdisynapticBias = None  # increase prob of I->Ey conns if Ex->I and Ex->Ey exist 
 
 # t_allpops joao parameters
 cfg.yConnFactor             = 10
@@ -307,10 +304,6 @@ cfg.addBicuculline = False
 ## I->E/I layer weights (L2/3+4, L5, L6)
 cfg.IEweights = [0.5175411466399648, 0.7434834613857577, 1.0101817500320014]
 cfg.IIweights = [1.449601171855032, 0.7831317900654744, 1.141724408254077]
-
-cfg.IPTGain = 1.0
-cfg.IFullGain = 1.0  # deprecated
-
 #------------------------------------------------------------------------------
 # Subcellular distribution
 #------------------------------------------------------------------------------
@@ -325,8 +318,6 @@ factor = 1
 cfg.weightLong = {	
 					'POm_sTC_m1': 0.0*factor, 
 					'VL_sTC': 0.0*factor, 
-					# 'POm_sTC_m1': 0.5*factor, 
-					# 'VL_sTC': 0.5*factor, 
 					'S1': 0.5*factor, 
 					'S2': 0.5*factor, 
 					'cM1': 0.5*factor, 
@@ -340,21 +331,9 @@ cfg.ratesLong = {	'POm_sTC_m1': [0,0.005],
 					'cM1': [0,5], 
 					'M2': [0,5], 
 					'OC': [0,5]}
-# cfg.weightLong = {'POm_sTC_m1': 0.5*factor, 'VL_sTC': 0.5*factor, 'S1': 0.5*factor, 'S2': 0.5*factor, 'cM1': 0.5*factor, 'M2': 0.5*factor, 'OC': 0.5*factor}  # corresponds to unitary connection somatic EPSP (mV)
-# cfg.startLong = 0  # start at 0 ms
-# cfg.ratesLong = {'POm_sTC_m1': [0,0.005], 'VL_sTC': [0,0.005], 'S1': [0,5], 'S2': [0,5], 'cM1': [0,5], 'M2': [0,5], 'OC': [0,5]}
 
-# cfg.weightLong_thalM1=0.01
 cfg.weightLong_thalM1=0.5
-
 cfg.weightLong_M1thal=0.5
-
-# cfg.weightLong_thalM1 = {	
-# 							# 'POm_sTC_m1': 0.0*factor, 
-# 							# 'VL_sTC': 0.0*factor, 
-# 							'POm_sTC_m1': 0.5*factor, 
-# 							'VL_sTC': 0.5*factor, 
-							# }
 
 cfg.ratesLong_thalM1 = {	
 							'POm_sTC_m1': [0,0.005], 
