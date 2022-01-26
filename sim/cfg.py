@@ -19,7 +19,7 @@ cfg = specs.SimConfig()
 #------------------------------------------------------------------------------
 
 cfg.simType='M1THS1'
-cfg.coreneuron = False
+cfg.coreneuron = True
 
 #------------------------------------------------------------------------------
 # Run parameters
@@ -152,7 +152,7 @@ cfg.saveDataInclude = ['simData', 'simConfig', 'netParams', 'net'] ## , 'simConf
 cfg.backupCfgFile = None 		##  
 cfg.gatherOnlySimData = False	##  
 cfg.saveCellSecs = False			
-cfg.saveCellConns = False	
+cfg.saveCellConns = True	
 
 #------------------------------------------------------------------------------
 # Analysis and plotting 
@@ -185,7 +185,6 @@ cfg.synWeightFractionSOME = [0.9, 0.1] # SOM -> E GABAASlow to GABAB ratio
 cfg.synWeightFractionNGF = [0.5, 0.5] # NGF GABAA to GABAB ratio
 
 cfg.synsperconn = {'HH_full': 5, 'HH_reduced': 1, 'HH_simple': 1}
-cfg.AMPATau2Factor = 1.0
 
 cfg.addSynMechs = True
 cfg.distributeSynsUniformly = True
@@ -280,7 +279,7 @@ cfg.sizeY = 1350.0
 cfg.sizeX = 300.0
 cfg.sizeZ = 300.0
 
-cfg.sizeYS1 = 1378.8
+cfg.sizeYS1 = 1378.8 # resized to 1350.0=M1
 
 cfg.L5BrecurrentFactor = 1.0
 cfg.ITinterFactor = 1.0
@@ -310,7 +309,6 @@ cfg.connLenghtConst = 200
 cfg.sRE_model = '../cells/sRE_jv_00.json'
 cfg.sTC_model = '../cells/sTC_jv_00.json'
 
-cfg.nothing=False
 cfg.addBicuculline = False
 
 #------------------------------------------------------------------------------

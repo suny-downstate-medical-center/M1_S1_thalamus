@@ -225,7 +225,7 @@ if 'PT5B_full' not in loadCellParams:
                 mech['gbar'] = [g*cfg.ihGbar for g in mech['gbar']] if isinstance(mech['gbar'],list) else mech['gbar']*cfg.ihGbar
                 if cfg.ihModel == 'migliore':   
                     mech['clk'] = cfg.ihlkc  # migliore's shunt current factor
-                    mech['elk'] = cfg.ihlke  # migliore's shunt current reversal potential
+                    mech['elk'] = cfg.ihlke  # migliore's _S1shunt current reversal potential
                 if secName.startswith('dend'): 
                     mech['gbar'] *= cfg.ihGbarBasal  # modify ih conductance in soma+basal dendrites
                     mech['clk'] *= cfg.ihlkcBasal  # modify ih conductance in soma+basal dendrites
@@ -529,7 +529,7 @@ for syntype in syntypes:
         dfS6.loc[syntype][name] = parameters_syn[name,syntype]
 
 #------------------------------------------------------------------------------
-# Synaptic mechanism parameters
+# Synaptic mechanism parameters with STP
 #------------------------------------------------------------------------------
 #  mods from S1 BBP - deterministic version
 for syntype in syntypes:
@@ -594,13 +594,32 @@ netParams.synMechParams['TC:S1'] = {'mod': 'DetAMPANMDA',
                                           'tau_d_NMDA': 43.0}
 
 
-# Spont and BG
-netParams.synMechParams['AMPA'] = {'mod':'MyExp2SynBB', 'tau1': 0.2, 'tau2': 1.74, 'e': 0}
-netParams.synMechParams['NMDA'] = {'mod': 'MyExp2SynNMDABB', 'tau1NMDA': 0.29, 'tau2NMDA': 43, 'e': 0}
-netParams.synMechParams['GABAA'] = {'mod':'MyExp2SynBB', 'tau1': 0.2, 'tau2': 8.3, 'e': -80}
-netParams.synMechParams['GABAB'] = {'mod':'MyExp2SynBB', 'tau1': 3.5, 'tau2': 260.9, 'e': -93} 
-ESynMech = ['AMPA', 'NMDA']
-ISynMech = ['GABAA', 'GABAB']
+#------------------------------------------------------------------------------
+# Synaptic mechanism parameters
+#------------------------------------------------------------------------------
+netParams.synMechParams['NMDA']             = {'mod': 'MyExp2SynNMDABB',    'tau1NMDA': 15,     'tau2NMDA': 150,                'e': 0}
+netParams.synMechParams['AMPA']             = {'mod': 'MyExp2SynBB',        'tau1': 0.05,       'tau2': 5.3,                    'e': 0}
+netParams.synMechParams['GABAB']            = {'mod': 'MyExp2SynBB',        'tau1': 3.5,        'tau2': 260.9,                  'e': -93} 
+netParams.synMechParams['GABAA']            = {'mod': 'MyExp2SynBB',        'tau1': 0.07,       'tau2': 18.2,                   'e': -80}
+netParams.synMechParams['GABAA_VIP']        = {'mod': 'MyExp2SynBB',        'tau1': 0.3,        'tau2': 6.4,                    'e': -80}  # Pi et al 2013
+netParams.synMechParams['GABAASlow']        = {'mod': 'MyExp2SynBB',        'tau1': 2,          'tau2': 100,                    'e': -80}
+netParams.synMechParams['GABAASlowSlow']    = {'mod': 'MyExp2SynBB',        'tau1': 200,        'tau2': 400,                    'e': -80}
+
+ESynMech    = ['AMPA', 'NMDA']
+SOMESynMech = ['GABAASlow','GABAB']
+SOMISynMech = ['GABAASlow']
+PVSynMech   = ['GABAA']
+VIPSynMech  = ['GABAA_VIP']
+NGFSynMech  = ['GABAA', 'GABAB']
+
+
+# Spont and BG_S1
+netParams.synMechParams['NMDA_S1'] = {'mod': 'MyExp2SynNMDABB', 'tau1NMDA': 0.29, 'tau2NMDA': 43, 'e': 0}
+netParams.synMechParams['AMPA_S1'] = {'mod':'MyExp2SynBB', 'tau1': 0.2, 'tau2': 1.74, 'e': 0}
+netParams.synMechParams['GABAA_S1'] = {'mod':'MyExp2SynBB', 'tau1': 0.2, 'tau2': 8.3, 'e': -80}
+netParams.synMechParams['GABAB_S1'] = {'mod':'MyExp2SynBB', 'tau1': 3.5, 'tau2': 260.9, 'e': -93} 
+ESynMech_S1 = ['AMPA_S1', 'NMDA_S1']
+ISynMech_S1 = ['GABAA_S1', 'GABAB_S1']
 
 # Th
 netParams.synMechParams['NMDA_Th']             = {'mod': 'MyExp2SynNMDABB',    'tau1NMDA': 15, 'tau2NMDA': 150,                'e': 0}
@@ -667,9 +686,8 @@ if cfg.connect_S1_S1:
                                         'postConds': {'pop': cfg.popLabelElS1[post]},
                                         'synMech': synMechType,
                                         'probability': prob,
-                                        'weight': parameters_syn['gsyn',connID] * cfg.IIGain, 
-                                        'synMecddhWeightFactor': cfg.synWeightFractionIIdd,
-                                'synMechWeightFactor': synWeightFactor,
+                                        'weight': parameters_syn['gsyn',connID],
+                                        'synMechWeightFactor': synWeightFactor,
                                         'delay': 'defaultDelay+dist_3D/propVelocity',
                                         'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                         'sec': 'spiny'}        
@@ -711,8 +729,8 @@ if cfg.connect_S1_S1:
                                     'postConds': {'pop': cfg.popLabelElS1[post]},
                                     'synMech': synMechType,
                                     'probability': prob,
-                                    'weight': parameters_syn['gsyn',connID] * cfg.IEGain, 
-                                    'synMechWeightFactor': cfg.synWeightFractionIE,
+                                    'weight': parameters_syn['gsyn',connID],
+                                    'synMechWeightFactor': synWeightFactor,
                                     'delay': 'defaultDelay+dist_3D/propVelocity',
                                     'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                     'sec': 'spiny'}  
@@ -726,8 +744,8 @@ if cfg.connect_S1_S1:
                                         'postConds': {'pop': cfg.popLabelElS1[post]},
                                         'synMech': synMechType,
                                         'probability': prob,
-                                        'weight': parameters_syn['gsyn',connID] * cfg.IEGain, 
-                                        'synMechWeightFactor': cfg.synWeightFractionIE,
+                                        'weight': parameters_syn['gsyn',connID],
+                                        'synMechWeightFactor': synWeightFactor,
                                         'delay': 'defaultDelay+dist_3D/propVelocity',
                                         'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                         'sec': 'spiny'}                       
@@ -741,8 +759,8 @@ if cfg.connect_S1_S1:
                                             'postConds': {'pop': cfg.popLabelElS1[post]},
                                             'synMech': synMechType,
                                             'probability': prob,
-                                            'weight': parameters_syn['gsyn',connID] * cfg.IEGain, 
-                                            'synMechWeightFactor': cfg.synWeightFractionIE,
+                                            'weight': parameters_syn['gsyn',connID],
+                                            'synMechWeightFactor': synWeightFactor,
                                             'delay': 'defaultDelay+dist_3D/propVelocity',
                                             'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                             'sec': 'spiny'}                       
@@ -760,8 +778,8 @@ if cfg.connect_S1_S1:
                             'postConds': {'pop': cfg.popLabelElS1[post]},
                             'synMech': synMechType,
                             'probability': prob, 
-                            'weight': parameters_syn['gsyn',connID] * cfg.EEGain, 
-                            'synMechWeightFactor': cfg.synWeightFractionEE,
+                            'weight': parameters_syn['gsyn',connID],
+                            'synMechWeightFactor': synWeightFactor,
                             'delay': 'defaultDelay+dist_3D/propVelocity',
                             'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                             'sec': 'spinyEE'}    
@@ -802,8 +820,8 @@ if cfg.connect_S1_S1:
                                         'postConds': {'pop': cellpostList_A},
                                         'synMech': synMechType,
                                         'probability': prob, 
-                                        'weight': parameters_syn['gsyn',connID] * cfg.EIGain, 
-                                        'synMechWeightFactor': cfg.synWeightFractionEI,
+                                        'weight': parameters_syn['gsyn',connID],
+                                        'synMechWeightFactor': synWeightFactor,
                                         'delay': 'defaultDelay+dist_3D/propVelocity',
                                         'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                         'sec': 'spiny'}   
@@ -816,8 +834,8 @@ if cfg.connect_S1_S1:
                                             'postConds': {'pop': cellpostList_B},
                                             'synMech': synMechType,
                                             'probability': prob, 
-                                            'weight': parameters_syn['gsyn',connID] * cfg.EIGain, 
-                                            'synMechWeightFactor': cfg.synWeightFractionEI,
+                                            'weight': parameters_syn['gsyn',connID],
+                                            'synMechWeightFactor': synWeightFactor,
                                             'delay': 'defaultDelay+dist_3D/propVelocity',
                                             'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                             'sec': 'spiny'}   
@@ -852,7 +870,7 @@ if cfg.addStimSynS1:
             netParams.stimTargetParams['StimSynS1_T_all_EXC->' + post + '_' + str(qSnum)] = {
                 'source': 'StimSynS1_S_all_EXC->' + post + '_' + str(qSnum), 
                 'conds': {'cellType': cfg.popLabelElS1[post]}, 
-                'synMech': 'AMPA', 
+                'synMech': 'AMPA_S1', 
                 'sec': 'spinyEE', 
                 'weight': GsynStimE[post],
                 'delay': 0.1}
@@ -861,7 +879,7 @@ if cfg.addStimSynS1:
         for qSnum in range(SourcesNumber):
             netParams.stimTargetParams['StimSynS1_T_all_EXC->' + post + '_' + str(qSnum)] = {
                 'source': 'StimSynS1_S_all_EXC->' + post + '_' + str(qSnum), 
-                'synMech': 'AMPA', 
+                'synMech': 'AMPA_S1', 
                 'conds': {'cellType': cfg.popLabelElS1[post]}, 
                 'sec': 'spiny', 
                 'weight': GsynStimE[post],
@@ -872,7 +890,7 @@ if cfg.addStimSynS1:
             netParams.stimTargetParams['StimSynS1_T_all_INH->' + post + '_' + str(qSnum)] = {
                 'source': 'StimSynS1_S_all_INH->' + post + '_' + str(qSnum), 
                 'conds': {'cellType': cfg.popLabelElS1[post]}, 
-                'synMech': 'GABAA', 
+                'synMech': 'GABAA_S1', 
                 'sec': 'spiny', 
                 'weight': GsynStimI[post],
                 'delay': 0.1}
@@ -1044,26 +1062,6 @@ if cfg.addLongConn:
             with open(spikesFile, 'r') as f: spks = json.load(f)
             netParams.popParams[longPop].pop('rate')
             netParams.popParams[longPop]['spkTimes'] = spks
-
-
-#------------------------------------------------------------------------------
-# Synaptic mechanism parameters
-#------------------------------------------------------------------------------
-netParams.synMechParams['NMDA']             = {'mod': 'MyExp2SynNMDABB',    'tau1NMDA': 15,     'tau2NMDA': 150,                'e': 0}
-netParams.synMechParams['AMPA']             = {'mod': 'MyExp2SynBB',        'tau1': 0.05,       'tau2': 5.3*cfg.AMPATau2Factor, 'e': 0}
-netParams.synMechParams['GABAB']            = {'mod': 'MyExp2SynBB',        'tau1': 3.5,        'tau2': 260.9,                  'e': -93} 
-netParams.synMechParams['GABAA']            = {'mod': 'MyExp2SynBB',        'tau1': 0.07,       'tau2': 18.2,                   'e': -80}
-netParams.synMechParams['GABAA_VIP']        = {'mod': 'MyExp2SynBB',        'tau1': 0.3,        'tau2': 6.4,                    'e': -80}  # Pi et al 2013
-netParams.synMechParams['GABAASlow']        = {'mod': 'MyExp2SynBB',        'tau1': 2,          'tau2': 100,                    'e': -80}
-netParams.synMechParams['GABAASlowSlow']    = {'mod': 'MyExp2SynBB',        'tau1': 200,        'tau2': 400,                    'e': -80}
-
-ESynMech    = ['AMPA', 'NMDA']
-SOMESynMech = ['GABAASlow','GABAB']
-SOMISynMech = ['GABAASlow']
-PVSynMech   = ['GABAA']
-VIPSynMech  = ['GABAA_VIP']
-NGFSynMech  = ['GABAA', 'GABAB']
-
 
 #------------------------------------------------------------------------------
 # Long range input pulses

@@ -40,7 +40,7 @@ def setRunCfg(b, type='mpi_bulletin'):
 
     elif type=='mpi_direct':
         b.runCfg = {'type': 'mpi_direct',
-            'cores': 40,
+            'cores': 80,
             'script': 'init.py',
             'mpiCommand': 'mpiexec',
             'skip': True}
@@ -66,5 +66,5 @@ if __name__ == '__main__':
     b.batchLabel = 'v1_batch0'  
     b.saveFolder = '../data/'+b.batchLabel
     b.method = 'grid'
-    setRunCfg(b, 'hpc_slurm_gcp')
+    setRunCfg(b, 'mpi_direct2')
     b.run() # run batch
