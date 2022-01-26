@@ -97,6 +97,14 @@ for line in mtype_content.split('\n')[:-1]:
 cfg.S1pops = popParamS1[0:55]
 cfg.S1cells = cellParamS1[0:207] # pop used in conns 
 
+#used to convengence rules S1-Th
+cfg.popNumberS1['ss_RTN_o'] = 382
+cfg.popNumberS1['ss_RTN_m'] = 382
+cfg.popNumberS1['ss_RTN_i'] = 765
+cfg.popNumberS1['VPL_sTC'] = 656
+cfg.popNumberS1['VPM_sTC'] = 839
+cfg.popNumberS1['POm_sTC_s1'] = 685
+
 #------------------------------------------------------------------------------
 # Recording 
 #------------------------------------------------------------------------------
@@ -182,11 +190,19 @@ cfg.AMPATau2Factor = 1.0
 cfg.addSynMechs = True
 cfg.distributeSynsUniformly = True
 
+
+
 #------------------------------------------------------------------------------
 # Connectivity
 #------------------------------------------------------------------------------
+
+# S1 Spontaneous synapses + background - data from Rat
+cfg.addStimSynS1 = True
+cfg.rateStimES1= 9.0
+cfg.rateStimIS1 = 9.0
+#---------------------
 ## S1->S1
-cfg.addConnS1S1 = True
+cfg.connect_S1_S1 = True
 #------------------------------------------------------------------------------
 ## Th->S1
 cfg.connect_Th_S1 = True
@@ -194,7 +210,6 @@ cfg.TC_S1 = {}
 cfg.TC_S1['VPL_sTC'] = True
 cfg.TC_S1['VPM_sTC'] = True
 cfg.TC_S1['POm_sTC_s1'] = True
-
 #------------------------------------------------------------------------------
 ## S1->Th 
 cfg.connect_S1_Th = True
@@ -207,10 +222,8 @@ cfg.connect_S1_TC = True
 cfg.convergence_S1_TC         = 30.0  # dist_2D<R
 cfg.connWeight_S1_TC       = 0.250
 
-
 #------------------------------------------------------------------------------
 ## Cortico-cortical connections - 2022_01_21
-
 cfg.connect_M1_S1 = 1
 cfg.connect_S1_M1 = 1
 
