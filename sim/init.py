@@ -40,6 +40,7 @@ allpopsplotConn = [	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2',
 				'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
 				'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
 				'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i',
+				'L1_HAC_cNA', 'L23_LBC_dNA', 'L23_MC_cAC', 'L4_LBC_dNA', 'L4_MC_cAC', 'L5_LBC_dST', 'L5_MC_bAC', 'L6_LBC_bIR', 'L6_MC_bIR',
 				'L23_PC_cAD', 'L4_PC_cAD', 'L4_SS_cAD', 'L4_SP_cAD', 
              	'L5_TTPC1_cAD', 'L5_TTPC2_cAD', 'L5_STPC_cAD', 'L5_UTPC_cAD',
              	'L6_TPC_L1_cAD', 'L6_TPC_L4_cAD', 'L6_BPC_cAD', 'L6_IPC_cAD', 'L6_UTPC_cAD']

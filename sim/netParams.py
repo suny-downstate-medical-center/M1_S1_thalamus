@@ -399,7 +399,7 @@ if cfg.addThalSs:
     netParams.popParams['POm_sTC_s1']   =   {'cellModel': 'HH_full', 'cellType': 'sTC_cell',  'yRange': t_layer['POm_sTC_s1'],  'xRange':[xmin['POm_sTC_s1'], xmax['POm_sTC_s1']], 'zRange':[zmin,zmax],  'density': thal_density[('thal','sTC')][4]/2}
 if cfg.addThalMt:
     netParams.popParams['VL_sTC']       =   {'cellModel': 'HH_full', 'cellType': 'sTC_cell',  'yRange': t_layer['VL_sTC'],      'xRange':[xmin['VL_sTC'],     xmax['VL_sTC']],     'zRange':[zmin,zmax],  'density': thal_density[('thal','sTC')][0]}
-    netParams.popParams['VM_sTC_m1']    =   {'cellModel': 'HH_full', 'cellType': 'sTC_cell',  'yRange': t_layer['VM_sTC_m1'],   'xRange':[xmin['VM_sTC_m1'],  xmax['VM_sTC_m1']],  'zRange':[zmin,zmax],  'density': thal_density[('thal','sTC')][1]/2}
+    netParams.popParams['VM_sTC_m1']    =   {'cellModel': 'HH_fu2ll', 'cellType': 'sTC_cell',  'yRange': t_layer['VM_sTC_m1'],   'xRange':[xmin['VM_sTC_m1'],  xmax['VM_sTC_m1']],  'zRange':[zmin,zmax],  'density': thal_density[('thal','sTC')][1]/2}
     netParams.popParams['POm_sTC_m1']   =   {'cellModel': 'HH_full', 'cellType': 'sTC_cell',  'yRange': t_layer['POm_sTC_m1'],  'xRange':[xmin['POm_sTC_m1'], xmax['POm_sTC_m1']], 'zRange':[zmin,zmax],  'density': thal_density[('thal','sTC')][4]/2}
 
 # inhibitory - RTN
@@ -588,9 +588,20 @@ for syntype in syntypes:
 #                                          'GABAB_ratio': 1.0,  #=0(1):The ratio of GABAB to GABAA   ?       
                                             }
 
-# Th NEW
+# Th->S1 NEW
 #E2 -> syn 134
 netParams.synMechParams['TC:S1'] = {'mod': 'DetAMPANMDA',
+                                          'Dep': 227.0,
+                                          'Fac': 13.0,
+                                          'Use': 0.72,
+                                          'tau_r_AMPA': 0.2,
+                                          'tau_d_AMPA': 1.74,
+                                          'NMDA_ratio': 0.4,
+                                          'tau_r_NMDA': 0.29,
+                                          'tau_d_NMDA': 43.0}
+# M1_>S1
+#E2 -> syn 134
+netParams.synMechParams['M1:S1'] = {'mod': 'DetAMPANMDA',
                                           'Dep': 227.0,
                                           'Fac': 13.0,
                                           'Use': 0.72,
@@ -1399,23 +1410,6 @@ if cfg.connectThalamusNetwork:
                                                                 }
 
 #------------------------------------------------------------------------------
-# M1->S1
-'''
-    References:
-    Kinnischtzke, A. K., Simons, D. J., & Fanselow, E. E. (2014). Motor cortex broadly engages excitatory and inhibitory neurons in somatosensory barrel cortex. Cerebral Cortex , 24(8), 2237–2248.
-    https://paperpile.com/app/p/ea0be1ed-6f8b-0046-9225-b447a8bdc8f3 
-
-    Kinnischtzke, A. K., Fanselow, E. E., & Simons, D. J. (2016). Target-specific M1 inputs to infragranular S1 pyramidal neurons. Journal of Neurophysiology, 116(3), 1261–1274.
-    https://paperpile.com/app/p/d623473e-41bd-07b3-93ce-44550d371fda 
-
-    Yamawaki, N., Raineri Tapies, M. G., Stults, A., Smith, G. A., & Shepherd, G. M. (2021). Circuit organization of the excitatory sensorimotor loop through hand/forelimb S1 and M1. eLife, 10. https://doi.org/10.7554/eLife.66836
-    https://paperpile.com/app/p/c91e1558-68fc-0bcc-a2f4-91c3f4cb0113 
-
-    Mao, T., Kusefoglu, D., Hooks, B. M., Huber, D., Petreanu, L., & Svoboda, K. (2011). Long-range neuronal circuits underlying the interaction between sensory and motor cortex. Neuron, 72(1), 111–123.
-    https://paperpile.com/app/p/9b23a6fc-70e7-08fc-af5a-29e1cccc19f1 
-'''
-
-
 M1_allPops=['NGF1', 
             'IT2',  'SOM2',  'PV2',   'VIP2',  'NGF2', 
             'IT4',  'SOM4',  'PV4',   'VIP4',  'NGF4', 
@@ -1437,9 +1431,26 @@ M1_L6_pops  =['IT6',    'CT6',      'SOM6',     'PV6',     'VIP6',      'NGF6']
 Thal_pops   =['VPL_sTC','VPM_sTC',  'POm_sTC_s1', 'VL_sTC',  'VM_sTC_m1', 'POm_sTC_m1', 'mt_RTN', 'ss_RTN_o', 'ss_RTN_m', 'ss_RTN_i']
 Long_pops   =['S1',     'S2',       'cM1',        'M2',      'OC']
 
+#------------------------------------------------------------------------------
+# M1->S1
+'''
+    References:
+    Kinnischtzke, A. K., Simons, D. J., & Fanselow, E. E. (2014). Motor cortex broadly engages excitatory and inhibitory neurons in somatosensory barrel cortex. Cerebral Cortex , 24(8), 2237–2248.
+    https://paperpile.com/app/p/ea0be1ed-6f8b-0046-9225-b447a8bdc8f3 
+
+    Kinnischtzke, A. K., Fanselow, E. E., & Simons, D. J. (2016). Target-specific M1 inputs to infragranular S1 pyramidal neurons. Journal of Neurophysiology, 116(3), 1261–1274.
+    https://paperpile.com/app/p/d623473e-41bd-07b3-93ce-44550d371fda 
+
+    Yamawaki, N., Raineri Tapies, M. G., Stults, A., Smith, G. A., & Shepherd, G. M. (2021). Circuit organization of the excitatory sensorimotor loop through hand/forelimb S1 and M1. eLife, 10. https://doi.org/10.7554/eLife.66836
+    https://paperpile.com/app/p/c91e1558-68fc-0bcc-a2f4-91c3f4cb0113 
+
+    Mao, T., Kusefoglu, D., Hooks, B. M., Huber, D., Petreanu, L., & Svoboda, K. (2011). Long-range neuronal circuits underlying the interaction between sensory and motor cortex. Neuron, 72(1), 111–123.
+    https://paperpile.com/app/p/9b23a6fc-70e7-08fc-af5a-29e1cccc19f1 
+'''
 if cfg.connect_M1_S1:
     
     synFracs=cfg.synWeightFractionEE
+    synapsesperconnection_M1_S1 = 5
 
     # Extracted from (Kinnischtzke, 2014) (https://paperpile.com/app/p/ea0be1ed-6f8b-0046-9225-b447a8bdc8f3)
     M1_S1_conn=[  # M1->S1
@@ -1461,26 +1472,54 @@ if cfg.connect_M1_S1:
                     ('IT',    'L4',    'SOM',  ESynMech,   0.2  ,   6.800,  None ),
                     ('IT',    'L5A',   'SOM',  ESynMech,   0.875,   4.974,  2.624),
                     ('IT',    'L5B',   'SOM',  ESynMech,   0.875,   4.974,  2.624),
-                    ('IT',    'L6',    'SOM',  ESynMech,   0.0  ,   None,   None),
+                    # ('IT',    'L6',    'SOM',  ESynMech,   0.0  ,   None,   None),
                     ]
     
     for (prePop,postPop,cellSubtype,synMech,prob,mean,sd) in M1_S1_conn:
         for M1_pop in M1_allPops:
             if M1_pop.startswith(prePop):
-                ruleLabel = cellSubtype+'_m1'+M1_pop+'_s1'+postPop
-                netParams.connParams[ruleLabel] = {
-                                                    'preConds':     {'pop': prePop},
-                                                    'postConds':    {'pop': postPop}, 
-                                                    'synMech':      synMech,
-                                                    'probability':  prob,
-                                                    'weight':       0.5,
-                                                    'synMechWeightFactor': synFracs,
-                                                    'delay':        'defaultDelay+dist_3D/propVelocity',
-                                                    # 'synsPerConn':  cfg.synsperconn[cellModel],
-                                                    'sec':          'soma',   
-                                                    }
-                
-                # print(ruleLabel,prob)
+
+                for post in EpopsS1: 
+                    if post[0:2] == postPop[0:2] and cellSubtype == 'RS':
+                        ruleLabel = 'M1_S1_'+M1_pop+'_'+post
+                        netParams.connParams[ruleLabel] = {
+                                                            'preConds':     {'pop': M1_pop},
+                                                            'postConds':    {'pop': cfg.popLabelElS1[post]}, 
+                                                            'probability':  0.1*prob,
+                                                            'weight': 0.19,   # synaptic weight 
+                                                            'sec': 'spinyEE', # target postsyn section
+                                                            'delay': 'defaultDelay+dist_3D/propVelocity',
+                                                            'synsPerConn': int(synapsesperconnection_M1_S1), 
+                                                            'synMech': 'M1:S1'}                         
+                        # print(ruleLabel,prob)
+
+                for post in IpopsS1: 
+                    if post[0:2] == postPop[0:2] and cellSubtype == 'FS' and '_MC' not in post:
+                        ruleLabel = 'M1_S1_'+M1_pop+'_'+post
+                        netParams.connParams[ruleLabel] = {
+                                                            'preConds':     {'pop': M1_pop},
+                                                            'postConds':    {'pop': cfg.popLabelElS1[post]}, 
+                                                            'probability':  0.1*prob,
+                                                            'weight': 0.19,   # synaptic weight 
+                                                            'sec': 'spinyEE', # target postsyn section
+                                                            'delay': 'defaultDelay+dist_3D/propVelocity',
+                                                            'synsPerConn': int(synapsesperconnection_M1_S1), 
+                                                            'synMech': 'M1:S1'}                         
+                        # print(ruleLabel,prob)
+
+                for post in IpopsS1: 
+                    if post[0:2] == postPop[0:2] and cellSubtype == 'SOM' and '_MC' in post:
+                        ruleLabel = 'M1_S1_'+M1_pop+'_'+post
+                        netParams.connParams[ruleLabel] = {
+                                                            'preConds':     {'pop': M1_pop},
+                                                            'postConds':    {'pop': cfg.popLabelElS1[post]}, 
+                                                            'probability':  0.1*prob,
+                                                            'weight': 0.19,   # synaptic weight 
+                                                            'sec': 'spinyEE', # target postsyn section
+                                                            'delay': 'defaultDelay+dist_3D/propVelocity',
+                                                            'synsPerConn': int(synapsesperconnection_M1_S1), 
+                                                            'synMech': 'M1:S1'}                          
+                        # print(ruleLabel,prob)
 
 # S1->M1
 if cfg.connect_S1_M1:
@@ -1495,49 +1534,46 @@ if cfg.connect_S1_M1:
     # L4  = 0.4723746548962131      |       0.18707482993197289
     # L5  = 0.07361077973573238     |       0.06802721088435426
     # L6  = 0                       |       0
-
+    S1_IT_23_5A = ['L23_PC_cAD', 'L5_UTPC_cAD']
     # Rescaling Projection weights to 0.5 mV
     S1_M1_conn  =[  #pre    post    syn         prob    input   rescaled input to 0.5
                     #S1-L2/3
-                    ('L23', 'IT2',  ESynMech,   0.2,    3.183,  0.5),
-                    
-                    ('L23', 'IT4',  ESynMech,   0.2,    0.472,  0.074),
-                    
+                    ('L23', 'IT2',  ESynMech,   0.2,    3.183,  0.5),                    
+                    ('L23', 'IT4',  ESynMech,   0.2,    0.472,  0.074),                    
                     ('L23', 'IT5A', ESynMech,   0.2,    0.074,  0.012),
                     ('L23', 'IT5B', ESynMech,   0.2,    0.074,  0.012),
-                    ('L23', 'PT5B', ESynMech,   0.2,    0.074,  0.012),
-                    
-                    ('L23', 'IT6',  ESynMech,   0.2,    0,      0),
-                    ('L23', 'CT6',  ESynMech,   0.2,    0,      0),
-
+                    ('L23', 'PT5B', ESynMech,   0.2,    0.074,  0.012),                    
+                    # ('L23', 'IT6',  ESynMech,   0.2,    0,      0),
+                    # ('L23', 'CT6',  ESynMech,   0.2,    0,      0),
                     #S1-L5A
-                    ('L5A', 'IT2',  ESynMech,   0.2,    2.704,  0.425),
-                    
-                    ('L5A', 'IT4',  ESynMech,   0.2,    0.187,  0.030),
-                    
+                    ('L5A', 'IT2',  ESynMech,   0.2,    2.704,  0.425),                    
+                    ('L5A', 'IT4',  ESynMech,   0.2,    0.187,  0.030),                    
                     ('L5A', 'IT5A', ESynMech,   0.2,    0.068,  0.011),
                     ('L5A', 'IT5B', ESynMech,   0.2,    0.068,  0.011),
-                    ('L5A', 'PT5B', ESynMech,   0.2,    0.068,  0.011),
-                    
-                    ('L5A', 'IT6',  ESynMech,   0.2,    0,      0),
-                    ('L5A', 'CT6',  ESynMech,   0.2,    0,      0),
+                    ('L5A', 'PT5B', ESynMech,   0.2,    0.068,  0.011),                    
+                    # ('L5A', 'IT6',  ESynMech,   0.2,    0,      0),
+                    # ('L5A', 'CT6',  ESynMech,   0.2,    0,      0),
                     ]
 
     for (prePop,postPop,synMech,prob,input,rescaled_input) in S1_M1_conn:
-        if postPop in M1_pyrPops:
-            ruleLabel = 's1'+prePop+'_m1'+postPop
-            netParams.connParams[ruleLabel] = {
-                        'preConds':     {'pop': prePop},
+
+        if prePop == 'L23':
+            pre = 'L23_PC'
+        if prePop == 'L5A':
+            pre = 'L5_UTPC'
+            
+        ruleLabel = 'S1_M1_'+pre+'_'+postPop
+        netParams.connParams[ruleLabel] = {
+                                                'preConds':    {'pop': cfg.popLabelElS1[pre]}, 
                                                 'postConds':    {'pop': postPop}, 
                                                 'synMech':      synMech,
-                                                'probability':  prob,
+                                                'probability':  0.5*prob,
                                                 'weight':       rescaled_input,
                                                 'synMechWeightFactor': synFracs,
                                                 'delay':        'defaultDelay+dist_3D/propVelocity',
-                                                # 'synsPerConn':  cfg.synsperconn[cellModel],
                                                 'sec':          'soma',   
                                                 }
-            # print(ruleLabel,prob,rescaled_input)
+        # print(ruleLabel,prob,rescaled_input)
 
 #------------------------------------------------------------------------------
 # M1

@@ -24,7 +24,7 @@ cfg.coreneuron = False
 #------------------------------------------------------------------------------
 # Run parameters
 #------------------------------------------------------------------------------
-cfg.duration = 1.0*1e2
+cfg.duration = 5.0*1e1
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
 cfg.hParams = {'celsius': 34, 'v_init': -80}  
@@ -165,11 +165,11 @@ cfg.analysis['plotRaster'] = {	'include': allpops, 			'orderBy': ['pop', 'y'],
 								'popColors': popColors, 		'figSize': (24,20), 		'lw': 0.3, 
 								'markerSize':2, 				'marker': '.', 				'dpi': 300} 
 
-cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.duration], 'ylim': [-100,55],'overlay': False, 'oneFigPer': 'cell', 'figSize': (10,4), 'saveFig': True, 'showFig': False} 
+# cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.duration], 'ylim': [-100,55],'overlay': False, 'oneFigPer': 'cell', 'figSize': (10,4), 'saveFig': True, 'showFig': False} 
 
 cfg.analysis['plot2Dnet']   = {'include': allpops, 'saveFig': True, 'showConns': False, 'figSize': (24,24), 'fontSize':16}   # Plot 2D cells xy
 
-
+#select some S1 pops only
 allpopsplotConn = [	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2', 
 				'IT4', 'SOM4', 'PV4', 'VIP4', 'NGF4', 'IT5A', 
 				'SOM5A', 'PV5A', 'VIP5A', 'NGF5A', 'IT5B', 
@@ -178,6 +178,7 @@ allpopsplotConn = [	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2',
 				'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
 				'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
 				'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i',
+				'L1_HAC_cNA', 'L23_LBC_dNA', 'L23_MC_cAC', 'L4_LBC_dNA', 'L4_MC_cAC', 'L5_LBC_dST', 'L5_MC_bAC', 'L6_LBC_bIR', 'L6_MC_bIR',
 				'L23_PC_cAD', 'L4_PC_cAD', 'L4_SS_cAD', 'L4_SP_cAD', 
              	'L5_TTPC1_cAD', 'L5_TTPC2_cAD', 'L5_STPC_cAD', 'L5_UTPC_cAD',
              	'L6_TPC_L1_cAD', 'L6_TPC_L4_cAD', 'L6_BPC_cAD', 'L6_IPC_cAD', 'L6_UTPC_cAD']
@@ -192,7 +193,7 @@ cfg.analysis['plotConn'] = {'includePre': allpopsplotConn,
 							'synMech': None, 
 							'saveData': True, 
 							'saveFig': True, 
-							'showFig': False
+							'showFig': False, 'clim': [0,0.2]
 							}
 #------------------------------------------------------------------------------
 # Synapses
@@ -223,7 +224,7 @@ cfg.distributeSynsUniformly = True
 # S1 Spontaneous synapses + background - data from Rat
 cfg.addStimSynS1 = True
 cfg.rateStimES1= 9.0
-cfg.rateStimIS1 = 9.0
+cfg.rateStimIS1 = 6.0
 #---------------------
 ## S1->S1
 cfg.connect_S1_S1 = True
@@ -278,7 +279,7 @@ cfg.Th_pops=[
 cfg.removeM1 = False # removes M1 pops
 cfg.removeS1 = False # removes M1 pops
 cfg.removeTh = False # removes Th pops
-cfg.scaleDensity = 0.1 # 1.0
+cfg.scaleDensity = 0.25 # 1.0
 
 cfg.addThalSs=1
 cfg.addThalMt=1
