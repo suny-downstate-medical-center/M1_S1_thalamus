@@ -31,3 +31,21 @@ sim.runSim()                      			# run parallel Neuron simulation
 sim.gatherData()                  			# gather spiking data and cell info from each node
 sim.saveData()                    			# save params, cell info and sim output to file (pickle,mat,txt,etc)#
 sim.analysis.plotData()         			# plot spike raster etc
+
+allpopsplotConn = [	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2', 
+				'IT4', 'SOM4', 'PV4', 'VIP4', 'NGF4', 'IT5A', 
+				'SOM5A', 'PV5A', 'VIP5A', 'NGF5A', 'IT5B', 
+				'PT5B', 'SOM5B', 'PV5B', 'VIP5B', 'NGF5B', 
+				'IT6', 'CT6', 'SOM6', 'PV6', 'VIP6', 'NGF6',	
+				'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
+				'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
+				'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i',
+				'L23_PC_cAD', 'L4_PC_cAD', 'L4_SS_cAD', 'L4_SP_cAD', 
+             	'L5_TTPC1_cAD', 'L5_TTPC2_cAD', 'L5_STPC_cAD', 'L5_UTPC_cAD',
+             	'L6_TPC_L1_cAD', 'L6_TPC_L4_cAD', 'L6_BPC_cAD', 'L6_IPC_cAD', 'L6_UTPC_cAD']
+
+features = ['numConns','convergence']
+groups =['pop']
+for feat in features:
+   for group in groups:
+       sim.analysis.plotConn(includePre=allpopsplotConn, includePost=allpopsplotConn, feature=feat, groupBy=group, figSize=(24,24), saveFig=True, orderBy='gid', graphType='matrix', fontSize=18, saveData='../data/'+cfg.simLabel[0:9]+'/'+cfg.simLabel + '_' + group + '_' + feat+ '_matrix.json')

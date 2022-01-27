@@ -45,10 +45,13 @@ netParams.scaleConnWeight = 1.0 # Connection weight scale factor (default if no 
 netParams.scaleConnWeightModels = {'HH_simple': 1.0, 'HH_reduced': 1.0, 'HH_full': 1.0} #scale conn weight factor for each cell model
 netParams.scaleConnWeightNetStims = 1.0 # scale conn weight factor for NetStims
 netParams.defaultThreshold = 0.0 # spike threshold, 10 mV is NetCon default, lower it for all cells
-netParams.defaultDelay = 0.1 # default conn delay (ms)
-netParams.propVelocity = 300.0 # propagation velocity (um/ms)
+netParams.defaultDelay = 2.0 # default conn delay (ms)
+netParams.propVelocity = 500.0 # propagation velocity (um/ms)
 netParams.probLambda = 100.0  # length constant (lambda) for connection probability decay (um)
 netParams.defineCellShapes = True  # convert stylized geoms to 3d points
+
+netParams.defaultDelayS1 = 0.1 # default conn delay (ms)
+netParams.propVelocityS1 = 300.0 #  300 μm/ms (Stuart et al., 1997)
 
 #------------------------------------------------------------------------------
 # Cell parameters
@@ -111,6 +114,10 @@ layer = {   '1':                [0.0,   0.1],
             'longM2':           [2.5,   2.6], 
             'longOC':           [2.6,   2.7]
             }  # normalized layer boundaries
+
+
+netParams.correctBorder = {'threshold': [cfg.correctBorderThreshold, cfg.correctBorderThreshold, cfg.correctBorderThreshold], 
+                        'yborders': [layer['2'][0], layer['5A'][0], layer['6'][0], layer['6'][1]]}  # correct conn border effect
 
 #------------------------------------------------------------------------------
 # Thalamocortical Relay cell model 
@@ -688,7 +695,7 @@ if cfg.connect_S1_S1:
                                         'probability': prob,
                                         'weight': parameters_syn['gsyn',connID],
                                         'synMechWeightFactor': synWeightFactor,
-                                        'delay': 'defaultDelay+dist_3D/propVelocity',
+                                        'delay': 'defaultDelayS1+dist_3D/propVelocityS1',
                                         'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                         'sec': 'spiny'}        
                 # ------------------------------------------------------------------------------
@@ -731,7 +738,7 @@ if cfg.connect_S1_S1:
                                     'probability': prob,
                                     'weight': parameters_syn['gsyn',connID],
                                     'synMechWeightFactor': synWeightFactor,
-                                    'delay': 'defaultDelay+dist_3D/propVelocity',
+                                    'delay': 'defaultDelayS1+dist_3D/propVelocityS1',
                                     'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                     'sec': 'spiny'}  
                 
@@ -746,7 +753,7 @@ if cfg.connect_S1_S1:
                                         'probability': prob,
                                         'weight': parameters_syn['gsyn',connID],
                                         'synMechWeightFactor': synWeightFactor,
-                                        'delay': 'defaultDelay+dist_3D/propVelocity',
+                                        'delay': 'defaultDelayS1+dist_3D/propVelocityS1',
                                         'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                         'sec': 'spiny'}                       
                 
@@ -761,7 +768,7 @@ if cfg.connect_S1_S1:
                                             'probability': prob,
                                             'weight': parameters_syn['gsyn',connID],
                                             'synMechWeightFactor': synWeightFactor,
-                                            'delay': 'defaultDelay+dist_3D/propVelocity',
+                                            'delay': 'defaultDelayS1+dist_3D/propVelocityS1',
                                             'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                             'sec': 'spiny'}                       
                                 
@@ -780,7 +787,7 @@ if cfg.connect_S1_S1:
                             'probability': prob, 
                             'weight': parameters_syn['gsyn',connID],
                             'synMechWeightFactor': synWeightFactor,
-                            'delay': 'defaultDelay+dist_3D/propVelocity',
+                            'delay': 'defaultDelayS1+dist_3D/propVelocityS1',
                             'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                             'sec': 'spinyEE'}    
     
@@ -822,7 +829,7 @@ if cfg.connect_S1_S1:
                                         'probability': prob, 
                                         'weight': parameters_syn['gsyn',connID],
                                         'synMechWeightFactor': synWeightFactor,
-                                        'delay': 'defaultDelay+dist_3D/propVelocity',
+                                        'delay': 'defaultDelayS1+dist_3D/propVelocityS1',
                                         'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                         'sec': 'spiny'}   
 
@@ -836,7 +843,7 @@ if cfg.connect_S1_S1:
                                             'probability': prob, 
                                             'weight': parameters_syn['gsyn',connID],
                                             'synMechWeightFactor': synWeightFactor,
-                                            'delay': 'defaultDelay+dist_3D/propVelocity',
+                                            'delay': 'defaultDelayS1+dist_3D/propVelocityS1',
                                             'synsPerConn': int(synperconnNumber[pre][post]+0.5),
                                             'sec': 'spiny'}   
 
@@ -872,7 +879,7 @@ if cfg.addStimSynS1:
                 'conds': {'cellType': cfg.popLabelElS1[post]}, 
                 'synMech': 'AMPA_S1', 
                 'sec': 'spinyEE', 
-                'weight': GsynStimE[post],
+                'weight': 0.001*GsynStimE[post],
                 'delay': 0.1}
 
     for post in IpopsS1:
@@ -882,7 +889,7 @@ if cfg.addStimSynS1:
                 'synMech': 'AMPA_S1', 
                 'conds': {'cellType': cfg.popLabelElS1[post]}, 
                 'sec': 'spiny', 
-                'weight': GsynStimE[post],
+                'weight': 0.001*GsynStimE[post],
                 'delay': 0.1}
 
     for post in EpopsS1+IpopsS1:
@@ -892,7 +899,7 @@ if cfg.addStimSynS1:
                 'conds': {'cellType': cfg.popLabelElS1[post]}, 
                 'synMech': 'GABAA_S1', 
                 'sec': 'spiny', 
-                'weight': GsynStimI[post],
+                'weight': 0.001*GsynStimI[post],
                 'delay': 0.1}
 
 #------------------------------------------------------------------------------
@@ -1014,8 +1021,6 @@ if cfg.connect_S1_Th:
                                 'synsPerConn': 1,
                                 'sec': 'soma'}
 
-#------------------------------------------------------------------------------
-#------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 
@@ -1621,7 +1626,7 @@ if cfg.addConn and cfg.IEGain > 0.0:
                             'preConds':     {'cellType': preType, 'ynorm': list(preBin)},
                             'postConds':    {'cellModel': cellModel, 'cellType': postType, 'ynorm': list(postBin)},
                             'synMech':      synMech,
-                            'probability':  '%f * exp(-dist_3D/probLambda)' % (pmat[(preType, 'E')][ipostBin,ipreBin]),
+                            'probability':  '%f * exp(-dist_3D_border/probLambda)' % (pmat[(preType, 'E')][ipostBin,ipreBin]),
                             'weight':       cfg.IEweights[ipostBin] * cfg.IEGain/ cfg.synsperconn[cellModel],
                             'synMechWeightFactor': weightFactor,
                             'synsPerConn':  cfg.synsperconn[cellModel],
@@ -1647,7 +1652,7 @@ if cfg.addConn and cfg.IIGain > 0.0:
                         'preConds':     {'cellType': preType, 'ynorm': bin},
                         'postConds':    {'cellModel': cellModel, 'cellType': postType, 'ynorm': bin},
                         'synMech':      synMech,
-                        'probability':  '%f * exp(-dist_3D/probLambda)' % (pmat[(preType, postType)]),
+                        'probability':  '%f * exp(-dist_3D_border/probLambda)' % (pmat[(preType, postType)]),
                         'weight':       cfg.IIweights[iBin] * cfg.IIGain / cfg.synsperconn[cellModel],
                         'synsPerConn':  cfg.synsperconn[cellModel],
                         'delay':        'defaultDelay+dist_3D/propVelocity',

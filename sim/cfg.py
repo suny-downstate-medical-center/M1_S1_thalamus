@@ -19,7 +19,7 @@ cfg = specs.SimConfig()
 #------------------------------------------------------------------------------
 
 cfg.simType='M1THS1'
-cfg.coreneuron = True
+cfg.coreneuron = False
 
 #------------------------------------------------------------------------------
 # Run parameters
@@ -64,7 +64,7 @@ cfg.poptypeNumberS1 = 55 # max 55
 cfg.celltypeNumberS1 = 207 # max 207
 
 # TO DEBUG - import and simulate only the Cell soma (to study only the Net)
-cfg.reducedtestS1 = True    
+cfg.reducedtestS1 = False    
 
 with open('../info/anatomy/S1-cells-distributions-Mouse.txt') as mtype_file:
     mtype_content = mtype_file.read()       
@@ -169,6 +169,31 @@ cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.du
 
 cfg.analysis['plot2Dnet']   = {'include': allpops, 'saveFig': True, 'showConns': False, 'figSize': (24,24), 'fontSize':16}   # Plot 2D cells xy
 
+
+allpopsplotConn = [	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2', 
+				'IT4', 'SOM4', 'PV4', 'VIP4', 'NGF4', 'IT5A', 
+				'SOM5A', 'PV5A', 'VIP5A', 'NGF5A', 'IT5B', 
+				'PT5B', 'SOM5B', 'PV5B', 'VIP5B', 'NGF5B', 
+				'IT6', 'CT6', 'SOM6', 'PV6', 'VIP6', 'NGF6',	
+				'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
+				'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
+				'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i',
+				'L23_PC_cAD', 'L4_PC_cAD', 'L4_SS_cAD', 'L4_SP_cAD', 
+             	'L5_TTPC1_cAD', 'L5_TTPC2_cAD', 'L5_STPC_cAD', 'L5_UTPC_cAD',
+             	'L6_TPC_L1_cAD', 'L6_TPC_L4_cAD', 'L6_BPC_cAD', 'L6_IPC_cAD', 'L6_UTPC_cAD']
+
+cfg.analysis['plotConn'] = {'includePre': allpopsplotConn, 
+							'includePost': allpopsplotConn, 
+							'feature': 'probability', 
+							'figSize': (20,20), 
+							'groupBy': 'pop', \
+ 							# 'graphType': 'bar', 
+							'synOrConn': 'conn', 
+							'synMech': None, 
+							'saveData': True, 
+							'saveFig': True, 
+							'showFig': False
+							}
 #------------------------------------------------------------------------------
 # Synapses
 #------------------------------------------------------------------------------
@@ -250,19 +275,19 @@ cfg.Th_pops=[
 				'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i']
 
 # ----- Network Parameters ------ #
-cfg.removeM1=0 # removes M1 pops
-cfg.removeS1=0 # removes M1 pops
-cfg.removeTh=0 # removes Th pops
-cfg.scaleDensity = 1.0 # 1.0
+cfg.removeM1 = False # removes M1 pops
+cfg.removeS1 = False # removes M1 pops
+cfg.removeTh = False # removes Th pops
+cfg.scaleDensity = 0.1 # 1.0
 
 cfg.addThalSs=1
 cfg.addThalMt=1
 
 # ----- Network Connections ----- #
-cfg.addConn 				= 1
-cfg.addSubConn 				= 1
-cfg.addLongConn 			= 1
-cfg.connectThalamusNetwork 	= 1
+cfg.addConn 				= True
+cfg.addSubConn 				= True
+cfg.addLongConn 			= True
+cfg.connectThalamusNetwork 	= True
 
 # Connections under cfg.connectThalamusNetwork
 cfg.connect_RTN_RTN     = 1
@@ -278,7 +303,7 @@ cfg.scale = 1.0
 cfg.sizeY = 1350.0
 cfg.sizeX = 300.0
 cfg.sizeZ = 300.0
-
+cfg.correctBorderThreshold = 150.0 # M1
 cfg.sizeYS1 = 1378.8 # resized to 1350.0=M1
 
 cfg.L5BrecurrentFactor = 1.0
