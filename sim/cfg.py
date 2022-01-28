@@ -64,7 +64,7 @@ cfg.poptypeNumberS1 = 55 # max 55
 cfg.celltypeNumberS1 = 207 # max 207
 
 # TO DEBUG - import and simulate only the Cell soma (to study only the Net)
-cfg.reducedtestS1 = False    
+cfg.reducedtestS1 = True    
 
 with open('../info/anatomy/S1-cells-distributions-Mouse.txt') as mtype_file:
     mtype_content = mtype_file.read()       
@@ -152,7 +152,7 @@ cfg.saveDataInclude = ['simData', 'simConfig', 'netParams', 'net'] ## , 'simConf
 cfg.backupCfgFile = None 		##  
 cfg.gatherOnlySimData = False	##  
 cfg.saveCellSecs = False			
-cfg.saveCellConns = False	
+cfg.saveCellConns = True	
 
 #------------------------------------------------------------------------------
 # Analysis and plotting 
@@ -170,31 +170,31 @@ cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.du
 # cfg.analysis['plot2Dnet']   = {'include': allpops, 'saveFig': True, 'showConns': False, 'figSize': (24,24), 'fontSize':16}   # Plot 2D cells xy
 
 #select some S1 pops only
-# allpopsplotConn = [	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2', 
-# 				'IT4', 'SOM4', 'PV4', 'VIP4', 'NGF4', 'IT5A', 
-# 				'SOM5A', 'PV5A', 'VIP5A', 'NGF5A', 'IT5B', 
-# 				'PT5B', 'SOM5B', 'PV5B', 'VIP5B', 'NGF5B', 
-# 				'IT6', 'CT6', 'SOM6', 'PV6', 'VIP6', 'NGF6',	
-# 				'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
-# 				'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
-# 				'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i',
-# 				'L1_HAC_cNA', 'L23_LBC_dNA', 'L23_MC_cAC', 'L4_LBC_dNA', 'L4_MC_cAC', 'L5_LBC_dST', 'L5_MC_bAC', 'L6_LBC_bIR', 'L6_MC_bIR',
-# 				'L23_PC_cAD', 'L4_PC_cAD', 'L4_SS_cAD', 'L4_SP_cAD', 
-#              	'L5_TTPC1_cAD', 'L5_TTPC2_cAD', 'L5_STPC_cAD', 'L5_UTPC_cAD',
-#              	'L6_TPC_L1_cAD', 'L6_TPC_L4_cAD', 'L6_BPC_cAD', 'L6_IPC_cAD', 'L6_UTPC_cAD']
+allpopsplotConn = [	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2', 
+				'IT4', 'SOM4', 'PV4', 'VIP4', 'NGF4', 'IT5A', 
+				'SOM5A', 'PV5A', 'VIP5A', 'NGF5A', 'IT5B', 
+				'PT5B', 'SOM5B', 'PV5B', 'VIP5B', 'NGF5B', 
+				'IT6', 'CT6', 'SOM6', 'PV6', 'VIP6', 'NGF6',	
+				'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
+				'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
+				'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i',
+				'L1_HAC_cNA', 'L23_LBC_dNA', 'L23_MC_cAC', 'L4_LBC_dNA', 'L4_MC_cAC', 'L5_LBC_dST', 'L5_MC_bAC', 'L6_LBC_bIR', 'L6_MC_bIR',
+				'L23_PC_cAD', 'L4_PC_cAD', 'L4_SS_cAD', 'L4_SP_cAD', 
+             	'L5_TTPC1_cAD', 'L5_TTPC2_cAD', 'L5_STPC_cAD', 'L5_UTPC_cAD',
+             	'L6_TPC_L1_cAD', 'L6_TPC_L4_cAD', 'L6_BPC_cAD', 'L6_IPC_cAD', 'L6_UTPC_cAD']
 
-# cfg.analysis['plotConn'] = {'includePre': allpopsplotConn, 
-# 							'includePost': allpopsplotConn, 
-# 							'feature': 'probability', 
-# 							'figSize': (20,20), 
-# 							'groupBy': 'pop', \
-#  							# 'graphType': 'bar', 
-# 							'synOrConn': 'conn', 
-# 							'synMech': None, 
-# 							'saveData': True, 
-# 							'saveFig': True, 
-# 							'showFig': False, 'clim': [0,0.2]
-# 							}
+cfg.analysis['plotConn'] = {'includePre': allpopsplotConn, 
+							'includePost': allpopsplotConn, 
+							'feature': 'probability', 
+							'figSize': (20,20), 
+							'groupBy': 'pop', \
+ 							# 'graphType': 'bar', 
+							'synOrConn': 'conn', 
+							'synMech': None, 
+							'saveData': True, 
+							'saveFig': True, 
+							'showFig': False, 'clim': [0,0.2]
+							}
 #------------------------------------------------------------------------------
 # Synapses
 #------------------------------------------------------------------------------
@@ -222,22 +222,22 @@ cfg.distributeSynsUniformly = True
 #------------------------------------------------------------------------------
 
 # S1 Spontaneous synapses + background - data from Rat
-cfg.addStimSynS1 = True
+cfg.addStimSynS1 = False
 cfg.rateStimES1= 9.0
 cfg.rateStimIS1 = 6.0
 #---------------------
 ## S1->S1
-cfg.connect_S1_S1 = True
+cfg.connect_S1_S1 = False
 #------------------------------------------------------------------------------
 ## Th->S1
-cfg.connect_Th_S1 = True
+cfg.connect_Th_S1 = False
 cfg.TC_S1 = {}
 cfg.TC_S1['VPL_sTC'] = True
 cfg.TC_S1['VPM_sTC'] = True
 cfg.TC_S1['POm_sTC_s1'] = True
 #------------------------------------------------------------------------------
 ## S1->Th 
-cfg.connect_S1_Th = True
+cfg.connect_S1_Th = False
 
 cfg.connect_S1_RTN = True
 cfg.convergence_S1_RTN         = 30.0  # dist_2D<R
@@ -249,8 +249,8 @@ cfg.connWeight_S1_TC       = 0.250
 
 #------------------------------------------------------------------------------
 ## Cortico-cortical connections - 2022_01_21
-cfg.connect_M1_S1 = 1
-cfg.connect_S1_M1 = 1
+cfg.connect_M1_S1 = False
+cfg.connect_S1_M1 = False
 
 #------------------------------------------------------------------------------
 # Network 
@@ -276,8 +276,8 @@ cfg.Th_pops=[
 				'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i']
 
 # ----- Network Parameters ------ #
-cfg.removeM1 = True # removes M1 pops
-cfg.removeS1 = True # removes M1 pops
+cfg.removeM1 = False # removes M1 pops
+cfg.removeS1 = False # removes M1 pops
 cfg.removeTh = False # removes Th pops
 cfg.scaleDensity = 1.0 # 1.0
 
@@ -285,9 +285,9 @@ cfg.addThalSs=1
 cfg.addThalMt=1
 
 # ----- Network Connections ----- #
-cfg.addConn 				= True
-cfg.addSubConn 				= True
-cfg.addLongConn 			= True
+cfg.addConn 				= False
+cfg.addSubConn 				= False
+cfg.addLongConn 			= False
 cfg.connectThalamusNetwork 	= True
 
 # Connections under cfg.connectThalamusNetwork
