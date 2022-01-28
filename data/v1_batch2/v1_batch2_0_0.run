@@ -1,0 +1,822 @@
+numprocs=40
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+	0 
+Balancing each compartment to -73 mV
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 28: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 28: 113613 
+  Number of synaptic contacts on node 28: 479873 
+  Number of stims on node 28: 1000 
+Recording 5 traces of 1 types on node 28
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f48b04ed4c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f48b04ed480>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 21: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 21: 113851 
+  Number of synaptic contacts on node 21: 483569 
+  Number of stims on node 21: 990 
+Recording 7 traces of 1 types on node 21
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7ff51b460740>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7ff51b460780>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 25: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 25: 114551 
+  Number of synaptic contacts on node 25: 488213 
+  Number of stims on node 25: 990 
+Recording 6 traces of 1 types on node 25
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f8f05f2c740>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f8f05f2c7c0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 30: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 30: 114561 
+  Number of synaptic contacts on node 30: 485877 
+  Number of stims on node 30: 1000 
+Recording 4 traces of 1 types on node 30
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f891839e540>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f891839e540>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 27: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 27: 112806 
+  Number of synaptic contacts on node 27: 477494 
+  Number of stims on node 27: 1000 
+Recording 7 traces of 1 types on node 27
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fdc5669d100>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fdc5669d040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 14: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 14: 114178 
+  Number of synaptic contacts on node 14: 486189 
+  Number of stims on node 14: 1000 
+Recording 4 traces of 1 types on node 14
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f52a26aeac0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f52a26aea40>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 9: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 9: 115037 
+  Number of synaptic contacts on node 9: 492114 
+  Number of stims on node 9: 1000 
+Recording 6 traces of 1 types on node 9
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f7478e42240>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f7478e42040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 34: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 34: 113233 
+  Number of synaptic contacts on node 34: 481651 
+  Number of stims on node 34: 1000 
+Recording 7 traces of 1 types on node 34
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fdf4aa56100>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fdf4aa56040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 29: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 29: 114797 
+  Number of synaptic contacts on node 29: 488841 
+  Number of stims on node 29: 1000 
+Recording 6 traces of 1 types on node 29
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f26978f20c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f26978f2040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 26: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 26: 114173 
+  Number of synaptic contacts on node 26: 485151 
+  Number of stims on node 26: 990 
+Recording 6 traces of 1 types on node 26
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fc4a7d2e680>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fc4a7d2e700>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 22: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 22: 114139 
+  Number of synaptic contacts on node 22: 484640 
+  Number of stims on node 22: 990 
+Recording 9 traces of 1 types on node 22
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f19b77ada40>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f19b77adac0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 24: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 24: 114509 
+  Number of synaptic contacts on node 24: 491053 
+  Number of stims on node 24: 990 
+Recording 11 traces of 1 types on node 24
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f55adc3f100>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f55adc3f040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 31: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 31: 114702 
+  Number of synaptic contacts on node 31: 495213 
+  Number of stims on node 31: 1000 
+Recording 7 traces of 1 types on node 31
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f5c36c55740>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f5c36c556c0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 20: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 20: 114055 
+  Number of synaptic contacts on node 20: 485027 
+  Number of stims on node 20: 990 
+Recording 7 traces of 1 types on node 20
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f8004b97480>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f8004b97400>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 15: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 15: 114040 
+  Number of synaptic contacts on node 15: 485508 
+  Number of stims on node 15: 1000 
+Recording 7 traces of 1 types on node 15
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fa8d6e9a5c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fa8d6e9a680>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 12: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 12: 113716 
+  Number of synaptic contacts on node 12: 483929 
+  Number of stims on node 12: 1000 
+Recording 3 traces of 1 types on node 12
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f90d538c800>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f90d538c7c0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 17: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 17: 114032 
+  Number of synaptic contacts on node 17: 484601 
+  Number of stims on node 17: 990 
+Recording 8 traces of 1 types on node 17
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f6abdc6d480>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f6abdc6d3c0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 3: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 3: 114620 
+  Number of synaptic contacts on node 3: 487108 
+  Number of stims on node 3: 1000 
+Recording 7 traces of 1 types on node 3
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f68505c7240>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f68505c71c0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 38: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 38: 114095 
+  Number of synaptic contacts on node 38: 484650 
+  Number of stims on node 38: 1000 
+Recording 4 traces of 1 types on node 38
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7ff7fd7135c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7ff7fd713540>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 13: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 13: 114706 
+  Number of synaptic contacts on node 13: 488653 
+  Number of stims on node 13: 1000 
+Recording 6 traces of 1 types on node 13
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f37c7578940>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f37c75788c0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 4: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 4: 114577 
+  Number of synaptic contacts on node 4: 488717 
+  Number of stims on node 4: 1000 
+Recording 6 traces of 1 types on node 4
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7ff7a3f33140>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7ff7a3f330c0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 7: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 7: 114390 
+  Number of synaptic contacts on node 7: 488611 
+  Number of stims on node 7: 1000 
+Recording 5 traces of 1 types on node 7
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f405fc5d680>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f405fc5d640>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 16: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 16: 114652 
+  Number of synaptic contacts on node 16: 489289 
+  Number of stims on node 16: 1000 
+Recording 7 traces of 1 types on node 16
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f46bb5710c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f46bb571040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 6: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 6: 114098 
+  Number of synaptic contacts on node 6: 490376 
+  Number of stims on node 6: 1000 
+Recording 8 traces of 1 types on node 6
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f93ac1710c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f93ac171040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 19: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 19: 114185 
+  Number of synaptic contacts on node 19: 487428 
+  Number of stims on node 19: 990 
+Recording 2 traces of 1 types on node 19
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f25823833c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f2582383380>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 2: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 2: 115154 
+  Number of synaptic contacts on node 2: 491833 
+  Number of stims on node 2: 1000 
+Recording 4 traces of 1 types on node 2
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fc693b8d440>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fc693b8d3c0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 10: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 10: 114337 
+  Number of synaptic contacts on node 10: 489212 
+  Number of stims on node 10: 1000 
+Recording 5 traces of 1 types on node 10
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f190e5a5100>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f190e5a5040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 18: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 18: 115281 
+  Number of synaptic contacts on node 18: 490563 
+  Number of stims on node 18: 990 
+Recording 7 traces of 1 types on node 18
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fc115584600>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fc115584680>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 1: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 1: 115105 
+  Number of synaptic contacts on node 1: 486539 
+  Number of stims on node 1: 1000 
+Recording 6 traces of 1 types on node 1
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fc437eed6c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fc437eed680>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 5: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 5: 114926 
+  Number of synaptic contacts on node 5: 494329 
+  Number of stims on node 5: 1000 
+Recording 6 traces of 1 types on node 5
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fc03efe45c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fc03efe4540>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 33: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 33: 114589 
+  Number of synaptic contacts on node 33: 490622 
+  Number of stims on node 33: 1000 
+Recording 8 traces of 1 types on node 33
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7ff73d05e140>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7ff73d05e040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 35: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 35: 115028 
+  Number of synaptic contacts on node 35: 491112 
+  Number of stims on node 35: 1000 
+Recording 3 traces of 1 types on node 35
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fe465b68100>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fe465b68040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 8: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 8: 114766 
+  Number of synaptic contacts on node 8: 490688 
+  Number of stims on node 8: 1000 
+Recording 6 traces of 1 types on node 8
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f11715848c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f1171584840>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 11: 377 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 11: 114810 
+  Number of synaptic contacts on node 11: 494447 
+  Number of stims on node 11: 1000 
+Recording 4 traces of 1 types on node 11
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f469fc43780>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f469fc43740>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 32: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 32: 113930 
+  Number of synaptic contacts on node 32: 486723 
+  Number of stims on node 32: 1000 
+Recording 10 traces of 1 types on node 32
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7efd85478780>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7efd85478740>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 36: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 36: 115049 
+  Number of synaptic contacts on node 36: 494447 
+  Number of stims on node 36: 1000 
+Recording 3 traces of 1 types on node 36
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f61343b2100>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f61343b2040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 39: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 39: 114729 
+  Number of synaptic contacts on node 39: 491432 
+  Number of stims on node 39: 1000 
+Recording 5 traces of 1 types on node 39
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fb56080a400>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fb56080a400>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 37: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 37: 114255 
+  Number of synaptic contacts on node 37: 487449 
+  Number of stims on node 37: 1000 
+Recording 6 traces of 1 types on node 37
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fdcdadd40c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fdcdadd4040>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch2/v1_batch2_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch2/v1_batch2_netParams.py
+  Number of cells on node 23: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 23: 113367 
+  Number of synaptic contacts on node 23: 479022 
+  Number of stims on node 23: 990 
+Recording 10 traces of 1 types on node 23
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fdf4165c9c0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fdf4165ca40>)

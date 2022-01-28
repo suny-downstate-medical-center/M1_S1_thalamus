@@ -1,0 +1,410 @@
+numprocs=6
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch1/v1_batch1_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch1/v1_batch1_netParams.py
+  Number of cells on node 5: 1263 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 5: 268906 
+  Number of synaptic contacts on node 5: 1155191 
+  Number of stims on node 5: 3420 
+Recording 41 traces of 1 types on node 5
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f237d2a7370>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f237d2a7280>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch1/v1_batch1_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch1/v1_batch1_netParams.py
+  Number of cells on node 4: 1263 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 4: 270248 
+  Number of synaptic contacts on node 4: 1157214 
+  Number of stims on node 4: 3430 
+Recording 39 traces of 1 types on node 4
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f03d1e81370>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f03d1e815a0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch1/v1_batch1_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch1/v1_batch1_netParams.py
+  Number of cells on node 2: 1264 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 2: 270971 
+  Number of synaptic contacts on node 2: 1158517 
+  Number of stims on node 2: 3430 
+Recording 40 traces of 1 types on node 2
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7ff69b522640>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7ff69b522870>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch1/v1_batch1_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch1/v1_batch1_netParams.py
+  Number of cells on node 3: 1263 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 3: 270124 
+  Number of synaptic contacts on node 3: 1150476 
+  Number of stims on node 3: 3430 
+Recording 42 traces of 1 types on node 3
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fd010af5dc0>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7fd010af5fa0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch1/v1_batch1_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch1/v1_batch1_netParams.py
+  Number of cells on node 1: 1264 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 1: 272363 
+  Number of synaptic contacts on node 1: 1172944 
+  Number of stims on node 1: 3430 
+Recording 40 traces of 1 types on node 1
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f7c54470b40>)
+Plotting connectivity matrix...
+  There was an exception in plotConn(): 
+    'Network' object has no attribute 'allCells' 
+    (<class 'AttributeError'>, AttributeError("'Network' object has no attribute 'allCells'"), <traceback object at 0x7f7c54470be0>)
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch1/v1_batch1_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch1/v1_batch1_netParams.py
+
+Start time:  2022-01-27 21:01:09.888966
+
+Creating network of 249 cell populations on 6 hosts...
+  Number of cells on node 0: 1264 
+  Done; cell creation time = 21.30 s.
+Making connections...
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 0: 271389 
+  Number of synaptic contacts on node 0: 1166242 
+  Done; cell connection time = 461.04 s.
+Adding stims...
+  Number of stims on node 0: 3420 
+  Done; cell stims creation time = 3.32 s.
+Recording 43 traces of 1 types on node 0
+0.0s
+
+Running simulation for 50.0 ms...
+  Done; run time = 389.17 s; real-time ratio: 0.00.
+
+Gathering data...
+  Done; gather time = 160.33 s.
+
+Analyzing...
+  Cells: 7581
+  Connections: 1626057 (214.49 per cell)
+  Synaptic contacts: 6981144 (920.87 per cell)
+  Spikes: 15165 (40.01 Hz)
+  Simulated time: 0.1 s; 6 workers
+  Run time: 389.17 s
+   NGF1 : 15.862 Hz
+   IT2 : 35.602 Hz
+   SOM2 : 0.000 Hz
+   PV2 : 0.000 Hz
+   VIP2 : 5.385 Hz
+   NGF2 : 18.947 Hz
+   IT4 : 0.942 Hz
+   SOM4 : 0.000 Hz
+   PV4 : 0.000 Hz
+   VIP4 : 0.000 Hz
+   NGF4 : 20.000 Hz
+   IT5A : 20.000 Hz
+   SOM5A : 16.923 Hz
+   PV5A : 0.000 Hz
+   VIP5A : 0.000 Hz
+   NGF5A : 20.000 Hz
+   IT5B : 0.000 Hz
+   PT5B : 23.743 Hz
+   SOM5B : 18.108 Hz
+   PV5B : 0.000 Hz
+   VIP5B : 0.000 Hz
+   NGF5B : 20.000 Hz
+   IT6 : 0.000 Hz
+   CT6 : 0.000 Hz
+   SOM6 : 0.000 Hz
+   PV6 : 0.000 Hz
+   VIP6 : 0.000 Hz
+   NGF6 : 0.000 Hz
+   VPL_sTC : 29.512 Hz
+   VPM_sTC : 28.804 Hz
+   POm_sTC_s1 : 13.801 Hz
+   VL_sTC : 20.000 Hz
+   VM_sTC_m1 : 20.000 Hz
+   POm_sTC_m1 : 20.000 Hz
+   mt_RTN : 0.000 Hz
+   ss_RTN_o : 199.789 Hz
+   ss_RTN_m : 198.737 Hz
+   ss_RTN_i : 198.429 Hz
+   L1_DAC_bNA : 0.000 Hz
+   L1_DAC_cNA : 8.000 Hz
+   L1_DLAC_cNA : 6.667 Hz
+   L1_HAC_bNA : 0.000 Hz
+   L1_HAC_cIR : 10.000 Hz
+   L1_HAC_cNA : 2.500 Hz
+   L1_NGC-DA_bNA : 0.000 Hz
+   L1_NGC-DA_cAC : 20.000 Hz
+   L1_NGC-DA_cNA : 3.333 Hz
+   L1_NGC-DA_cST : 0.000 Hz
+   L1_NGC-SA_cNA : 6.667 Hz
+   L1_SLAC_bNA : 0.000 Hz
+   L1_SLAC_cAC : 0.000 Hz
+   L1_SLAC_cNA : 20.000 Hz
+   L23_BP_bAC : 40.000 Hz
+   L23_BP_bIR : 40.000 Hz
+   L23_BP_bNA : 60.000 Hz
+   L23_BP_cAC : 120.000 Hz
+   L23_BP_cNA : 40.000 Hz
+   L23_BP_dST : 60.000 Hz
+   L23_BTC_bAC : 40.000 Hz
+   L23_BTC_bIR : 0.000 Hz
+   L23_BTC_bNA : 20.000 Hz
+   L23_BTC_cAC : 33.333 Hz
+   L23_BTC_cNA : 0.000 Hz
+   L23_ChC_cAC : 90.000 Hz
+   L23_ChC_cNA : 60.000 Hz
+   L23_ChC_dNA : 40.000 Hz
+   L23_DBC_bAC : 40.000 Hz
+   L23_DBC_bIR : 40.000 Hz
+   L23_DBC_bNA : 68.000 Hz
+   L23_DBC_cAC : 90.000 Hz
+   L23_LBC_bAC : 26.667 Hz
+   L23_LBC_bNA : 30.000 Hz
+   L23_LBC_cAC : 74.286 Hz
+   L23_LBC_cNA : 36.000 Hz
+   L23_LBC_cST : 50.000 Hz
+   L23_LBC_dNA : 30.000 Hz
+   L23_MC_bAC : 0.000 Hz
+   L23_MC_bNA : 0.000 Hz
+   L23_MC_cAC : 1.176 Hz
+   L23_MC_cNA : 0.000 Hz
+   L23_MC_dNA : 0.000 Hz
+   L23_NBC_bAC : 0.000 Hz
+   L23_NBC_bNA : 20.000 Hz
+   L23_NBC_cAC : 70.000 Hz
+   L23_NBC_cIR : 80.000 Hz
+   L23_NBC_cNA : 32.000 Hz
+   L23_NBC_dNA : 26.667 Hz
+   L23_NGC_bNA : 20.000 Hz
+   L23_NGC_cAC : 100.000 Hz
+   L23_NGC_cNA : 46.667 Hz
+   L23_NGC_cST : 60.000 Hz
+   L23_PC_cAD : 74.714 Hz
+   L23_SBC_bNA : 50.000 Hz
+   L23_SBC_cAC : 75.000 Hz
+   L23_SBC_dNA : 46.667 Hz
+   L4_BP_bAC : 40.000 Hz
+   L4_BP_bIR : 20.000 Hz
+   L4_BP_bNA : 60.000 Hz
+   L4_BP_cAC : 80.000 Hz
+   L4_BP_cNA : 60.000 Hz
+   L4_BP_dST : 20.000 Hz
+   L4_BTC_bAC : 40.000 Hz
+   L4_BTC_bIR : 20.000 Hz
+   L4_BTC_bST : 20.000 Hz
+   L4_BTC_cAC : 120.000 Hz
+   L4_BTC_cNA : 60.000 Hz
+   L4_BTC_dNA : 40.000 Hz
+   L4_ChC_cAC : 140.000 Hz
+   L4_ChC_cNA : 20.000 Hz
+   L4_ChC_dNA : 20.000 Hz
+   L4_DBC_bAC : 40.000 Hz
+   L4_DBC_bIR : 40.000 Hz
+   L4_DBC_bNA : 100.000 Hz
+   L4_DBC_bST : 20.000 Hz
+   L4_DBC_cAC : 20.000 Hz
+   L4_DBC_cIR : 100.000 Hz
+   L4_DBC_cNA : 40.000 Hz
+   L4_LBC_cAC : 110.000 Hz
+   L4_LBC_cNA : 20.000 Hz
+   L4_LBC_cST : 33.333 Hz
+   L4_LBC_dNA : 25.000 Hz
+   L4_LBC_dST : 20.000 Hz
+   L4_MC_bAC : 0.000 Hz
+   L4_MC_bNA : 0.000 Hz
+   L4_MC_cAC : 10.000 Hz
+   L4_MC_cNA : 0.000 Hz
+   L4_MC_dNA : 0.000 Hz
+   L4_NBC_cAC : 120.000 Hz
+   L4_NBC_cIR : 140.000 Hz
+   L4_NBC_cNA : 25.000 Hz
+   L4_NBC_dNA : 33.333 Hz
+   L4_NGC_bNA : 40.000 Hz
+   L4_NGC_cAC : 40.000 Hz
+   L4_NGC_cNA : 40.000 Hz
+   L4_NGC_cST : 40.000 Hz
+   L4_PC_cAD : 66.263 Hz
+   L4_SBC_bNA : 20.000 Hz
+   L4_SBC_cAC : 120.000 Hz
+   L4_SBC_dNA : 50.000 Hz
+   L4_SP_cAD : 93.415 Hz
+   L4_SS_cAD : 53.333 Hz
+   L5_BP_bAC : 60.000 Hz
+   L5_BP_bIR : 60.000 Hz
+   L5_BP_bNA : 120.000 Hz
+   L5_BP_cAC : 140.000 Hz
+   L5_BP_cNA : 80.000 Hz
+   L5_BP_dST : 80.000 Hz
+   L5_BTC_bAC : 40.000 Hz
+   L5_BTC_cAC : 150.000 Hz
+   L5_BTC_cNA : 20.000 Hz
+   L5_ChC_cAC : 100.000 Hz
+   L5_ChC_cNA : 40.000 Hz
+   L5_ChC_dNA : 20.000 Hz
+   L5_DBC_bAC : 40.000 Hz
+   L5_DBC_bIR : 40.000 Hz
+   L5_DBC_bNA : 60.000 Hz
+   L5_DBC_bST : 60.000 Hz
+   L5_DBC_cAC : 100.000 Hz
+   L5_DBC_cIR : 120.000 Hz
+   L5_DBC_cNA : 60.000 Hz
+   L5_LBC_bAC : 40.000 Hz
+   L5_LBC_cAC : 160.000 Hz
+   L5_LBC_cIR : 140.000 Hz
+   L5_LBC_cNA : 46.667 Hz
+   L5_LBC_cST : 40.000 Hz
+   L5_LBC_dNA : 33.333 Hz
+   L5_LBC_dST : 25.000 Hz
+   L5_MC_bAC : 20.000 Hz
+   L5_MC_bIR : 20.000 Hz
+   L5_MC_bST : 20.000 Hz
+   L5_MC_cAC : 74.000 Hz
+   L5_MC_cNA : 40.000 Hz
+   L5_MC_cST : 40.000 Hz
+   L5_MC_dNA : 20.000 Hz
+   L5_NBC_bAC : 20.000 Hz
+   L5_NBC_bIR : 40.000 Hz
+   L5_NBC_bST : 20.000 Hz
+   L5_NBC_cAC : 166.667 Hz
+   L5_NBC_cIR : 180.000 Hz
+   L5_NBC_cNA : 40.000 Hz
+   L5_NBC_cST : 33.333 Hz
+   L5_NBC_dST : 20.000 Hz
+   L5_NGC_bNA : 140.000 Hz
+   L5_NGC_cAC : 160.000 Hz
+   L5_NGC_cNA : 80.000 Hz
+   L5_NGC_cST : 80.000 Hz
+   L5_SBC_bNA : 80.000 Hz
+   L5_SBC_cAC : 180.000 Hz
+   L5_SBC_dNA : 60.000 Hz
+   L5_STPC_cAD : 149.524 Hz
+   L5_TTPC1_cAD : 155.422 Hz
+   L5_TTPC2_cAD : 154.676 Hz
+   L5_UTPC_cAD : 145.000 Hz
+   L6_BPC_cAD : 65.349 Hz
+   L6_BP_bAC : 60.000 Hz
+   L6_BP_bIR : 60.000 Hz
+   L6_BP_bNA : 80.000 Hz
+   L6_BP_cAC : 140.000 Hz
+   L6_BP_cNA : 80.000 Hz
+   L6_BP_dST : 60.000 Hz
+   L6_BTC_bAC : 40.000 Hz
+   L6_BTC_cAC : 140.000 Hz
+   L6_BTC_cNA : 40.000 Hz
+   L6_ChC_cAC : 220.000 Hz
+   L6_ChC_cNA : 20.000 Hz
+   L6_ChC_dNA : 20.000 Hz
+   L6_DBC_bAC : 60.000 Hz
+   L6_DBC_bIR : 60.000 Hz
+   L6_DBC_bNA : 100.000 Hz
+   L6_DBC_bST : 140.000 Hz
+   L6_DBC_cAC : 160.000 Hz
+   L6_DBC_cIR : 120.000 Hz
+   L6_DBC_cNA : 80.000 Hz
+   L6_IPC_cAD : 91.323 Hz
+   L6_LBC_bAC : 48.000 Hz
+   L6_LBC_bIR : 37.143 Hz
+   L6_LBC_bNA : 73.333 Hz
+   L6_LBC_bST : 71.429 Hz
+   L6_LBC_cNA : 60.000 Hz
+   L6_LBC_cST : 53.333 Hz
+   L6_MC_bAC : 13.333 Hz
+   L6_MC_bIR : 7.500 Hz
+   L6_MC_bNA : 20.000 Hz
+   L6_MC_bST : 0.000 Hz
+   L6_MC_cAC : 32.000 Hz
+   L6_MC_cIR : 20.000 Hz
+   L6_MC_cNA : 20.000 Hz
+   L6_NBC_bAC : 40.000 Hz
+   L6_NBC_bIR : 40.000 Hz
+   L6_NBC_bST : 30.000 Hz
+   L6_NBC_cAC : 170.000 Hz
+   L6_NBC_cIR : 160.000 Hz
+   L6_NBC_cNA : 40.000 Hz
+   L6_NBC_cST : 30.000 Hz
+   L6_NBC_dST : 60.000 Hz
+   L6_NGC_bNA : 100.000 Hz
+   L6_NGC_cAC : 100.000 Hz
+   L6_NGC_cNA : 60.000 Hz
+   L6_NGC_cST : 80.000 Hz
+   L6_SBC_bNA : 60.000 Hz
+   L6_SBC_cAC : 170.000 Hz
+   L6_SBC_dNA : 80.000 Hz
+   L6_TPC_L1_cAD : 71.461 Hz
+   L6_TPC_L4_cAD : 85.897 Hz
+   L6_UTPC_cAD : 77.660 Hz
+   S2 : 0.000 Hz
+   cM1 : 0.000 Hz
+   M2 : 0.000 Hz
+   OC : 0.000 Hz
+Saving output as ../data/v1_batch1/v1_batch1_0_0.pkl ... 
+Finished saving!
+  Done; saving time = 163.89 s.
+Plotting 2D representation of network cell locations and connections...
+Plotting connectivity matrix...
+Saving figure data as ../data/v1_batch1/v1_batch1_0_0_conn.pkl ... 
+Plotting raster...
+  Done; plotting time = 1202.83 s
+
+Total time = 2406.03 s
+
+End time:  2022-01-27 21:41:15.922651
+Plotting connectivity matrix...
+Saving figure data as ../data/v1_batch1/v1_batch1_0_0_pop_numConns_matrix.json ... 
+Plotting connectivity matrix...
+Saving figure data as ../data/v1_batch1/v1_batch1_0_0_pop_convergence_matrix.json ... 
+[mpiexec@fernando-Nitro5] Sending Ctrl-C to processes as requested
+[mpiexec@fernando-Nitro5] Press Ctrl-C again to force abort

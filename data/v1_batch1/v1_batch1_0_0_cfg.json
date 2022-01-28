@@ -1,0 +1,3561 @@
+{
+    "simConfig": {
+        "EEGain": 0.530860873959182,
+        "EICellTypeGain": {
+            "NGF": 3.355557614291127,
+            "PV": 2.588295268601415,
+            "SOM": 0.6568380849927258,
+            "VIP": 1.4582025338644486
+        },
+        "EIGain": 1.0,
+        "IClamp1": {
+            "amp": 0.5,
+            "dur": 1000,
+            "loc": 0.5,
+            "pop": "POm_sTC_m1",
+            "sec": "soma",
+            "start": 0
+        },
+        "IEGain": 1.0,
+        "IEweights": [
+            0.5175411466399648,
+            0.7434834613857577,
+            1.0101817500320014
+        ],
+        "IIGain": 1.0,
+        "IIweights": [
+            1.449601171855032,
+            0.7831317900654744,
+            1.141724408254077
+        ],
+        "ITinterFactor": 1.0,
+        "L5BrecurrentFactor": 1.0,
+        "M1_pops": [
+            "NGF1",
+            "IT2",
+            "SOM2",
+            "PV2",
+            "VIP2",
+            "NGF2",
+            "IT4",
+            "SOM4",
+            "PV4",
+            "VIP4",
+            "NGF4",
+            "IT5A",
+            "SOM5A",
+            "PV5A",
+            "VIP5A",
+            "NGF5A",
+            "IT5B",
+            "PT5B",
+            "SOM5B",
+            "PV5B",
+            "VIP5B",
+            "NGF5B",
+            "IT6",
+            "CT6",
+            "SOM6",
+            "PV6",
+            "VIP6",
+            "NGF6"
+        ],
+        "NetStim1": {
+            "delay": 0,
+            "interval": 16.666666666666668,
+            "loc": 0.5,
+            "noise": 0.0,
+            "number": 60.0,
+            "pop": "IT2",
+            "sec": "soma",
+            "start": 500,
+            "synMech": [
+                "AMPA"
+            ],
+            "synMechWeightFactor": [
+                1.0
+            ],
+            "weight": 30.0,
+            "ynorm": [
+                0,
+                1
+            ]
+        },
+        "S1_pops": [
+            "L1_DAC_bNA",
+            "L1_DAC_cNA",
+            "L1_DLAC_cNA",
+            "L1_HAC_bNA",
+            "L1_HAC_cIR",
+            "L1_HAC_cNA",
+            "L1_NGC-DA_bNA",
+            "L1_NGC-DA_cAC",
+            "L1_NGC-DA_cNA",
+            "L1_NGC-DA_cST",
+            "L1_NGC-SA_cNA",
+            "L1_SLAC_bNA",
+            "L1_SLAC_cAC",
+            "L1_SLAC_cNA",
+            "L23_BP_bAC",
+            "L23_BP_bIR",
+            "L23_BP_bNA",
+            "L23_BP_cAC",
+            "L23_BP_cNA",
+            "L23_BP_dST",
+            "L23_BTC_bAC",
+            "L23_BTC_bIR",
+            "L23_BTC_bNA",
+            "L23_BTC_cAC",
+            "L23_BTC_cNA",
+            "L23_ChC_cAC",
+            "L23_ChC_cNA",
+            "L23_ChC_dNA",
+            "L23_DBC_bAC",
+            "L23_DBC_bIR",
+            "L23_DBC_bNA",
+            "L23_DBC_cAC",
+            "L23_LBC_bAC",
+            "L23_LBC_bNA",
+            "L23_LBC_cAC",
+            "L23_LBC_cNA",
+            "L23_LBC_cST",
+            "L23_LBC_dNA",
+            "L23_MC_bAC",
+            "L23_MC_bNA",
+            "L23_MC_cAC",
+            "L23_MC_cNA",
+            "L23_MC_dNA",
+            "L23_NBC_bAC",
+            "L23_NBC_bNA",
+            "L23_NBC_cAC",
+            "L23_NBC_cIR",
+            "L23_NBC_cNA",
+            "L23_NBC_dNA",
+            "L23_NGC_bNA",
+            "L23_NGC_cAC",
+            "L23_NGC_cNA",
+            "L23_NGC_cST",
+            "L23_PC_cAD",
+            "L23_SBC_bNA",
+            "L23_SBC_cAC",
+            "L23_SBC_dNA",
+            "L4_BP_bAC",
+            "L4_BP_bIR",
+            "L4_BP_bNA",
+            "L4_BP_cAC",
+            "L4_BP_cNA",
+            "L4_BP_dST",
+            "L4_BTC_bAC",
+            "L4_BTC_bIR",
+            "L4_BTC_bST",
+            "L4_BTC_cAC",
+            "L4_BTC_cNA",
+            "L4_BTC_dNA",
+            "L4_ChC_cAC",
+            "L4_ChC_cNA",
+            "L4_ChC_dNA",
+            "L4_DBC_bAC",
+            "L4_DBC_bIR",
+            "L4_DBC_bNA",
+            "L4_DBC_bST",
+            "L4_DBC_cAC",
+            "L4_DBC_cIR",
+            "L4_DBC_cNA",
+            "L4_LBC_cAC",
+            "L4_LBC_cNA",
+            "L4_LBC_cST",
+            "L4_LBC_dNA",
+            "L4_LBC_dST",
+            "L4_MC_bAC",
+            "L4_MC_bNA",
+            "L4_MC_cAC",
+            "L4_MC_cNA",
+            "L4_MC_dNA",
+            "L4_NBC_cAC",
+            "L4_NBC_cIR",
+            "L4_NBC_cNA",
+            "L4_NBC_dNA",
+            "L4_NGC_bNA",
+            "L4_NGC_cAC",
+            "L4_NGC_cNA",
+            "L4_NGC_cST",
+            "L4_PC_cAD",
+            "L4_SBC_bNA",
+            "L4_SBC_cAC",
+            "L4_SBC_dNA",
+            "L4_SP_cAD",
+            "L4_SS_cAD",
+            "L5_BP_bAC",
+            "L5_BP_bIR",
+            "L5_BP_bNA",
+            "L5_BP_cAC",
+            "L5_BP_cNA",
+            "L5_BP_dST",
+            "L5_BTC_bAC",
+            "L5_BTC_cAC",
+            "L5_BTC_cNA",
+            "L5_ChC_cAC",
+            "L5_ChC_cNA",
+            "L5_ChC_dNA",
+            "L5_DBC_bAC",
+            "L5_DBC_bIR",
+            "L5_DBC_bNA",
+            "L5_DBC_bST",
+            "L5_DBC_cAC",
+            "L5_DBC_cIR",
+            "L5_DBC_cNA",
+            "L5_LBC_bAC",
+            "L5_LBC_cAC",
+            "L5_LBC_cIR",
+            "L5_LBC_cNA",
+            "L5_LBC_cST",
+            "L5_LBC_dNA",
+            "L5_LBC_dST",
+            "L5_MC_bAC",
+            "L5_MC_bIR",
+            "L5_MC_bST",
+            "L5_MC_cAC",
+            "L5_MC_cNA",
+            "L5_MC_cST",
+            "L5_MC_dNA",
+            "L5_NBC_bAC",
+            "L5_NBC_bIR",
+            "L5_NBC_bST",
+            "L5_NBC_cAC",
+            "L5_NBC_cIR",
+            "L5_NBC_cNA",
+            "L5_NBC_cST",
+            "L5_NBC_dST",
+            "L5_NGC_bNA",
+            "L5_NGC_cAC",
+            "L5_NGC_cNA",
+            "L5_NGC_cST",
+            "L5_SBC_bNA",
+            "L5_SBC_cAC",
+            "L5_SBC_dNA",
+            "L5_STPC_cAD",
+            "L5_TTPC1_cAD",
+            "L5_TTPC2_cAD",
+            "L5_UTPC_cAD",
+            "L6_BPC_cAD",
+            "L6_BP_bAC",
+            "L6_BP_bIR",
+            "L6_BP_bNA",
+            "L6_BP_cAC",
+            "L6_BP_cNA",
+            "L6_BP_dST",
+            "L6_BTC_bAC",
+            "L6_BTC_cAC",
+            "L6_BTC_cNA",
+            "L6_ChC_cAC",
+            "L6_ChC_cNA",
+            "L6_ChC_dNA",
+            "L6_DBC_bAC",
+            "L6_DBC_bIR",
+            "L6_DBC_bNA",
+            "L6_DBC_bST",
+            "L6_DBC_cAC",
+            "L6_DBC_cIR",
+            "L6_DBC_cNA",
+            "L6_IPC_cAD",
+            "L6_LBC_bAC",
+            "L6_LBC_bIR",
+            "L6_LBC_bNA",
+            "L6_LBC_bST",
+            "L6_LBC_cNA",
+            "L6_LBC_cST",
+            "L6_MC_bAC",
+            "L6_MC_bIR",
+            "L6_MC_bNA",
+            "L6_MC_bST",
+            "L6_MC_cAC",
+            "L6_MC_cIR",
+            "L6_MC_cNA",
+            "L6_NBC_bAC",
+            "L6_NBC_bIR",
+            "L6_NBC_bST",
+            "L6_NBC_cAC",
+            "L6_NBC_cIR",
+            "L6_NBC_cNA",
+            "L6_NBC_cST",
+            "L6_NBC_dST",
+            "L6_NGC_bNA",
+            "L6_NGC_cAC",
+            "L6_NGC_cNA",
+            "L6_NGC_cST",
+            "L6_SBC_bNA",
+            "L6_SBC_cAC",
+            "L6_SBC_dNA",
+            "L6_TPC_L1_cAD",
+            "L6_TPC_L4_cAD",
+            "L6_UTPC_cAD"
+        ],
+        "S1cells": [
+            "L1_DAC_bNA",
+            "L1_DAC_cNA",
+            "L1_DLAC_cNA",
+            "L1_HAC_bNA",
+            "L1_HAC_cIR",
+            "L1_HAC_cNA",
+            "L1_NGC-DA_bNA",
+            "L1_NGC-DA_cAC",
+            "L1_NGC-DA_cNA",
+            "L1_NGC-DA_cST",
+            "L1_NGC-SA_cNA",
+            "L1_SLAC_bNA",
+            "L1_SLAC_cAC",
+            "L1_SLAC_cNA",
+            "L23_BP_bAC",
+            "L23_BP_bIR",
+            "L23_BP_bNA",
+            "L23_BP_cAC",
+            "L23_BP_cNA",
+            "L23_BP_dST",
+            "L23_BTC_bAC",
+            "L23_BTC_bIR",
+            "L23_BTC_bNA",
+            "L23_BTC_cAC",
+            "L23_BTC_cNA",
+            "L23_ChC_cAC",
+            "L23_ChC_cNA",
+            "L23_ChC_dNA",
+            "L23_DBC_bAC",
+            "L23_DBC_bIR",
+            "L23_DBC_bNA",
+            "L23_DBC_cAC",
+            "L23_LBC_bAC",
+            "L23_LBC_bNA",
+            "L23_LBC_cAC",
+            "L23_LBC_cNA",
+            "L23_LBC_cST",
+            "L23_LBC_dNA",
+            "L23_MC_bAC",
+            "L23_MC_bNA",
+            "L23_MC_cAC",
+            "L23_MC_cNA",
+            "L23_MC_dNA",
+            "L23_NBC_bAC",
+            "L23_NBC_bNA",
+            "L23_NBC_cAC",
+            "L23_NBC_cIR",
+            "L23_NBC_cNA",
+            "L23_NBC_dNA",
+            "L23_NGC_bNA",
+            "L23_NGC_cAC",
+            "L23_NGC_cNA",
+            "L23_NGC_cST",
+            "L23_PC_cAD",
+            "L23_SBC_bNA",
+            "L23_SBC_cAC",
+            "L23_SBC_dNA",
+            "L4_BP_bAC",
+            "L4_BP_bIR",
+            "L4_BP_bNA",
+            "L4_BP_cAC",
+            "L4_BP_cNA",
+            "L4_BP_dST",
+            "L4_BTC_bAC",
+            "L4_BTC_bIR",
+            "L4_BTC_bST",
+            "L4_BTC_cAC",
+            "L4_BTC_cNA",
+            "L4_BTC_dNA",
+            "L4_ChC_cAC",
+            "L4_ChC_cNA",
+            "L4_ChC_dNA",
+            "L4_DBC_bAC",
+            "L4_DBC_bIR",
+            "L4_DBC_bNA",
+            "L4_DBC_bST",
+            "L4_DBC_cAC",
+            "L4_DBC_cIR",
+            "L4_DBC_cNA",
+            "L4_LBC_cAC",
+            "L4_LBC_cNA",
+            "L4_LBC_cST",
+            "L4_LBC_dNA",
+            "L4_LBC_dST",
+            "L4_MC_bAC",
+            "L4_MC_bNA",
+            "L4_MC_cAC",
+            "L4_MC_cNA",
+            "L4_MC_dNA",
+            "L4_NBC_cAC",
+            "L4_NBC_cIR",
+            "L4_NBC_cNA",
+            "L4_NBC_dNA",
+            "L4_NGC_bNA",
+            "L4_NGC_cAC",
+            "L4_NGC_cNA",
+            "L4_NGC_cST",
+            "L4_PC_cAD",
+            "L4_SBC_bNA",
+            "L4_SBC_cAC",
+            "L4_SBC_dNA",
+            "L4_SP_cAD",
+            "L4_SS_cAD",
+            "L5_BP_bAC",
+            "L5_BP_bIR",
+            "L5_BP_bNA",
+            "L5_BP_cAC",
+            "L5_BP_cNA",
+            "L5_BP_dST",
+            "L5_BTC_bAC",
+            "L5_BTC_cAC",
+            "L5_BTC_cNA",
+            "L5_ChC_cAC",
+            "L5_ChC_cNA",
+            "L5_ChC_dNA",
+            "L5_DBC_bAC",
+            "L5_DBC_bIR",
+            "L5_DBC_bNA",
+            "L5_DBC_bST",
+            "L5_DBC_cAC",
+            "L5_DBC_cIR",
+            "L5_DBC_cNA",
+            "L5_LBC_bAC",
+            "L5_LBC_cAC",
+            "L5_LBC_cIR",
+            "L5_LBC_cNA",
+            "L5_LBC_cST",
+            "L5_LBC_dNA",
+            "L5_LBC_dST",
+            "L5_MC_bAC",
+            "L5_MC_bIR",
+            "L5_MC_bST",
+            "L5_MC_cAC",
+            "L5_MC_cNA",
+            "L5_MC_cST",
+            "L5_MC_dNA",
+            "L5_NBC_bAC",
+            "L5_NBC_bIR",
+            "L5_NBC_bST",
+            "L5_NBC_cAC",
+            "L5_NBC_cIR",
+            "L5_NBC_cNA",
+            "L5_NBC_cST",
+            "L5_NBC_dST",
+            "L5_NGC_bNA",
+            "L5_NGC_cAC",
+            "L5_NGC_cNA",
+            "L5_NGC_cST",
+            "L5_SBC_bNA",
+            "L5_SBC_cAC",
+            "L5_SBC_dNA",
+            "L5_STPC_cAD",
+            "L5_TTPC1_cAD",
+            "L5_TTPC2_cAD",
+            "L5_UTPC_cAD",
+            "L6_BPC_cAD",
+            "L6_BP_bAC",
+            "L6_BP_bIR",
+            "L6_BP_bNA",
+            "L6_BP_cAC",
+            "L6_BP_cNA",
+            "L6_BP_dST",
+            "L6_BTC_bAC",
+            "L6_BTC_cAC",
+            "L6_BTC_cNA",
+            "L6_ChC_cAC",
+            "L6_ChC_cNA",
+            "L6_ChC_dNA",
+            "L6_DBC_bAC",
+            "L6_DBC_bIR",
+            "L6_DBC_bNA",
+            "L6_DBC_bST",
+            "L6_DBC_cAC",
+            "L6_DBC_cIR",
+            "L6_DBC_cNA",
+            "L6_IPC_cAD",
+            "L6_LBC_bAC",
+            "L6_LBC_bIR",
+            "L6_LBC_bNA",
+            "L6_LBC_bST",
+            "L6_LBC_cNA",
+            "L6_LBC_cST",
+            "L6_MC_bAC",
+            "L6_MC_bIR",
+            "L6_MC_bNA",
+            "L6_MC_bST",
+            "L6_MC_cAC",
+            "L6_MC_cIR",
+            "L6_MC_cNA",
+            "L6_NBC_bAC",
+            "L6_NBC_bIR",
+            "L6_NBC_bST",
+            "L6_NBC_cAC",
+            "L6_NBC_cIR",
+            "L6_NBC_cNA",
+            "L6_NBC_cST",
+            "L6_NBC_dST",
+            "L6_NGC_bNA",
+            "L6_NGC_cAC",
+            "L6_NGC_cNA",
+            "L6_NGC_cST",
+            "L6_SBC_bNA",
+            "L6_SBC_cAC",
+            "L6_SBC_dNA",
+            "L6_TPC_L1_cAD",
+            "L6_TPC_L4_cAD",
+            "L6_UTPC_cAD"
+        ],
+        "S1pops": [
+            "L1_DAC",
+            "L1_DLAC",
+            "L1_HAC",
+            "L1_NGC-DA",
+            "L1_NGC-SA",
+            "L1_SLAC",
+            "L23_BP",
+            "L23_BTC",
+            "L23_ChC",
+            "L23_DBC",
+            "L23_LBC",
+            "L23_MC",
+            "L23_NBC",
+            "L23_NGC",
+            "L23_PC",
+            "L23_SBC",
+            "L4_BP",
+            "L4_BTC",
+            "L4_ChC",
+            "L4_DBC",
+            "L4_LBC",
+            "L4_MC",
+            "L4_NBC",
+            "L4_NGC",
+            "L4_PC",
+            "L4_SBC",
+            "L4_SP",
+            "L4_SS",
+            "L5_BP",
+            "L5_BTC",
+            "L5_ChC",
+            "L5_DBC",
+            "L5_LBC",
+            "L5_MC",
+            "L5_NBC",
+            "L5_NGC",
+            "L5_SBC",
+            "L5_STPC",
+            "L5_TTPC1",
+            "L5_TTPC2",
+            "L5_UTPC",
+            "L6_BPC",
+            "L6_BP",
+            "L6_BTC",
+            "L6_ChC",
+            "L6_DBC",
+            "L6_IPC",
+            "L6_LBC",
+            "L6_MC",
+            "L6_NBC",
+            "L6_NGC",
+            "L6_SBC",
+            "L6_TPC_L1",
+            "L6_TPC_L4",
+            "L6_UTPC"
+        ],
+        "TC_S1": {
+            "POm_sTC_s1": true,
+            "VPL_sTC": true,
+            "VPM_sTC": true
+        },
+        "Th_pops": [
+            "VPL_sTC",
+            "VPM_sTC",
+            "POm_sTC_s1",
+            "VL_sTC",
+            "VM_sTC_m1",
+            "POm_sTC_m1",
+            "mt_RTN",
+            "ss_RTN_o",
+            "ss_RTN_m",
+            "ss_RTN_i"
+        ],
+        "addBicuculline": false,
+        "addConn": true,
+        "addIClamp": 0,
+        "addLongConn": true,
+        "addNetStim": 0,
+        "addPulses": 0,
+        "addStimSynS1": true,
+        "addSubConn": true,
+        "addSynMechs": true,
+        "addThalMt": 1,
+        "addThalSs": 1,
+        "addTopographicalConn": 1,
+        "allowConnsWithWeight0": true,
+        "allowSelfConns": false,
+        "analysis": {
+            "plot2Dnet": {
+                "figSize": [
+                    24,
+                    24
+                ],
+                "fontSize": 16,
+                "include": [
+                    "NGF1",
+                    "IT2",
+                    "PV2",
+                    "SOM2",
+                    "VIP2",
+                    "NGF2",
+                    "IT4",
+                    "PV4",
+                    "SOM4",
+                    "VIP4",
+                    "NGF4",
+                    "IT5A",
+                    "PV5A",
+                    "SOM5A",
+                    "VIP5A",
+                    "NGF5A",
+                    "IT5B",
+                    "PT5B",
+                    "PV5B",
+                    "SOM5B",
+                    "VIP5B",
+                    "NGF5B",
+                    "IT6",
+                    "CT6",
+                    "PV6",
+                    "SOM6",
+                    "VIP6",
+                    "NGF6",
+                    "VPL_sTC",
+                    "VPM_sTC",
+                    "POm_sTC_s1",
+                    "VL_sTC",
+                    "VM_sTC_m1",
+                    "POm_sTC_m1",
+                    "mt_RTN",
+                    "ss_RTN_o",
+                    "ss_RTN_m",
+                    "ss_RTN_i",
+                    "L1_DAC_bNA",
+                    "L1_DAC_cNA",
+                    "L1_DLAC_cNA",
+                    "L1_HAC_bNA",
+                    "L1_HAC_cIR",
+                    "L1_HAC_cNA",
+                    "L1_NGC-DA_bNA",
+                    "L1_NGC-DA_cAC",
+                    "L1_NGC-DA_cNA",
+                    "L1_NGC-DA_cST",
+                    "L1_NGC-SA_cNA",
+                    "L1_SLAC_bNA",
+                    "L1_SLAC_cAC",
+                    "L1_SLAC_cNA",
+                    "L23_BP_bAC",
+                    "L23_BP_bIR",
+                    "L23_BP_bNA",
+                    "L23_BP_cAC",
+                    "L23_BP_cNA",
+                    "L23_BP_dST",
+                    "L23_BTC_bAC",
+                    "L23_BTC_bIR",
+                    "L23_BTC_bNA",
+                    "L23_BTC_cAC",
+                    "L23_BTC_cNA",
+                    "L23_ChC_cAC",
+                    "L23_ChC_cNA",
+                    "L23_ChC_dNA",
+                    "L23_DBC_bAC",
+                    "L23_DBC_bIR",
+                    "L23_DBC_bNA",
+                    "L23_DBC_cAC",
+                    "L23_LBC_bAC",
+                    "L23_LBC_bNA",
+                    "L23_LBC_cAC",
+                    "L23_LBC_cNA",
+                    "L23_LBC_cST",
+                    "L23_LBC_dNA",
+                    "L23_MC_bAC",
+                    "L23_MC_bNA",
+                    "L23_MC_cAC",
+                    "L23_MC_cNA",
+                    "L23_MC_dNA",
+                    "L23_NBC_bAC",
+                    "L23_NBC_bNA",
+                    "L23_NBC_cAC",
+                    "L23_NBC_cIR",
+                    "L23_NBC_cNA",
+                    "L23_NBC_dNA",
+                    "L23_NGC_bNA",
+                    "L23_NGC_cAC",
+                    "L23_NGC_cNA",
+                    "L23_NGC_cST",
+                    "L23_PC_cAD",
+                    "L23_SBC_bNA",
+                    "L23_SBC_cAC",
+                    "L23_SBC_dNA",
+                    "L4_BP_bAC",
+                    "L4_BP_bIR",
+                    "L4_BP_bNA",
+                    "L4_BP_cAC",
+                    "L4_BP_cNA",
+                    "L4_BP_dST",
+                    "L4_BTC_bAC",
+                    "L4_BTC_bIR",
+                    "L4_BTC_bST",
+                    "L4_BTC_cAC",
+                    "L4_BTC_cNA",
+                    "L4_BTC_dNA",
+                    "L4_ChC_cAC",
+                    "L4_ChC_cNA",
+                    "L4_ChC_dNA",
+                    "L4_DBC_bAC",
+                    "L4_DBC_bIR",
+                    "L4_DBC_bNA",
+                    "L4_DBC_bST",
+                    "L4_DBC_cAC",
+                    "L4_DBC_cIR",
+                    "L4_DBC_cNA",
+                    "L4_LBC_cAC",
+                    "L4_LBC_cNA",
+                    "L4_LBC_cST",
+                    "L4_LBC_dNA",
+                    "L4_LBC_dST",
+                    "L4_MC_bAC",
+                    "L4_MC_bNA",
+                    "L4_MC_cAC",
+                    "L4_MC_cNA",
+                    "L4_MC_dNA",
+                    "L4_NBC_cAC",
+                    "L4_NBC_cIR",
+                    "L4_NBC_cNA",
+                    "L4_NBC_dNA",
+                    "L4_NGC_bNA",
+                    "L4_NGC_cAC",
+                    "L4_NGC_cNA",
+                    "L4_NGC_cST",
+                    "L4_PC_cAD",
+                    "L4_SBC_bNA",
+                    "L4_SBC_cAC",
+                    "L4_SBC_dNA",
+                    "L4_SP_cAD",
+                    "L4_SS_cAD",
+                    "L5_BP_bAC",
+                    "L5_BP_bIR",
+                    "L5_BP_bNA",
+                    "L5_BP_cAC",
+                    "L5_BP_cNA",
+                    "L5_BP_dST",
+                    "L5_BTC_bAC",
+                    "L5_BTC_cAC",
+                    "L5_BTC_cNA",
+                    "L5_ChC_cAC",
+                    "L5_ChC_cNA",
+                    "L5_ChC_dNA",
+                    "L5_DBC_bAC",
+                    "L5_DBC_bIR",
+                    "L5_DBC_bNA",
+                    "L5_DBC_bST",
+                    "L5_DBC_cAC",
+                    "L5_DBC_cIR",
+                    "L5_DBC_cNA",
+                    "L5_LBC_bAC",
+                    "L5_LBC_cAC",
+                    "L5_LBC_cIR",
+                    "L5_LBC_cNA",
+                    "L5_LBC_cST",
+                    "L5_LBC_dNA",
+                    "L5_LBC_dST",
+                    "L5_MC_bAC",
+                    "L5_MC_bIR",
+                    "L5_MC_bST",
+                    "L5_MC_cAC",
+                    "L5_MC_cNA",
+                    "L5_MC_cST",
+                    "L5_MC_dNA",
+                    "L5_NBC_bAC",
+                    "L5_NBC_bIR",
+                    "L5_NBC_bST",
+                    "L5_NBC_cAC",
+                    "L5_NBC_cIR",
+                    "L5_NBC_cNA",
+                    "L5_NBC_cST",
+                    "L5_NBC_dST",
+                    "L5_NGC_bNA",
+                    "L5_NGC_cAC",
+                    "L5_NGC_cNA",
+                    "L5_NGC_cST",
+                    "L5_SBC_bNA",
+                    "L5_SBC_cAC",
+                    "L5_SBC_dNA",
+                    "L5_STPC_cAD",
+                    "L5_TTPC1_cAD",
+                    "L5_TTPC2_cAD",
+                    "L5_UTPC_cAD",
+                    "L6_BPC_cAD",
+                    "L6_BP_bAC",
+                    "L6_BP_bIR",
+                    "L6_BP_bNA",
+                    "L6_BP_cAC",
+                    "L6_BP_cNA",
+                    "L6_BP_dST",
+                    "L6_BTC_bAC",
+                    "L6_BTC_cAC",
+                    "L6_BTC_cNA",
+                    "L6_ChC_cAC",
+                    "L6_ChC_cNA",
+                    "L6_ChC_dNA",
+                    "L6_DBC_bAC",
+                    "L6_DBC_bIR",
+                    "L6_DBC_bNA",
+                    "L6_DBC_bST",
+                    "L6_DBC_cAC",
+                    "L6_DBC_cIR",
+                    "L6_DBC_cNA",
+                    "L6_IPC_cAD",
+                    "L6_LBC_bAC",
+                    "L6_LBC_bIR",
+                    "L6_LBC_bNA",
+                    "L6_LBC_bST",
+                    "L6_LBC_cNA",
+                    "L6_LBC_cST",
+                    "L6_MC_bAC",
+                    "L6_MC_bIR",
+                    "L6_MC_bNA",
+                    "L6_MC_bST",
+                    "L6_MC_cAC",
+                    "L6_MC_cIR",
+                    "L6_MC_cNA",
+                    "L6_NBC_bAC",
+                    "L6_NBC_bIR",
+                    "L6_NBC_bST",
+                    "L6_NBC_cAC",
+                    "L6_NBC_cIR",
+                    "L6_NBC_cNA",
+                    "L6_NBC_cST",
+                    "L6_NBC_dST",
+                    "L6_NGC_bNA",
+                    "L6_NGC_cAC",
+                    "L6_NGC_cNA",
+                    "L6_NGC_cST",
+                    "L6_SBC_bNA",
+                    "L6_SBC_cAC",
+                    "L6_SBC_dNA",
+                    "L6_TPC_L1_cAD",
+                    "L6_TPC_L4_cAD",
+                    "L6_UTPC_cAD"
+                ],
+                "saveFig": true,
+                "showConns": false
+            },
+            "plotConn": {
+                "clim": [
+                    0,
+                    0.2
+                ],
+                "feature": "probability",
+                "figSize": [
+                    20,
+                    20
+                ],
+                "groupBy": "pop",
+                "includePost": [
+                    "NGF1",
+                    "IT2",
+                    "SOM2",
+                    "PV2",
+                    "VIP2",
+                    "NGF2",
+                    "IT4",
+                    "SOM4",
+                    "PV4",
+                    "VIP4",
+                    "NGF4",
+                    "IT5A",
+                    "SOM5A",
+                    "PV5A",
+                    "VIP5A",
+                    "NGF5A",
+                    "IT5B",
+                    "PT5B",
+                    "SOM5B",
+                    "PV5B",
+                    "VIP5B",
+                    "NGF5B",
+                    "IT6",
+                    "CT6",
+                    "SOM6",
+                    "PV6",
+                    "VIP6",
+                    "NGF6",
+                    "VPL_sTC",
+                    "VPM_sTC",
+                    "POm_sTC_s1",
+                    "VL_sTC",
+                    "VM_sTC_m1",
+                    "POm_sTC_m1",
+                    "mt_RTN",
+                    "ss_RTN_o",
+                    "ss_RTN_m",
+                    "ss_RTN_i",
+                    "L1_HAC_cNA",
+                    "L23_LBC_dNA",
+                    "L23_MC_cAC",
+                    "L4_LBC_dNA",
+                    "L4_MC_cAC",
+                    "L5_LBC_dST",
+                    "L5_MC_bAC",
+                    "L6_LBC_bIR",
+                    "L6_MC_bIR",
+                    "L23_PC_cAD",
+                    "L4_PC_cAD",
+                    "L4_SS_cAD",
+                    "L4_SP_cAD",
+                    "L5_TTPC1_cAD",
+                    "L5_TTPC2_cAD",
+                    "L5_STPC_cAD",
+                    "L5_UTPC_cAD",
+                    "L6_TPC_L1_cAD",
+                    "L6_TPC_L4_cAD",
+                    "L6_BPC_cAD",
+                    "L6_IPC_cAD",
+                    "L6_UTPC_cAD"
+                ],
+                "includePre": [
+                    "NGF1",
+                    "IT2",
+                    "SOM2",
+                    "PV2",
+                    "VIP2",
+                    "NGF2",
+                    "IT4",
+                    "SOM4",
+                    "PV4",
+                    "VIP4",
+                    "NGF4",
+                    "IT5A",
+                    "SOM5A",
+                    "PV5A",
+                    "VIP5A",
+                    "NGF5A",
+                    "IT5B",
+                    "PT5B",
+                    "SOM5B",
+                    "PV5B",
+                    "VIP5B",
+                    "NGF5B",
+                    "IT6",
+                    "CT6",
+                    "SOM6",
+                    "PV6",
+                    "VIP6",
+                    "NGF6",
+                    "VPL_sTC",
+                    "VPM_sTC",
+                    "POm_sTC_s1",
+                    "VL_sTC",
+                    "VM_sTC_m1",
+                    "POm_sTC_m1",
+                    "mt_RTN",
+                    "ss_RTN_o",
+                    "ss_RTN_m",
+                    "ss_RTN_i",
+                    "L1_HAC_cNA",
+                    "L23_LBC_dNA",
+                    "L23_MC_cAC",
+                    "L4_LBC_dNA",
+                    "L4_MC_cAC",
+                    "L5_LBC_dST",
+                    "L5_MC_bAC",
+                    "L6_LBC_bIR",
+                    "L6_MC_bIR",
+                    "L23_PC_cAD",
+                    "L4_PC_cAD",
+                    "L4_SS_cAD",
+                    "L4_SP_cAD",
+                    "L5_TTPC1_cAD",
+                    "L5_TTPC2_cAD",
+                    "L5_STPC_cAD",
+                    "L5_UTPC_cAD",
+                    "L6_TPC_L1_cAD",
+                    "L6_TPC_L4_cAD",
+                    "L6_BPC_cAD",
+                    "L6_IPC_cAD",
+                    "L6_UTPC_cAD"
+                ],
+                "saveData": true,
+                "saveFig": true,
+                "showFig": false,
+                "synMech": null,
+                "synOrConn": "conn"
+            },
+            "plotRaster": {
+                "dpi": 300,
+                "figSize": [
+                    24,
+                    20
+                ],
+                "include": [
+                    "NGF1",
+                    "IT2",
+                    "PV2",
+                    "SOM2",
+                    "VIP2",
+                    "NGF2",
+                    "IT4",
+                    "PV4",
+                    "SOM4",
+                    "VIP4",
+                    "NGF4",
+                    "IT5A",
+                    "PV5A",
+                    "SOM5A",
+                    "VIP5A",
+                    "NGF5A",
+                    "IT5B",
+                    "PT5B",
+                    "PV5B",
+                    "SOM5B",
+                    "VIP5B",
+                    "NGF5B",
+                    "IT6",
+                    "CT6",
+                    "PV6",
+                    "SOM6",
+                    "VIP6",
+                    "NGF6",
+                    "VPL_sTC",
+                    "VPM_sTC",
+                    "POm_sTC_s1",
+                    "VL_sTC",
+                    "VM_sTC_m1",
+                    "POm_sTC_m1",
+                    "mt_RTN",
+                    "ss_RTN_o",
+                    "ss_RTN_m",
+                    "ss_RTN_i",
+                    "L1_DAC_bNA",
+                    "L1_DAC_cNA",
+                    "L1_DLAC_cNA",
+                    "L1_HAC_bNA",
+                    "L1_HAC_cIR",
+                    "L1_HAC_cNA",
+                    "L1_NGC-DA_bNA",
+                    "L1_NGC-DA_cAC",
+                    "L1_NGC-DA_cNA",
+                    "L1_NGC-DA_cST",
+                    "L1_NGC-SA_cNA",
+                    "L1_SLAC_bNA",
+                    "L1_SLAC_cAC",
+                    "L1_SLAC_cNA",
+                    "L23_BP_bAC",
+                    "L23_BP_bIR",
+                    "L23_BP_bNA",
+                    "L23_BP_cAC",
+                    "L23_BP_cNA",
+                    "L23_BP_dST",
+                    "L23_BTC_bAC",
+                    "L23_BTC_bIR",
+                    "L23_BTC_bNA",
+                    "L23_BTC_cAC",
+                    "L23_BTC_cNA",
+                    "L23_ChC_cAC",
+                    "L23_ChC_cNA",
+                    "L23_ChC_dNA",
+                    "L23_DBC_bAC",
+                    "L23_DBC_bIR",
+                    "L23_DBC_bNA",
+                    "L23_DBC_cAC",
+                    "L23_LBC_bAC",
+                    "L23_LBC_bNA",
+                    "L23_LBC_cAC",
+                    "L23_LBC_cNA",
+                    "L23_LBC_cST",
+                    "L23_LBC_dNA",
+                    "L23_MC_bAC",
+                    "L23_MC_bNA",
+                    "L23_MC_cAC",
+                    "L23_MC_cNA",
+                    "L23_MC_dNA",
+                    "L23_NBC_bAC",
+                    "L23_NBC_bNA",
+                    "L23_NBC_cAC",
+                    "L23_NBC_cIR",
+                    "L23_NBC_cNA",
+                    "L23_NBC_dNA",
+                    "L23_NGC_bNA",
+                    "L23_NGC_cAC",
+                    "L23_NGC_cNA",
+                    "L23_NGC_cST",
+                    "L23_PC_cAD",
+                    "L23_SBC_bNA",
+                    "L23_SBC_cAC",
+                    "L23_SBC_dNA",
+                    "L4_BP_bAC",
+                    "L4_BP_bIR",
+                    "L4_BP_bNA",
+                    "L4_BP_cAC",
+                    "L4_BP_cNA",
+                    "L4_BP_dST",
+                    "L4_BTC_bAC",
+                    "L4_BTC_bIR",
+                    "L4_BTC_bST",
+                    "L4_BTC_cAC",
+                    "L4_BTC_cNA",
+                    "L4_BTC_dNA",
+                    "L4_ChC_cAC",
+                    "L4_ChC_cNA",
+                    "L4_ChC_dNA",
+                    "L4_DBC_bAC",
+                    "L4_DBC_bIR",
+                    "L4_DBC_bNA",
+                    "L4_DBC_bST",
+                    "L4_DBC_cAC",
+                    "L4_DBC_cIR",
+                    "L4_DBC_cNA",
+                    "L4_LBC_cAC",
+                    "L4_LBC_cNA",
+                    "L4_LBC_cST",
+                    "L4_LBC_dNA",
+                    "L4_LBC_dST",
+                    "L4_MC_bAC",
+                    "L4_MC_bNA",
+                    "L4_MC_cAC",
+                    "L4_MC_cNA",
+                    "L4_MC_dNA",
+                    "L4_NBC_cAC",
+                    "L4_NBC_cIR",
+                    "L4_NBC_cNA",
+                    "L4_NBC_dNA",
+                    "L4_NGC_bNA",
+                    "L4_NGC_cAC",
+                    "L4_NGC_cNA",
+                    "L4_NGC_cST",
+                    "L4_PC_cAD",
+                    "L4_SBC_bNA",
+                    "L4_SBC_cAC",
+                    "L4_SBC_dNA",
+                    "L4_SP_cAD",
+                    "L4_SS_cAD",
+                    "L5_BP_bAC",
+                    "L5_BP_bIR",
+                    "L5_BP_bNA",
+                    "L5_BP_cAC",
+                    "L5_BP_cNA",
+                    "L5_BP_dST",
+                    "L5_BTC_bAC",
+                    "L5_BTC_cAC",
+                    "L5_BTC_cNA",
+                    "L5_ChC_cAC",
+                    "L5_ChC_cNA",
+                    "L5_ChC_dNA",
+                    "L5_DBC_bAC",
+                    "L5_DBC_bIR",
+                    "L5_DBC_bNA",
+                    "L5_DBC_bST",
+                    "L5_DBC_cAC",
+                    "L5_DBC_cIR",
+                    "L5_DBC_cNA",
+                    "L5_LBC_bAC",
+                    "L5_LBC_cAC",
+                    "L5_LBC_cIR",
+                    "L5_LBC_cNA",
+                    "L5_LBC_cST",
+                    "L5_LBC_dNA",
+                    "L5_LBC_dST",
+                    "L5_MC_bAC",
+                    "L5_MC_bIR",
+                    "L5_MC_bST",
+                    "L5_MC_cAC",
+                    "L5_MC_cNA",
+                    "L5_MC_cST",
+                    "L5_MC_dNA",
+                    "L5_NBC_bAC",
+                    "L5_NBC_bIR",
+                    "L5_NBC_bST",
+                    "L5_NBC_cAC",
+                    "L5_NBC_cIR",
+                    "L5_NBC_cNA",
+                    "L5_NBC_cST",
+                    "L5_NBC_dST",
+                    "L5_NGC_bNA",
+                    "L5_NGC_cAC",
+                    "L5_NGC_cNA",
+                    "L5_NGC_cST",
+                    "L5_SBC_bNA",
+                    "L5_SBC_cAC",
+                    "L5_SBC_dNA",
+                    "L5_STPC_cAD",
+                    "L5_TTPC1_cAD",
+                    "L5_TTPC2_cAD",
+                    "L5_UTPC_cAD",
+                    "L6_BPC_cAD",
+                    "L6_BP_bAC",
+                    "L6_BP_bIR",
+                    "L6_BP_bNA",
+                    "L6_BP_cAC",
+                    "L6_BP_cNA",
+                    "L6_BP_dST",
+                    "L6_BTC_bAC",
+                    "L6_BTC_cAC",
+                    "L6_BTC_cNA",
+                    "L6_ChC_cAC",
+                    "L6_ChC_cNA",
+                    "L6_ChC_dNA",
+                    "L6_DBC_bAC",
+                    "L6_DBC_bIR",
+                    "L6_DBC_bNA",
+                    "L6_DBC_bST",
+                    "L6_DBC_cAC",
+                    "L6_DBC_cIR",
+                    "L6_DBC_cNA",
+                    "L6_IPC_cAD",
+                    "L6_LBC_bAC",
+                    "L6_LBC_bIR",
+                    "L6_LBC_bNA",
+                    "L6_LBC_bST",
+                    "L6_LBC_cNA",
+                    "L6_LBC_cST",
+                    "L6_MC_bAC",
+                    "L6_MC_bIR",
+                    "L6_MC_bNA",
+                    "L6_MC_bST",
+                    "L6_MC_cAC",
+                    "L6_MC_cIR",
+                    "L6_MC_cNA",
+                    "L6_NBC_bAC",
+                    "L6_NBC_bIR",
+                    "L6_NBC_bST",
+                    "L6_NBC_cAC",
+                    "L6_NBC_cIR",
+                    "L6_NBC_cNA",
+                    "L6_NBC_cST",
+                    "L6_NBC_dST",
+                    "L6_NGC_bNA",
+                    "L6_NGC_cAC",
+                    "L6_NGC_cNA",
+                    "L6_NGC_cST",
+                    "L6_SBC_bNA",
+                    "L6_SBC_cAC",
+                    "L6_SBC_dNA",
+                    "L6_TPC_L1_cAD",
+                    "L6_TPC_L4_cAD",
+                    "L6_UTPC_cAD"
+                ],
+                "labels": "overlay",
+                "lw": 0.3,
+                "marker": ".",
+                "markerSize": 2,
+                "orderBy": [
+                    "pop",
+                    "y"
+                ],
+                "orderInverse": true,
+                "popColors": {
+                    "CT6": [
+                        0.08984375,
+                        0.6328125,
+                        0.2578125
+                    ],
+                    "IT2": [
+                        0.984375,
+                        0.44140625,
+                        0.49609375
+                    ],
+                    "IT4": [
+                        0.984375,
+                        0.24609375,
+                        0.30078125
+                    ],
+                    "IT5A": [
+                        0.984375,
+                        0.05078125,
+                        0.10546875
+                    ],
+                    "IT5B": [
+                        0.7890625,
+                        0.05078125,
+                        0.10546875
+                    ],
+                    "IT6": [
+                        0.59375,
+                        0.05078125,
+                        0.10546875
+                    ],
+                    "PT5B": [
+                        0.04296875,
+                        0.140625,
+                        0.98046875
+                    ],
+                    "PT5B_1": [
+                        0.04296875,
+                        0.140625,
+                        0.98046875
+                    ],
+                    "PT5B_ZD": [
+                        0.04296875,
+                        0.140625,
+                        0.98046875
+                    ],
+                    "PV2": [
+                        0.96484375,
+                        0.859375,
+                        0.43359375
+                    ],
+                    "PV5A": [
+                        0.953125,
+                        0.8125,
+                        0.24609375
+                    ],
+                    "PV5B": [
+                        0.94140625,
+                        0.765625,
+                        0.05859375
+                    ],
+                    "PV6": [
+                        0.828125,
+                        0.671875,
+                        0.05078125
+                    ],
+                    "SOM2": [
+                        0.96875,
+                        0.765625,
+                        0.44140625
+                    ],
+                    "SOM5A": [
+                        0.95703125,
+                        0.6875,
+                        0.25390625
+                    ],
+                    "SOM5B": [
+                        0.94921875,
+                        0.609375,
+                        0.0703125
+                    ],
+                    "SOM6": [
+                        0.8359375,
+                        0.53515625,
+                        0.0625
+                    ]
+                },
+                "popRates": true,
+                "saveFig": true,
+                "showFig": false,
+                "timeRange": [
+                    0,
+                    50.0
+                ]
+            }
+        },
+        "backupCfgFile": null,
+        "cache_efficient": true,
+        "cellLabelS1": {
+            "L1_DAC_bNA": "L1_DAC_bNAC219",
+            "L1_DAC_cNA": "L1_DAC_cNAC187",
+            "L1_DLAC_cNA": "L1_DLAC_cNAC187",
+            "L1_HAC_bNA": "L1_HAC_bNAC219",
+            "L1_HAC_cIR": "L1_HAC_cIR216",
+            "L1_HAC_cNA": "L1_HAC_cNAC187",
+            "L1_NGC-DA_bNA": "L1_NGC-DA_bNAC219",
+            "L1_NGC-DA_cAC": "L1_NGC-DA_cACint209",
+            "L1_NGC-DA_cNA": "L1_NGC-DA_cNAC187",
+            "L1_NGC-DA_cST": "L1_NGC-DA_cSTUT189",
+            "L1_NGC-SA_cNA": "L1_NGC-SA_cNAC187",
+            "L1_SLAC_bNA": "L1_SLAC_bNAC219",
+            "L1_SLAC_cAC": "L1_SLAC_cACint209",
+            "L1_SLAC_cNA": "L1_SLAC_cNAC187",
+            "L23_BP_bAC": "L23_BP_bAC217",
+            "L23_BP_bIR": "L23_BP_bIR215",
+            "L23_BP_bNA": "L23_BP_bNAC219",
+            "L23_BP_cAC": "L23_BP_cACint209",
+            "L23_BP_cNA": "L23_BP_cNAC187",
+            "L23_BP_dST": "L23_BP_dSTUT214",
+            "L23_BTC_bAC": "L23_BTC_bAC217",
+            "L23_BTC_bIR": "L23_BTC_bIR215",
+            "L23_BTC_bNA": "L23_BTC_bNAC219",
+            "L23_BTC_cAC": "L23_BTC_cACint209",
+            "L23_BTC_cNA": "L23_BTC_cNAC187",
+            "L23_ChC_cAC": "L23_ChC_cACint209",
+            "L23_ChC_cNA": "L23_ChC_cNAC187",
+            "L23_ChC_dNA": "L23_ChC_dNAC222",
+            "L23_DBC_bAC": "L23_DBC_bAC217",
+            "L23_DBC_bIR": "L23_DBC_bIR215",
+            "L23_DBC_bNA": "L23_DBC_bNAC219",
+            "L23_DBC_cAC": "L23_DBC_cACint209",
+            "L23_LBC_bAC": "L23_LBC_bAC217",
+            "L23_LBC_bNA": "L23_LBC_bNAC219",
+            "L23_LBC_cAC": "L23_LBC_cACint209",
+            "L23_LBC_cNA": "L23_LBC_cNAC187",
+            "L23_LBC_cST": "L23_LBC_cSTUT189",
+            "L23_LBC_dNA": "L23_LBC_dNAC222",
+            "L23_MC_bAC": "L23_MC_bAC217",
+            "L23_MC_bNA": "L23_MC_bNAC219",
+            "L23_MC_cAC": "L23_MC_cACint209",
+            "L23_MC_cNA": "L23_MC_cNAC187",
+            "L23_MC_dNA": "L23_MC_dNAC222",
+            "L23_NBC_bAC": "L23_NBC_bAC217",
+            "L23_NBC_bNA": "L23_NBC_bNAC219",
+            "L23_NBC_cAC": "L23_NBC_cACint209",
+            "L23_NBC_cIR": "L23_NBC_cIR216",
+            "L23_NBC_cNA": "L23_NBC_cNAC187",
+            "L23_NBC_dNA": "L23_NBC_dNAC222",
+            "L23_NGC_bNA": "L23_NGC_bNAC219",
+            "L23_NGC_cAC": "L23_NGC_cACint209",
+            "L23_NGC_cNA": "L23_NGC_cNAC187",
+            "L23_NGC_cST": "L23_NGC_cSTUT189",
+            "L23_PC_cAD": "L23_PC_cADpyr229",
+            "L23_SBC_bNA": "L23_SBC_bNAC219",
+            "L23_SBC_cAC": "L23_SBC_cACint209",
+            "L23_SBC_dNA": "L23_SBC_dNAC222",
+            "L4_BP_bAC": "L4_BP_bAC217",
+            "L4_BP_bIR": "L4_BP_bIR215",
+            "L4_BP_bNA": "L4_BP_bNAC219",
+            "L4_BP_cAC": "L4_BP_cACint209",
+            "L4_BP_cNA": "L4_BP_cNAC187",
+            "L4_BP_dST": "L4_BP_dSTUT214",
+            "L4_BTC_bAC": "L4_BTC_bAC217",
+            "L4_BTC_bIR": "L4_BTC_bIR215",
+            "L4_BTC_bST": "L4_BTC_bSTUT213",
+            "L4_BTC_cAC": "L4_BTC_cACint209",
+            "L4_BTC_cNA": "L4_BTC_cNAC187",
+            "L4_BTC_dNA": "L4_BTC_dNAC222",
+            "L4_ChC_cAC": "L4_ChC_cACint209",
+            "L4_ChC_cNA": "L4_ChC_cNAC187",
+            "L4_ChC_dNA": "L4_ChC_dNAC222",
+            "L4_DBC_bAC": "L4_DBC_bAC217",
+            "L4_DBC_bIR": "L4_DBC_bIR215",
+            "L4_DBC_bNA": "L4_DBC_bNAC219",
+            "L4_DBC_bST": "L4_DBC_bSTUT213",
+            "L4_DBC_cAC": "L4_DBC_cACint209",
+            "L4_DBC_cIR": "L4_DBC_cIR216",
+            "L4_DBC_cNA": "L4_DBC_cNAC187",
+            "L4_LBC_cAC": "L4_LBC_cACint209",
+            "L4_LBC_cNA": "L4_LBC_cNAC187",
+            "L4_LBC_cST": "L4_LBC_cSTUT189",
+            "L4_LBC_dNA": "L4_LBC_dNAC222",
+            "L4_LBC_dST": "L4_LBC_dSTUT214",
+            "L4_MC_bAC": "L4_MC_bAC217",
+            "L4_MC_bNA": "L4_MC_bNAC219",
+            "L4_MC_cAC": "L4_MC_cACint209",
+            "L4_MC_cNA": "L4_MC_cNAC187",
+            "L4_MC_dNA": "L4_MC_dNAC222",
+            "L4_NBC_cAC": "L4_NBC_cACint209",
+            "L4_NBC_cIR": "L4_NBC_cIR216",
+            "L4_NBC_cNA": "L4_NBC_cNAC187",
+            "L4_NBC_dNA": "L4_NBC_dNAC222",
+            "L4_NGC_bNA": "L4_NGC_bNAC219",
+            "L4_NGC_cAC": "L4_NGC_cACint209",
+            "L4_NGC_cNA": "L4_NGC_cNAC187",
+            "L4_NGC_cST": "L4_NGC_cSTUT189",
+            "L4_PC_cAD": "L4_PC_cADpyr230",
+            "L4_SBC_bNA": "L4_SBC_bNAC219",
+            "L4_SBC_cAC": "L4_SBC_cACint209",
+            "L4_SBC_dNA": "L4_SBC_dNAC222",
+            "L4_SP_cAD": "L4_SP_cADpyr230",
+            "L4_SS_cAD": "L4_SS_cADpyr230",
+            "L5_BP_bAC": "L5_BP_bAC217",
+            "L5_BP_bIR": "L5_BP_bIR215",
+            "L5_BP_bNA": "L5_BP_bNAC219",
+            "L5_BP_cAC": "L5_BP_cACint209",
+            "L5_BP_cNA": "L5_BP_cNAC187",
+            "L5_BP_dST": "L5_BP_dSTUT214",
+            "L5_BTC_bAC": "L5_BTC_bAC217",
+            "L5_BTC_cAC": "L5_BTC_cACint209",
+            "L5_BTC_cNA": "L5_BTC_cNAC187",
+            "L5_ChC_cAC": "L5_ChC_cACint209",
+            "L5_ChC_cNA": "L5_ChC_cNAC187",
+            "L5_ChC_dNA": "L5_ChC_dNAC222",
+            "L5_DBC_bAC": "L5_DBC_bAC217",
+            "L5_DBC_bIR": "L5_DBC_bIR215",
+            "L5_DBC_bNA": "L5_DBC_bNAC219",
+            "L5_DBC_bST": "L5_DBC_bSTUT213",
+            "L5_DBC_cAC": "L5_DBC_cACint209",
+            "L5_DBC_cIR": "L5_DBC_cIR216",
+            "L5_DBC_cNA": "L5_DBC_cNAC187",
+            "L5_LBC_bAC": "L5_LBC_bAC217",
+            "L5_LBC_cAC": "L5_LBC_cACint209",
+            "L5_LBC_cIR": "L5_LBC_cIR216",
+            "L5_LBC_cNA": "L5_LBC_cNAC187",
+            "L5_LBC_cST": "L5_LBC_cSTUT189",
+            "L5_LBC_dNA": "L5_LBC_dNAC222",
+            "L5_LBC_dST": "L5_LBC_dSTUT214",
+            "L5_MC_bAC": "L5_MC_bAC217",
+            "L5_MC_bIR": "L5_MC_bIR215",
+            "L5_MC_bST": "L5_MC_bSTUT213",
+            "L5_MC_cAC": "L5_MC_cACint209",
+            "L5_MC_cNA": "L5_MC_cNAC187",
+            "L5_MC_cST": "L5_MC_cSTUT189",
+            "L5_MC_dNA": "L5_MC_dNAC222",
+            "L5_NBC_bAC": "L5_NBC_bAC217",
+            "L5_NBC_bIR": "L5_NBC_bIR215",
+            "L5_NBC_bST": "L5_NBC_bSTUT213",
+            "L5_NBC_cAC": "L5_NBC_cACint209",
+            "L5_NBC_cIR": "L5_NBC_cIR216",
+            "L5_NBC_cNA": "L5_NBC_cNAC187",
+            "L5_NBC_cST": "L5_NBC_cSTUT189",
+            "L5_NBC_dST": "L5_NBC_dSTUT214",
+            "L5_NGC_bNA": "L5_NGC_bNAC219",
+            "L5_NGC_cAC": "L5_NGC_cACint209",
+            "L5_NGC_cNA": "L5_NGC_cNAC187",
+            "L5_NGC_cST": "L5_NGC_cSTUT189",
+            "L5_SBC_bNA": "L5_SBC_bNAC219",
+            "L5_SBC_cAC": "L5_SBC_cACint209",
+            "L5_SBC_dNA": "L5_SBC_dNAC222",
+            "L5_STPC_cAD": "L5_STPC_cADpyr232",
+            "L5_TTPC1_cAD": "L5_TTPC1_cADpyr232",
+            "L5_TTPC2_cAD": "L5_TTPC2_cADpyr232",
+            "L5_UTPC_cAD": "L5_UTPC_cADpyr232",
+            "L6_BPC_cAD": "L6_BPC_cADpyr231",
+            "L6_BP_bAC": "L6_BP_bAC217",
+            "L6_BP_bIR": "L6_BP_bIR215",
+            "L6_BP_bNA": "L6_BP_bNAC219",
+            "L6_BP_cAC": "L6_BP_cACint209",
+            "L6_BP_cNA": "L6_BP_cNAC187",
+            "L6_BP_dST": "L6_BP_dSTUT214",
+            "L6_BTC_bAC": "L6_BTC_bAC217",
+            "L6_BTC_cAC": "L6_BTC_cACint209",
+            "L6_BTC_cNA": "L6_BTC_cNAC187",
+            "L6_ChC_cAC": "L6_ChC_cACint209",
+            "L6_ChC_cNA": "L6_ChC_cNAC187",
+            "L6_ChC_dNA": "L6_ChC_dNAC222",
+            "L6_DBC_bAC": "L6_DBC_bAC217",
+            "L6_DBC_bIR": "L6_DBC_bIR215",
+            "L6_DBC_bNA": "L6_DBC_bNAC219",
+            "L6_DBC_bST": "L6_DBC_bSTUT213",
+            "L6_DBC_cAC": "L6_DBC_cACint209",
+            "L6_DBC_cIR": "L6_DBC_cIR216",
+            "L6_DBC_cNA": "L6_DBC_cNAC187",
+            "L6_IPC_cAD": "L6_IPC_cADpyr231",
+            "L6_LBC_bAC": "L6_LBC_bAC217",
+            "L6_LBC_bIR": "L6_LBC_bIR215",
+            "L6_LBC_bNA": "L6_LBC_bNAC219",
+            "L6_LBC_bST": "L6_LBC_bSTUT213",
+            "L6_LBC_cNA": "L6_LBC_cNAC187",
+            "L6_LBC_cST": "L6_LBC_cSTUT189",
+            "L6_MC_bAC": "L6_MC_bAC217",
+            "L6_MC_bIR": "L6_MC_bIR215",
+            "L6_MC_bNA": "L6_MC_bNAC219",
+            "L6_MC_bST": "L6_MC_bSTUT213",
+            "L6_MC_cAC": "L6_MC_cACint209",
+            "L6_MC_cIR": "L6_MC_cIR216",
+            "L6_MC_cNA": "L6_MC_cNAC187",
+            "L6_NBC_bAC": "L6_NBC_bAC217",
+            "L6_NBC_bIR": "L6_NBC_bIR215",
+            "L6_NBC_bST": "L6_NBC_bSTUT213",
+            "L6_NBC_cAC": "L6_NBC_cACint209",
+            "L6_NBC_cIR": "L6_NBC_cIR216",
+            "L6_NBC_cNA": "L6_NBC_cNAC187",
+            "L6_NBC_cST": "L6_NBC_cSTUT189",
+            "L6_NBC_dST": "L6_NBC_dSTUT214",
+            "L6_NGC_bNA": "L6_NGC_bNAC219",
+            "L6_NGC_cAC": "L6_NGC_cACint209",
+            "L6_NGC_cNA": "L6_NGC_cNAC187",
+            "L6_NGC_cST": "L6_NGC_cSTUT189",
+            "L6_SBC_bNA": "L6_SBC_bNAC219",
+            "L6_SBC_cAC": "L6_SBC_cACint209",
+            "L6_SBC_dNA": "L6_SBC_dNAC222",
+            "L6_TPC_L1_cAD": "L6_TPC_L1_cADpyr231",
+            "L6_TPC_L4_cAD": "L6_TPC_L4_cADpyr231",
+            "L6_UTPC_cAD": "L6_UTPC_cADpyr231"
+        },
+        "cellNumberS1": {
+            "L1_DAC_bNA": 9,
+            "L1_DAC_cNA": 18,
+            "L1_DLAC_cNA": 11,
+            "L1_HAC_bNA": 9,
+            "L1_HAC_cIR": 5,
+            "L1_HAC_cNA": 29,
+            "L1_NGC-DA_bNA": 4,
+            "L1_NGC-DA_cAC": 4,
+            "L1_NGC-DA_cNA": 23,
+            "L1_NGC-DA_cST": 4,
+            "L1_NGC-SA_cNA": 24,
+            "L1_SLAC_bNA": 7,
+            "L1_SLAC_cAC": 4,
+            "L1_SLAC_cNA": 9,
+            "L23_BP_bAC": 1,
+            "L23_BP_bIR": 1,
+            "L23_BP_bNA": 2,
+            "L23_BP_cAC": 2,
+            "L23_BP_cNA": 1,
+            "L23_BP_dST": 1,
+            "L23_BTC_bAC": 4,
+            "L23_BTC_bIR": 2,
+            "L23_BTC_bNA": 6,
+            "L23_BTC_cAC": 10,
+            "L23_BTC_cNA": 4,
+            "L23_ChC_cAC": 6,
+            "L23_ChC_cNA": 6,
+            "L23_ChC_dNA": 4,
+            "L23_DBC_bAC": 3,
+            "L23_DBC_bIR": 8,
+            "L23_DBC_bNA": 17,
+            "L23_DBC_cAC": 15,
+            "L23_LBC_bAC": 9,
+            "L23_LBC_bNA": 7,
+            "L23_LBC_cAC": 27,
+            "L23_LBC_cNA": 19,
+            "L23_LBC_cST": 5,
+            "L23_LBC_dNA": 47,
+            "L23_MC_bAC": 2,
+            "L23_MC_bNA": 2,
+            "L23_MC_cAC": 67,
+            "L23_MC_cNA": 8,
+            "L23_MC_dNA": 2,
+            "L23_NBC_bAC": 3,
+            "L23_NBC_bNA": 1,
+            "L23_NBC_cAC": 16,
+            "L23_NBC_cIR": 1,
+            "L23_NBC_cNA": 20,
+            "L23_NBC_dNA": 24,
+            "L23_NGC_bNA": 1,
+            "L23_NGC_cAC": 1,
+            "L23_NGC_cNA": 10,
+            "L23_NGC_cST": 1,
+            "L23_PC_cAD": 1468,
+            "L23_SBC_bNA": 15,
+            "L23_SBC_cAC": 15,
+            "L23_SBC_dNA": 11,
+            "L4_BP_bAC": 1,
+            "L4_BP_bIR": 1,
+            "L4_BP_bNA": 1,
+            "L4_BP_cAC": 1,
+            "L4_BP_cNA": 1,
+            "L4_BP_dST": 1,
+            "L4_BTC_bAC": 1,
+            "L4_BTC_bIR": 1,
+            "L4_BTC_bST": 1,
+            "L4_BTC_cAC": 3,
+            "L4_BTC_cNA": 1,
+            "L4_BTC_dNA": 1,
+            "L4_ChC_cAC": 1,
+            "L4_ChC_cNA": 1,
+            "L4_ChC_dNA": 1,
+            "L4_DBC_bAC": 1,
+            "L4_DBC_bIR": 4,
+            "L4_DBC_bNA": 1,
+            "L4_DBC_bST": 1,
+            "L4_DBC_cAC": 1,
+            "L4_DBC_cIR": 2,
+            "L4_DBC_cNA": 1,
+            "L4_LBC_cAC": 7,
+            "L4_LBC_cNA": 4,
+            "L4_LBC_cST": 9,
+            "L4_LBC_dNA": 14,
+            "L4_LBC_dST": 3,
+            "L4_MC_bAC": 3,
+            "L4_MC_bNA": 1,
+            "L4_MC_cAC": 24,
+            "L4_MC_cNA": 5,
+            "L4_MC_dNA": 1,
+            "L4_NBC_cAC": 3,
+            "L4_NBC_cIR": 1,
+            "L4_NBC_cNA": 13,
+            "L4_NBC_dNA": 11,
+            "L4_NGC_bNA": 1,
+            "L4_NGC_cAC": 1,
+            "L4_NGC_cNA": 1,
+            "L4_NGC_cST": 1,
+            "L4_PC_cAD": 792,
+            "L4_SBC_bNA": 6,
+            "L4_SBC_cAC": 7,
+            "L4_SBC_dNA": 5,
+            "L4_SP_cAD": 325,
+            "L4_SS_cAD": 120,
+            "L5_BP_bAC": 1,
+            "L5_BP_bIR": 1,
+            "L5_BP_bNA": 2,
+            "L5_BP_cAC": 2,
+            "L5_BP_cNA": 1,
+            "L5_BP_dST": 1,
+            "L5_BTC_bAC": 4,
+            "L5_BTC_cAC": 14,
+            "L5_BTC_cNA": 4,
+            "L5_ChC_cAC": 2,
+            "L5_ChC_cNA": 2,
+            "L5_ChC_dNA": 1,
+            "L5_DBC_bAC": 2,
+            "L5_DBC_bIR": 9,
+            "L5_DBC_bNA": 2,
+            "L5_DBC_bST": 2,
+            "L5_DBC_cAC": 2,
+            "L5_DBC_cIR": 5,
+            "L5_DBC_cNA": 2,
+            "L5_LBC_bAC": 3,
+            "L5_LBC_cAC": 7,
+            "L5_LBC_cIR": 4,
+            "L5_LBC_cNA": 10,
+            "L5_LBC_cST": 10,
+            "L5_LBC_dNA": 10,
+            "L5_LBC_dST": 14,
+            "L5_MC_bAC": 40,
+            "L5_MC_bIR": 12,
+            "L5_MC_bST": 4,
+            "L5_MC_cAC": 39,
+            "L5_MC_cNA": 4,
+            "L5_MC_cST": 4,
+            "L5_MC_dNA": 4,
+            "L5_NBC_bAC": 4,
+            "L5_NBC_bIR": 4,
+            "L5_NBC_bST": 7,
+            "L5_NBC_cAC": 11,
+            "L5_NBC_cIR": 4,
+            "L5_NBC_cNA": 11,
+            "L5_NBC_cST": 11,
+            "L5_NBC_dST": 4,
+            "L5_NGC_bNA": 1,
+            "L5_NGC_cAC": 1,
+            "L5_NGC_cNA": 1,
+            "L5_NGC_cST": 1,
+            "L5_SBC_bNA": 2,
+            "L5_SBC_cAC": 2,
+            "L5_SBC_dNA": 2,
+            "L5_STPC_cAD": 83,
+            "L5_TTPC1_cAD": 664,
+            "L5_TTPC2_cAD": 553,
+            "L5_UTPC_cAD": 94,
+            "L6_BPC_cAD": 688,
+            "L6_BP_bAC": 1,
+            "L6_BP_bIR": 2,
+            "L6_BP_bNA": 4,
+            "L6_BP_cAC": 4,
+            "L6_BP_cNA": 2,
+            "L6_BP_dST": 1,
+            "L6_BTC_bAC": 2,
+            "L6_BTC_cAC": 7,
+            "L6_BTC_cNA": 2,
+            "L6_ChC_cAC": 1,
+            "L6_ChC_cNA": 1,
+            "L6_ChC_dNA": 1,
+            "L6_DBC_bAC": 1,
+            "L6_DBC_bIR": 2,
+            "L6_DBC_bNA": 1,
+            "L6_DBC_bST": 1,
+            "L6_DBC_cAC": 1,
+            "L6_DBC_cIR": 1,
+            "L6_DBC_cNA": 1,
+            "L6_IPC_cAD": 754,
+            "L6_LBC_bAC": 18,
+            "L6_LBC_bIR": 28,
+            "L6_LBC_bNA": 9,
+            "L6_LBC_bST": 27,
+            "L6_LBC_cNA": 9,
+            "L6_LBC_cST": 9,
+            "L6_MC_bAC": 9,
+            "L6_MC_bIR": 31,
+            "L6_MC_bNA": 3,
+            "L6_MC_bST": 3,
+            "L6_MC_cAC": 20,
+            "L6_MC_cIR": 3,
+            "L6_MC_cNA": 3,
+            "L6_NBC_bAC": 3,
+            "L6_NBC_bIR": 3,
+            "L6_NBC_bST": 6,
+            "L6_NBC_cAC": 8,
+            "L6_NBC_cIR": 3,
+            "L6_NBC_cNA": 8,
+            "L6_NBC_cST": 8,
+            "L6_NBC_dST": 3,
+            "L6_NGC_bNA": 1,
+            "L6_NGC_cAC": 1,
+            "L6_NGC_cNA": 2,
+            "L6_NGC_cST": 1,
+            "L6_SBC_bNA": 5,
+            "L6_SBC_cAC": 5,
+            "L6_SBC_dNA": 4,
+            "L6_TPC_L1_cAD": 355,
+            "L6_TPC_L4_cAD": 312,
+            "L6_UTPC_cAD": 376
+        },
+        "cellsrec": 1,
+        "celltypeNumberS1": 207,
+        "checkErrors": false,
+        "checkErrorsVerbose": false,
+        "compactConnFormat": false,
+        "connLenghtConst": 200,
+        "connProb_RTN_RTN": 0.5,
+        "connProb_RTN_TC": 1.0,
+        "connProb_TC_RTN": 1.0,
+        "connRandomSecFromList": false,
+        "connWeight_RTN_RTN": 1.0,
+        "connWeight_RTN_TC": 0.5,
+        "connWeight_S1_RTN": 0.5,
+        "connWeight_S1_TC": 0.25,
+        "connWeight_TC_RTN": 1.5,
+        "connectThalamusNetwork": true,
+        "connect_CTX_TC": 1,
+        "connect_M1_S1": 1,
+        "connect_RTN_RTN": 1,
+        "connect_RTN_TC": 1,
+        "connect_S1_M1": 1,
+        "connect_S1_RTN": true,
+        "connect_S1_S1": true,
+        "connect_S1_TC": true,
+        "connect_S1_Th": true,
+        "connect_TC_CTX": 1,
+        "connect_TC_RTN": 1,
+        "connect_Th_S1": true,
+        "convergence_S1_RTN": 30.0,
+        "convergence_S1_TC": 30.0,
+        "coreneuron": false,
+        "correctBorderThreshold": 150.0,
+        "createNEURONObj": true,
+        "createPyStruct": true,
+        "cvode_active": false,
+        "cvode_atol": 1e-06,
+        "delayLong": 5.0,
+        "distributeSynsUniformly": true,
+        "divergenceHO": 10,
+        "dt": 0.025,
+        "duration": 50.0,
+        "filename": "model_output",
+        "gatherOnlySimData": false,
+        "hParams": {
+            "celsius": 34,
+            "v_init": -80
+        },
+        "includeParamsLabel": false,
+        "intraThalamicGain": 1.0,
+        "invertedYCoord": true,
+        "meParamLabelsS1": {},
+        "noiseLong": 0.0,
+        "numCellsLong": 250,
+        "oneSynPerNetcon": false,
+        "popLabelElS1": {
+            "L1_DAC": [
+                "L1_DAC_bNA",
+                "L1_DAC_cNA"
+            ],
+            "L1_DLAC": [
+                "L1_DLAC_cNA"
+            ],
+            "L1_HAC": [
+                "L1_HAC_bNA",
+                "L1_HAC_cIR",
+                "L1_HAC_cNA"
+            ],
+            "L1_NGC-DA": [
+                "L1_NGC-DA_bNA",
+                "L1_NGC-DA_cAC",
+                "L1_NGC-DA_cNA",
+                "L1_NGC-DA_cST"
+            ],
+            "L1_NGC-SA": [
+                "L1_NGC-SA_cNA"
+            ],
+            "L1_SLAC": [
+                "L1_SLAC_bNA",
+                "L1_SLAC_cAC",
+                "L1_SLAC_cNA"
+            ],
+            "L23_BP": [
+                "L23_BP_bAC",
+                "L23_BP_bIR",
+                "L23_BP_bNA",
+                "L23_BP_cAC",
+                "L23_BP_cNA",
+                "L23_BP_dST"
+            ],
+            "L23_BTC": [
+                "L23_BTC_bAC",
+                "L23_BTC_bIR",
+                "L23_BTC_bNA",
+                "L23_BTC_cAC",
+                "L23_BTC_cNA"
+            ],
+            "L23_ChC": [
+                "L23_ChC_cAC",
+                "L23_ChC_cNA",
+                "L23_ChC_dNA"
+            ],
+            "L23_DBC": [
+                "L23_DBC_bAC",
+                "L23_DBC_bIR",
+                "L23_DBC_bNA",
+                "L23_DBC_cAC"
+            ],
+            "L23_LBC": [
+                "L23_LBC_bAC",
+                "L23_LBC_bNA",
+                "L23_LBC_cAC",
+                "L23_LBC_cNA",
+                "L23_LBC_cST",
+                "L23_LBC_dNA"
+            ],
+            "L23_MC": [
+                "L23_MC_bAC",
+                "L23_MC_bNA",
+                "L23_MC_cAC",
+                "L23_MC_cNA",
+                "L23_MC_dNA"
+            ],
+            "L23_NBC": [
+                "L23_NBC_bAC",
+                "L23_NBC_bNA",
+                "L23_NBC_cAC",
+                "L23_NBC_cIR",
+                "L23_NBC_cNA",
+                "L23_NBC_dNA"
+            ],
+            "L23_NGC": [
+                "L23_NGC_bNA",
+                "L23_NGC_cAC",
+                "L23_NGC_cNA",
+                "L23_NGC_cST"
+            ],
+            "L23_PC": [
+                "L23_PC_cAD"
+            ],
+            "L23_SBC": [
+                "L23_SBC_bNA",
+                "L23_SBC_cAC",
+                "L23_SBC_dNA"
+            ],
+            "L4_BP": [
+                "L4_BP_bAC",
+                "L4_BP_bIR",
+                "L4_BP_bNA",
+                "L4_BP_cAC",
+                "L4_BP_cNA",
+                "L4_BP_dST"
+            ],
+            "L4_BTC": [
+                "L4_BTC_bAC",
+                "L4_BTC_bIR",
+                "L4_BTC_bST",
+                "L4_BTC_cAC",
+                "L4_BTC_cNA",
+                "L4_BTC_dNA"
+            ],
+            "L4_ChC": [
+                "L4_ChC_cAC",
+                "L4_ChC_cNA",
+                "L4_ChC_dNA"
+            ],
+            "L4_DBC": [
+                "L4_DBC_bAC",
+                "L4_DBC_bIR",
+                "L4_DBC_bNA",
+                "L4_DBC_bST",
+                "L4_DBC_cAC",
+                "L4_DBC_cIR",
+                "L4_DBC_cNA"
+            ],
+            "L4_LBC": [
+                "L4_LBC_cAC",
+                "L4_LBC_cNA",
+                "L4_LBC_cST",
+                "L4_LBC_dNA",
+                "L4_LBC_dST"
+            ],
+            "L4_MC": [
+                "L4_MC_bAC",
+                "L4_MC_bNA",
+                "L4_MC_cAC",
+                "L4_MC_cNA",
+                "L4_MC_dNA"
+            ],
+            "L4_NBC": [
+                "L4_NBC_cAC",
+                "L4_NBC_cIR",
+                "L4_NBC_cNA",
+                "L4_NBC_dNA"
+            ],
+            "L4_NGC": [
+                "L4_NGC_bNA",
+                "L4_NGC_cAC",
+                "L4_NGC_cNA",
+                "L4_NGC_cST"
+            ],
+            "L4_PC": [
+                "L4_PC_cAD"
+            ],
+            "L4_SBC": [
+                "L4_SBC_bNA",
+                "L4_SBC_cAC",
+                "L4_SBC_dNA"
+            ],
+            "L4_SP": [
+                "L4_SP_cAD"
+            ],
+            "L4_SS": [
+                "L4_SS_cAD"
+            ],
+            "L5_BP": [
+                "L5_BP_bAC",
+                "L5_BP_bIR",
+                "L5_BP_bNA",
+                "L5_BP_cAC",
+                "L5_BP_cNA",
+                "L5_BP_dST"
+            ],
+            "L5_BTC": [
+                "L5_BTC_bAC",
+                "L5_BTC_cAC",
+                "L5_BTC_cNA"
+            ],
+            "L5_ChC": [
+                "L5_ChC_cAC",
+                "L5_ChC_cNA",
+                "L5_ChC_dNA"
+            ],
+            "L5_DBC": [
+                "L5_DBC_bAC",
+                "L5_DBC_bIR",
+                "L5_DBC_bNA",
+                "L5_DBC_bST",
+                "L5_DBC_cAC",
+                "L5_DBC_cIR",
+                "L5_DBC_cNA"
+            ],
+            "L5_LBC": [
+                "L5_LBC_bAC",
+                "L5_LBC_cAC",
+                "L5_LBC_cIR",
+                "L5_LBC_cNA",
+                "L5_LBC_cST",
+                "L5_LBC_dNA",
+                "L5_LBC_dST"
+            ],
+            "L5_MC": [
+                "L5_MC_bAC",
+                "L5_MC_bIR",
+                "L5_MC_bST",
+                "L5_MC_cAC",
+                "L5_MC_cNA",
+                "L5_MC_cST",
+                "L5_MC_dNA"
+            ],
+            "L5_NBC": [
+                "L5_NBC_bAC",
+                "L5_NBC_bIR",
+                "L5_NBC_bST",
+                "L5_NBC_cAC",
+                "L5_NBC_cIR",
+                "L5_NBC_cNA",
+                "L5_NBC_cST",
+                "L5_NBC_dST"
+            ],
+            "L5_NGC": [
+                "L5_NGC_bNA",
+                "L5_NGC_cAC",
+                "L5_NGC_cNA",
+                "L5_NGC_cST"
+            ],
+            "L5_SBC": [
+                "L5_SBC_bNA",
+                "L5_SBC_cAC",
+                "L5_SBC_dNA"
+            ],
+            "L5_STPC": [
+                "L5_STPC_cAD"
+            ],
+            "L5_TTPC1": [
+                "L5_TTPC1_cAD"
+            ],
+            "L5_TTPC2": [
+                "L5_TTPC2_cAD"
+            ],
+            "L5_UTPC": [
+                "L5_UTPC_cAD"
+            ],
+            "L6_BP": [
+                "L6_BP_bAC",
+                "L6_BP_bIR",
+                "L6_BP_bNA",
+                "L6_BP_cAC",
+                "L6_BP_cNA",
+                "L6_BP_dST"
+            ],
+            "L6_BPC": [
+                "L6_BPC_cAD"
+            ],
+            "L6_BTC": [
+                "L6_BTC_bAC",
+                "L6_BTC_cAC",
+                "L6_BTC_cNA"
+            ],
+            "L6_ChC": [
+                "L6_ChC_cAC",
+                "L6_ChC_cNA",
+                "L6_ChC_dNA"
+            ],
+            "L6_DBC": [
+                "L6_DBC_bAC",
+                "L6_DBC_bIR",
+                "L6_DBC_bNA",
+                "L6_DBC_bST",
+                "L6_DBC_cAC",
+                "L6_DBC_cIR",
+                "L6_DBC_cNA"
+            ],
+            "L6_IPC": [
+                "L6_IPC_cAD"
+            ],
+            "L6_LBC": [
+                "L6_LBC_bAC",
+                "L6_LBC_bIR",
+                "L6_LBC_bNA",
+                "L6_LBC_bST",
+                "L6_LBC_cNA",
+                "L6_LBC_cST"
+            ],
+            "L6_MC": [
+                "L6_MC_bAC",
+                "L6_MC_bIR",
+                "L6_MC_bNA",
+                "L6_MC_bST",
+                "L6_MC_cAC",
+                "L6_MC_cIR",
+                "L6_MC_cNA"
+            ],
+            "L6_NBC": [
+                "L6_NBC_bAC",
+                "L6_NBC_bIR",
+                "L6_NBC_bST",
+                "L6_NBC_cAC",
+                "L6_NBC_cIR",
+                "L6_NBC_cNA",
+                "L6_NBC_cST",
+                "L6_NBC_dST"
+            ],
+            "L6_NGC": [
+                "L6_NGC_bNA",
+                "L6_NGC_cAC",
+                "L6_NGC_cNA",
+                "L6_NGC_cST"
+            ],
+            "L6_SBC": [
+                "L6_SBC_bNA",
+                "L6_SBC_cAC",
+                "L6_SBC_dNA"
+            ],
+            "L6_TPC_L1": [
+                "L6_TPC_L1_cAD"
+            ],
+            "L6_TPC_L4": [
+                "L6_TPC_L4_cAD"
+            ],
+            "L6_UTPC": [
+                "L6_UTPC_cAD"
+            ]
+        },
+        "popLabelS1": {
+            "L1_DAC_bNA": "L1_DAC",
+            "L1_DAC_cNA": "L1_DAC",
+            "L1_DLAC_cNA": "L1_DLAC",
+            "L1_HAC_bNA": "L1_HAC",
+            "L1_HAC_cIR": "L1_HAC",
+            "L1_HAC_cNA": "L1_HAC",
+            "L1_NGC-DA_bNA": "L1_NGC-DA",
+            "L1_NGC-DA_cAC": "L1_NGC-DA",
+            "L1_NGC-DA_cNA": "L1_NGC-DA",
+            "L1_NGC-DA_cST": "L1_NGC-DA",
+            "L1_NGC-SA_cNA": "L1_NGC-SA",
+            "L1_SLAC_bNA": "L1_SLAC",
+            "L1_SLAC_cAC": "L1_SLAC",
+            "L1_SLAC_cNA": "L1_SLAC",
+            "L23_BP_bAC": "L23_BP",
+            "L23_BP_bIR": "L23_BP",
+            "L23_BP_bNA": "L23_BP",
+            "L23_BP_cAC": "L23_BP",
+            "L23_BP_cNA": "L23_BP",
+            "L23_BP_dST": "L23_BP",
+            "L23_BTC_bAC": "L23_BTC",
+            "L23_BTC_bIR": "L23_BTC",
+            "L23_BTC_bNA": "L23_BTC",
+            "L23_BTC_cAC": "L23_BTC",
+            "L23_BTC_cNA": "L23_BTC",
+            "L23_ChC_cAC": "L23_ChC",
+            "L23_ChC_cNA": "L23_ChC",
+            "L23_ChC_dNA": "L23_ChC",
+            "L23_DBC_bAC": "L23_DBC",
+            "L23_DBC_bIR": "L23_DBC",
+            "L23_DBC_bNA": "L23_DBC",
+            "L23_DBC_cAC": "L23_DBC",
+            "L23_LBC_bAC": "L23_LBC",
+            "L23_LBC_bNA": "L23_LBC",
+            "L23_LBC_cAC": "L23_LBC",
+            "L23_LBC_cNA": "L23_LBC",
+            "L23_LBC_cST": "L23_LBC",
+            "L23_LBC_dNA": "L23_LBC",
+            "L23_MC_bAC": "L23_MC",
+            "L23_MC_bNA": "L23_MC",
+            "L23_MC_cAC": "L23_MC",
+            "L23_MC_cNA": "L23_MC",
+            "L23_MC_dNA": "L23_MC",
+            "L23_NBC_bAC": "L23_NBC",
+            "L23_NBC_bNA": "L23_NBC",
+            "L23_NBC_cAC": "L23_NBC",
+            "L23_NBC_cIR": "L23_NBC",
+            "L23_NBC_cNA": "L23_NBC",
+            "L23_NBC_dNA": "L23_NBC",
+            "L23_NGC_bNA": "L23_NGC",
+            "L23_NGC_cAC": "L23_NGC",
+            "L23_NGC_cNA": "L23_NGC",
+            "L23_NGC_cST": "L23_NGC",
+            "L23_PC_cAD": "L23_PC",
+            "L23_SBC_bNA": "L23_SBC",
+            "L23_SBC_cAC": "L23_SBC",
+            "L23_SBC_dNA": "L23_SBC",
+            "L4_BP_bAC": "L4_BP",
+            "L4_BP_bIR": "L4_BP",
+            "L4_BP_bNA": "L4_BP",
+            "L4_BP_cAC": "L4_BP",
+            "L4_BP_cNA": "L4_BP",
+            "L4_BP_dST": "L4_BP",
+            "L4_BTC_bAC": "L4_BTC",
+            "L4_BTC_bIR": "L4_BTC",
+            "L4_BTC_bST": "L4_BTC",
+            "L4_BTC_cAC": "L4_BTC",
+            "L4_BTC_cNA": "L4_BTC",
+            "L4_BTC_dNA": "L4_BTC",
+            "L4_ChC_cAC": "L4_ChC",
+            "L4_ChC_cNA": "L4_ChC",
+            "L4_ChC_dNA": "L4_ChC",
+            "L4_DBC_bAC": "L4_DBC",
+            "L4_DBC_bIR": "L4_DBC",
+            "L4_DBC_bNA": "L4_DBC",
+            "L4_DBC_bST": "L4_DBC",
+            "L4_DBC_cAC": "L4_DBC",
+            "L4_DBC_cIR": "L4_DBC",
+            "L4_DBC_cNA": "L4_DBC",
+            "L4_LBC_cAC": "L4_LBC",
+            "L4_LBC_cNA": "L4_LBC",
+            "L4_LBC_cST": "L4_LBC",
+            "L4_LBC_dNA": "L4_LBC",
+            "L4_LBC_dST": "L4_LBC",
+            "L4_MC_bAC": "L4_MC",
+            "L4_MC_bNA": "L4_MC",
+            "L4_MC_cAC": "L4_MC",
+            "L4_MC_cNA": "L4_MC",
+            "L4_MC_dNA": "L4_MC",
+            "L4_NBC_cAC": "L4_NBC",
+            "L4_NBC_cIR": "L4_NBC",
+            "L4_NBC_cNA": "L4_NBC",
+            "L4_NBC_dNA": "L4_NBC",
+            "L4_NGC_bNA": "L4_NGC",
+            "L4_NGC_cAC": "L4_NGC",
+            "L4_NGC_cNA": "L4_NGC",
+            "L4_NGC_cST": "L4_NGC",
+            "L4_PC_cAD": "L4_PC",
+            "L4_SBC_bNA": "L4_SBC",
+            "L4_SBC_cAC": "L4_SBC",
+            "L4_SBC_dNA": "L4_SBC",
+            "L4_SP_cAD": "L4_SP",
+            "L4_SS_cAD": "L4_SS",
+            "L5_BP_bAC": "L5_BP",
+            "L5_BP_bIR": "L5_BP",
+            "L5_BP_bNA": "L5_BP",
+            "L5_BP_cAC": "L5_BP",
+            "L5_BP_cNA": "L5_BP",
+            "L5_BP_dST": "L5_BP",
+            "L5_BTC_bAC": "L5_BTC",
+            "L5_BTC_cAC": "L5_BTC",
+            "L5_BTC_cNA": "L5_BTC",
+            "L5_ChC_cAC": "L5_ChC",
+            "L5_ChC_cNA": "L5_ChC",
+            "L5_ChC_dNA": "L5_ChC",
+            "L5_DBC_bAC": "L5_DBC",
+            "L5_DBC_bIR": "L5_DBC",
+            "L5_DBC_bNA": "L5_DBC",
+            "L5_DBC_bST": "L5_DBC",
+            "L5_DBC_cAC": "L5_DBC",
+            "L5_DBC_cIR": "L5_DBC",
+            "L5_DBC_cNA": "L5_DBC",
+            "L5_LBC_bAC": "L5_LBC",
+            "L5_LBC_cAC": "L5_LBC",
+            "L5_LBC_cIR": "L5_LBC",
+            "L5_LBC_cNA": "L5_LBC",
+            "L5_LBC_cST": "L5_LBC",
+            "L5_LBC_dNA": "L5_LBC",
+            "L5_LBC_dST": "L5_LBC",
+            "L5_MC_bAC": "L5_MC",
+            "L5_MC_bIR": "L5_MC",
+            "L5_MC_bST": "L5_MC",
+            "L5_MC_cAC": "L5_MC",
+            "L5_MC_cNA": "L5_MC",
+            "L5_MC_cST": "L5_MC",
+            "L5_MC_dNA": "L5_MC",
+            "L5_NBC_bAC": "L5_NBC",
+            "L5_NBC_bIR": "L5_NBC",
+            "L5_NBC_bST": "L5_NBC",
+            "L5_NBC_cAC": "L5_NBC",
+            "L5_NBC_cIR": "L5_NBC",
+            "L5_NBC_cNA": "L5_NBC",
+            "L5_NBC_cST": "L5_NBC",
+            "L5_NBC_dST": "L5_NBC",
+            "L5_NGC_bNA": "L5_NGC",
+            "L5_NGC_cAC": "L5_NGC",
+            "L5_NGC_cNA": "L5_NGC",
+            "L5_NGC_cST": "L5_NGC",
+            "L5_SBC_bNA": "L5_SBC",
+            "L5_SBC_cAC": "L5_SBC",
+            "L5_SBC_dNA": "L5_SBC",
+            "L5_STPC_cAD": "L5_STPC",
+            "L5_TTPC1_cAD": "L5_TTPC1",
+            "L5_TTPC2_cAD": "L5_TTPC2",
+            "L5_UTPC_cAD": "L5_UTPC",
+            "L6_BPC_cAD": "L6_BPC",
+            "L6_BP_bAC": "L6_BP",
+            "L6_BP_bIR": "L6_BP",
+            "L6_BP_bNA": "L6_BP",
+            "L6_BP_cAC": "L6_BP",
+            "L6_BP_cNA": "L6_BP",
+            "L6_BP_dST": "L6_BP",
+            "L6_BTC_bAC": "L6_BTC",
+            "L6_BTC_cAC": "L6_BTC",
+            "L6_BTC_cNA": "L6_BTC",
+            "L6_ChC_cAC": "L6_ChC",
+            "L6_ChC_cNA": "L6_ChC",
+            "L6_ChC_dNA": "L6_ChC",
+            "L6_DBC_bAC": "L6_DBC",
+            "L6_DBC_bIR": "L6_DBC",
+            "L6_DBC_bNA": "L6_DBC",
+            "L6_DBC_bST": "L6_DBC",
+            "L6_DBC_cAC": "L6_DBC",
+            "L6_DBC_cIR": "L6_DBC",
+            "L6_DBC_cNA": "L6_DBC",
+            "L6_IPC_cAD": "L6_IPC",
+            "L6_LBC_bAC": "L6_LBC",
+            "L6_LBC_bIR": "L6_LBC",
+            "L6_LBC_bNA": "L6_LBC",
+            "L6_LBC_bST": "L6_LBC",
+            "L6_LBC_cNA": "L6_LBC",
+            "L6_LBC_cST": "L6_LBC",
+            "L6_MC_bAC": "L6_MC",
+            "L6_MC_bIR": "L6_MC",
+            "L6_MC_bNA": "L6_MC",
+            "L6_MC_bST": "L6_MC",
+            "L6_MC_cAC": "L6_MC",
+            "L6_MC_cIR": "L6_MC",
+            "L6_MC_cNA": "L6_MC",
+            "L6_NBC_bAC": "L6_NBC",
+            "L6_NBC_bIR": "L6_NBC",
+            "L6_NBC_bST": "L6_NBC",
+            "L6_NBC_cAC": "L6_NBC",
+            "L6_NBC_cIR": "L6_NBC",
+            "L6_NBC_cNA": "L6_NBC",
+            "L6_NBC_cST": "L6_NBC",
+            "L6_NBC_dST": "L6_NBC",
+            "L6_NGC_bNA": "L6_NGC",
+            "L6_NGC_cAC": "L6_NGC",
+            "L6_NGC_cNA": "L6_NGC",
+            "L6_NGC_cST": "L6_NGC",
+            "L6_SBC_bNA": "L6_SBC",
+            "L6_SBC_cAC": "L6_SBC",
+            "L6_SBC_dNA": "L6_SBC",
+            "L6_TPC_L1_cAD": "L6_TPC_L1",
+            "L6_TPC_L4_cAD": "L6_TPC_L4",
+            "L6_UTPC_cAD": "L6_UTPC"
+        },
+        "popNumberS1": {
+            "L1_DAC": 27,
+            "L1_DLAC": 11,
+            "L1_HAC": 43,
+            "L1_NGC-DA": 35,
+            "L1_NGC-SA": 24,
+            "L1_SLAC": 20,
+            "L23_BP": 8,
+            "L23_BTC": 26,
+            "L23_ChC": 16,
+            "L23_DBC": 43,
+            "L23_LBC": 114,
+            "L23_MC": 81,
+            "L23_NBC": 65,
+            "L23_NGC": 13,
+            "L23_PC": 1468,
+            "L23_SBC": 41,
+            "L4_BP": 6,
+            "L4_BTC": 8,
+            "L4_ChC": 3,
+            "L4_DBC": 11,
+            "L4_LBC": 37,
+            "L4_MC": 34,
+            "L4_NBC": 28,
+            "L4_NGC": 4,
+            "L4_PC": 792,
+            "L4_SBC": 18,
+            "L4_SP": 325,
+            "L4_SS": 120,
+            "L5_BP": 8,
+            "L5_BTC": 22,
+            "L5_ChC": 5,
+            "L5_DBC": 24,
+            "L5_LBC": 58,
+            "L5_MC": 107,
+            "L5_NBC": 56,
+            "L5_NGC": 4,
+            "L5_SBC": 6,
+            "L5_STPC": 83,
+            "L5_TTPC1": 664,
+            "L5_TTPC2": 553,
+            "L5_UTPC": 94,
+            "L6_BP": 14,
+            "L6_BPC": 688,
+            "L6_BTC": 11,
+            "L6_ChC": 3,
+            "L6_DBC": 8,
+            "L6_IPC": 754,
+            "L6_LBC": 100,
+            "L6_MC": 72,
+            "L6_NBC": 42,
+            "L6_NGC": 5,
+            "L6_SBC": 14,
+            "L6_TPC_L1": 355,
+            "L6_TPC_L4": 312,
+            "L6_UTPC": 376,
+            "POm_sTC_s1": 685,
+            "VPL_sTC": 656,
+            "VPM_sTC": 839,
+            "ss_RTN_i": 765,
+            "ss_RTN_m": 382,
+            "ss_RTN_o": 382
+        },
+        "poptypeNumberS1": 55,
+        "printPopAvgRates": [
+            0,
+            50.0
+        ],
+        "printRunTime": 0.1,
+        "printSynsAfterRule": false,
+        "pt3dRelativeToCellLocation": true,
+        "pulse": {
+            "end": 1100,
+            "noise": 0.8,
+            "pop": "None",
+            "rate": 20,
+            "start": 1000
+        },
+        "pulse2": {
+            "duration": null,
+            "end": 1200,
+            "noise": 0.5,
+            "pop": "None",
+            "rate": 20,
+            "start": 1000
+        },
+        "rand123GlobalIndex": null,
+        "rateStimES1": 9.0,
+        "rateStimIS1": 6.0,
+        "ratesLong": {
+            "M2": [
+                0,
+                5
+            ],
+            "OC": [
+                0,
+                5
+            ],
+            "POm_sTC_m1": [
+                0,
+                0.005
+            ],
+            "S1": [
+                0,
+                5
+            ],
+            "S2": [
+                0,
+                5
+            ],
+            "VL_sTC": [
+                0,
+                0.005
+            ],
+            "cM1": [
+                0,
+                5
+            ]
+        },
+        "ratesLong_thalM1": {
+            "POm_sTC_m1": [
+                0,
+                0.005
+            ],
+            "VL_sTC": [
+                0,
+                0.005
+            ]
+        },
+        "recordCells": [
+            [
+                "NGF1",
+                0
+            ],
+            [
+                "IT2",
+                0
+            ],
+            [
+                "PV2",
+                0
+            ],
+            [
+                "SOM2",
+                0
+            ],
+            [
+                "VIP2",
+                0
+            ],
+            [
+                "NGF2",
+                0
+            ],
+            [
+                "IT4",
+                0
+            ],
+            [
+                "PV4",
+                0
+            ],
+            [
+                "SOM4",
+                0
+            ],
+            [
+                "VIP4",
+                0
+            ],
+            [
+                "NGF4",
+                0
+            ],
+            [
+                "IT5A",
+                0
+            ],
+            [
+                "PV5A",
+                0
+            ],
+            [
+                "SOM5A",
+                0
+            ],
+            [
+                "VIP5A",
+                0
+            ],
+            [
+                "NGF5A",
+                0
+            ],
+            [
+                "IT5B",
+                0
+            ],
+            [
+                "PT5B",
+                0
+            ],
+            [
+                "PV5B",
+                0
+            ],
+            [
+                "SOM5B",
+                0
+            ],
+            [
+                "VIP5B",
+                0
+            ],
+            [
+                "NGF5B",
+                0
+            ],
+            [
+                "IT6",
+                0
+            ],
+            [
+                "CT6",
+                0
+            ],
+            [
+                "PV6",
+                0
+            ],
+            [
+                "SOM6",
+                0
+            ],
+            [
+                "VIP6",
+                0
+            ],
+            [
+                "NGF6",
+                0
+            ],
+            [
+                "VPL_sTC",
+                0
+            ],
+            [
+                "VPM_sTC",
+                0
+            ],
+            [
+                "POm_sTC_s1",
+                0
+            ],
+            [
+                "VL_sTC",
+                0
+            ],
+            [
+                "VM_sTC_m1",
+                0
+            ],
+            [
+                "POm_sTC_m1",
+                0
+            ],
+            [
+                "mt_RTN",
+                0
+            ],
+            [
+                "ss_RTN_o",
+                0
+            ],
+            [
+                "ss_RTN_m",
+                0
+            ],
+            [
+                "ss_RTN_i",
+                0
+            ],
+            [
+                "L1_DAC_bNA",
+                0
+            ],
+            [
+                "L1_DAC_cNA",
+                0
+            ],
+            [
+                "L1_DLAC_cNA",
+                0
+            ],
+            [
+                "L1_HAC_bNA",
+                0
+            ],
+            [
+                "L1_HAC_cIR",
+                0
+            ],
+            [
+                "L1_HAC_cNA",
+                0
+            ],
+            [
+                "L1_NGC-DA_bNA",
+                0
+            ],
+            [
+                "L1_NGC-DA_cAC",
+                0
+            ],
+            [
+                "L1_NGC-DA_cNA",
+                0
+            ],
+            [
+                "L1_NGC-DA_cST",
+                0
+            ],
+            [
+                "L1_NGC-SA_cNA",
+                0
+            ],
+            [
+                "L1_SLAC_bNA",
+                0
+            ],
+            [
+                "L1_SLAC_cAC",
+                0
+            ],
+            [
+                "L1_SLAC_cNA",
+                0
+            ],
+            [
+                "L23_BP_bAC",
+                0
+            ],
+            [
+                "L23_BP_bIR",
+                0
+            ],
+            [
+                "L23_BP_bNA",
+                0
+            ],
+            [
+                "L23_BP_cAC",
+                0
+            ],
+            [
+                "L23_BP_cNA",
+                0
+            ],
+            [
+                "L23_BP_dST",
+                0
+            ],
+            [
+                "L23_BTC_bAC",
+                0
+            ],
+            [
+                "L23_BTC_bIR",
+                0
+            ],
+            [
+                "L23_BTC_bNA",
+                0
+            ],
+            [
+                "L23_BTC_cAC",
+                0
+            ],
+            [
+                "L23_BTC_cNA",
+                0
+            ],
+            [
+                "L23_ChC_cAC",
+                0
+            ],
+            [
+                "L23_ChC_cNA",
+                0
+            ],
+            [
+                "L23_ChC_dNA",
+                0
+            ],
+            [
+                "L23_DBC_bAC",
+                0
+            ],
+            [
+                "L23_DBC_bIR",
+                0
+            ],
+            [
+                "L23_DBC_bNA",
+                0
+            ],
+            [
+                "L23_DBC_cAC",
+                0
+            ],
+            [
+                "L23_LBC_bAC",
+                0
+            ],
+            [
+                "L23_LBC_bNA",
+                0
+            ],
+            [
+                "L23_LBC_cAC",
+                0
+            ],
+            [
+                "L23_LBC_cNA",
+                0
+            ],
+            [
+                "L23_LBC_cST",
+                0
+            ],
+            [
+                "L23_LBC_dNA",
+                0
+            ],
+            [
+                "L23_MC_bAC",
+                0
+            ],
+            [
+                "L23_MC_bNA",
+                0
+            ],
+            [
+                "L23_MC_cAC",
+                0
+            ],
+            [
+                "L23_MC_cNA",
+                0
+            ],
+            [
+                "L23_MC_dNA",
+                0
+            ],
+            [
+                "L23_NBC_bAC",
+                0
+            ],
+            [
+                "L23_NBC_bNA",
+                0
+            ],
+            [
+                "L23_NBC_cAC",
+                0
+            ],
+            [
+                "L23_NBC_cIR",
+                0
+            ],
+            [
+                "L23_NBC_cNA",
+                0
+            ],
+            [
+                "L23_NBC_dNA",
+                0
+            ],
+            [
+                "L23_NGC_bNA",
+                0
+            ],
+            [
+                "L23_NGC_cAC",
+                0
+            ],
+            [
+                "L23_NGC_cNA",
+                0
+            ],
+            [
+                "L23_NGC_cST",
+                0
+            ],
+            [
+                "L23_PC_cAD",
+                0
+            ],
+            [
+                "L23_SBC_bNA",
+                0
+            ],
+            [
+                "L23_SBC_cAC",
+                0
+            ],
+            [
+                "L23_SBC_dNA",
+                0
+            ],
+            [
+                "L4_BP_bAC",
+                0
+            ],
+            [
+                "L4_BP_bIR",
+                0
+            ],
+            [
+                "L4_BP_bNA",
+                0
+            ],
+            [
+                "L4_BP_cAC",
+                0
+            ],
+            [
+                "L4_BP_cNA",
+                0
+            ],
+            [
+                "L4_BP_dST",
+                0
+            ],
+            [
+                "L4_BTC_bAC",
+                0
+            ],
+            [
+                "L4_BTC_bIR",
+                0
+            ],
+            [
+                "L4_BTC_bST",
+                0
+            ],
+            [
+                "L4_BTC_cAC",
+                0
+            ],
+            [
+                "L4_BTC_cNA",
+                0
+            ],
+            [
+                "L4_BTC_dNA",
+                0
+            ],
+            [
+                "L4_ChC_cAC",
+                0
+            ],
+            [
+                "L4_ChC_cNA",
+                0
+            ],
+            [
+                "L4_ChC_dNA",
+                0
+            ],
+            [
+                "L4_DBC_bAC",
+                0
+            ],
+            [
+                "L4_DBC_bIR",
+                0
+            ],
+            [
+                "L4_DBC_bNA",
+                0
+            ],
+            [
+                "L4_DBC_bST",
+                0
+            ],
+            [
+                "L4_DBC_cAC",
+                0
+            ],
+            [
+                "L4_DBC_cIR",
+                0
+            ],
+            [
+                "L4_DBC_cNA",
+                0
+            ],
+            [
+                "L4_LBC_cAC",
+                0
+            ],
+            [
+                "L4_LBC_cNA",
+                0
+            ],
+            [
+                "L4_LBC_cST",
+                0
+            ],
+            [
+                "L4_LBC_dNA",
+                0
+            ],
+            [
+                "L4_LBC_dST",
+                0
+            ],
+            [
+                "L4_MC_bAC",
+                0
+            ],
+            [
+                "L4_MC_bNA",
+                0
+            ],
+            [
+                "L4_MC_cAC",
+                0
+            ],
+            [
+                "L4_MC_cNA",
+                0
+            ],
+            [
+                "L4_MC_dNA",
+                0
+            ],
+            [
+                "L4_NBC_cAC",
+                0
+            ],
+            [
+                "L4_NBC_cIR",
+                0
+            ],
+            [
+                "L4_NBC_cNA",
+                0
+            ],
+            [
+                "L4_NBC_dNA",
+                0
+            ],
+            [
+                "L4_NGC_bNA",
+                0
+            ],
+            [
+                "L4_NGC_cAC",
+                0
+            ],
+            [
+                "L4_NGC_cNA",
+                0
+            ],
+            [
+                "L4_NGC_cST",
+                0
+            ],
+            [
+                "L4_PC_cAD",
+                0
+            ],
+            [
+                "L4_SBC_bNA",
+                0
+            ],
+            [
+                "L4_SBC_cAC",
+                0
+            ],
+            [
+                "L4_SBC_dNA",
+                0
+            ],
+            [
+                "L4_SP_cAD",
+                0
+            ],
+            [
+                "L4_SS_cAD",
+                0
+            ],
+            [
+                "L5_BP_bAC",
+                0
+            ],
+            [
+                "L5_BP_bIR",
+                0
+            ],
+            [
+                "L5_BP_bNA",
+                0
+            ],
+            [
+                "L5_BP_cAC",
+                0
+            ],
+            [
+                "L5_BP_cNA",
+                0
+            ],
+            [
+                "L5_BP_dST",
+                0
+            ],
+            [
+                "L5_BTC_bAC",
+                0
+            ],
+            [
+                "L5_BTC_cAC",
+                0
+            ],
+            [
+                "L5_BTC_cNA",
+                0
+            ],
+            [
+                "L5_ChC_cAC",
+                0
+            ],
+            [
+                "L5_ChC_cNA",
+                0
+            ],
+            [
+                "L5_ChC_dNA",
+                0
+            ],
+            [
+                "L5_DBC_bAC",
+                0
+            ],
+            [
+                "L5_DBC_bIR",
+                0
+            ],
+            [
+                "L5_DBC_bNA",
+                0
+            ],
+            [
+                "L5_DBC_bST",
+                0
+            ],
+            [
+                "L5_DBC_cAC",
+                0
+            ],
+            [
+                "L5_DBC_cIR",
+                0
+            ],
+            [
+                "L5_DBC_cNA",
+                0
+            ],
+            [
+                "L5_LBC_bAC",
+                0
+            ],
+            [
+                "L5_LBC_cAC",
+                0
+            ],
+            [
+                "L5_LBC_cIR",
+                0
+            ],
+            [
+                "L5_LBC_cNA",
+                0
+            ],
+            [
+                "L5_LBC_cST",
+                0
+            ],
+            [
+                "L5_LBC_dNA",
+                0
+            ],
+            [
+                "L5_LBC_dST",
+                0
+            ],
+            [
+                "L5_MC_bAC",
+                0
+            ],
+            [
+                "L5_MC_bIR",
+                0
+            ],
+            [
+                "L5_MC_bST",
+                0
+            ],
+            [
+                "L5_MC_cAC",
+                0
+            ],
+            [
+                "L5_MC_cNA",
+                0
+            ],
+            [
+                "L5_MC_cST",
+                0
+            ],
+            [
+                "L5_MC_dNA",
+                0
+            ],
+            [
+                "L5_NBC_bAC",
+                0
+            ],
+            [
+                "L5_NBC_bIR",
+                0
+            ],
+            [
+                "L5_NBC_bST",
+                0
+            ],
+            [
+                "L5_NBC_cAC",
+                0
+            ],
+            [
+                "L5_NBC_cIR",
+                0
+            ],
+            [
+                "L5_NBC_cNA",
+                0
+            ],
+            [
+                "L5_NBC_cST",
+                0
+            ],
+            [
+                "L5_NBC_dST",
+                0
+            ],
+            [
+                "L5_NGC_bNA",
+                0
+            ],
+            [
+                "L5_NGC_cAC",
+                0
+            ],
+            [
+                "L5_NGC_cNA",
+                0
+            ],
+            [
+                "L5_NGC_cST",
+                0
+            ],
+            [
+                "L5_SBC_bNA",
+                0
+            ],
+            [
+                "L5_SBC_cAC",
+                0
+            ],
+            [
+                "L5_SBC_dNA",
+                0
+            ],
+            [
+                "L5_STPC_cAD",
+                0
+            ],
+            [
+                "L5_TTPC1_cAD",
+                0
+            ],
+            [
+                "L5_TTPC2_cAD",
+                0
+            ],
+            [
+                "L5_UTPC_cAD",
+                0
+            ],
+            [
+                "L6_BPC_cAD",
+                0
+            ],
+            [
+                "L6_BP_bAC",
+                0
+            ],
+            [
+                "L6_BP_bIR",
+                0
+            ],
+            [
+                "L6_BP_bNA",
+                0
+            ],
+            [
+                "L6_BP_cAC",
+                0
+            ],
+            [
+                "L6_BP_cNA",
+                0
+            ],
+            [
+                "L6_BP_dST",
+                0
+            ],
+            [
+                "L6_BTC_bAC",
+                0
+            ],
+            [
+                "L6_BTC_cAC",
+                0
+            ],
+            [
+                "L6_BTC_cNA",
+                0
+            ],
+            [
+                "L6_ChC_cAC",
+                0
+            ],
+            [
+                "L6_ChC_cNA",
+                0
+            ],
+            [
+                "L6_ChC_dNA",
+                0
+            ],
+            [
+                "L6_DBC_bAC",
+                0
+            ],
+            [
+                "L6_DBC_bIR",
+                0
+            ],
+            [
+                "L6_DBC_bNA",
+                0
+            ],
+            [
+                "L6_DBC_bST",
+                0
+            ],
+            [
+                "L6_DBC_cAC",
+                0
+            ],
+            [
+                "L6_DBC_cIR",
+                0
+            ],
+            [
+                "L6_DBC_cNA",
+                0
+            ],
+            [
+                "L6_IPC_cAD",
+                0
+            ],
+            [
+                "L6_LBC_bAC",
+                0
+            ],
+            [
+                "L6_LBC_bIR",
+                0
+            ],
+            [
+                "L6_LBC_bNA",
+                0
+            ],
+            [
+                "L6_LBC_bST",
+                0
+            ],
+            [
+                "L6_LBC_cNA",
+                0
+            ],
+            [
+                "L6_LBC_cST",
+                0
+            ],
+            [
+                "L6_MC_bAC",
+                0
+            ],
+            [
+                "L6_MC_bIR",
+                0
+            ],
+            [
+                "L6_MC_bNA",
+                0
+            ],
+            [
+                "L6_MC_bST",
+                0
+            ],
+            [
+                "L6_MC_cAC",
+                0
+            ],
+            [
+                "L6_MC_cIR",
+                0
+            ],
+            [
+                "L6_MC_cNA",
+                0
+            ],
+            [
+                "L6_NBC_bAC",
+                0
+            ],
+            [
+                "L6_NBC_bIR",
+                0
+            ],
+            [
+                "L6_NBC_bST",
+                0
+            ],
+            [
+                "L6_NBC_cAC",
+                0
+            ],
+            [
+                "L6_NBC_cIR",
+                0
+            ],
+            [
+                "L6_NBC_cNA",
+                0
+            ],
+            [
+                "L6_NBC_cST",
+                0
+            ],
+            [
+                "L6_NBC_dST",
+                0
+            ],
+            [
+                "L6_NGC_bNA",
+                0
+            ],
+            [
+                "L6_NGC_cAC",
+                0
+            ],
+            [
+                "L6_NGC_cNA",
+                0
+            ],
+            [
+                "L6_NGC_cST",
+                0
+            ],
+            [
+                "L6_SBC_bNA",
+                0
+            ],
+            [
+                "L6_SBC_cAC",
+                0
+            ],
+            [
+                "L6_SBC_dNA",
+                0
+            ],
+            [
+                "L6_TPC_L1_cAD",
+                0
+            ],
+            [
+                "L6_TPC_L4_cAD",
+                0
+            ],
+            [
+                "L6_UTPC_cAD",
+                0
+            ]
+        ],
+        "recordCellsSpikes": -1,
+        "recordDipoles": false,
+        "recordLFP": [],
+        "recordStep": 0.1,
+        "recordStim": false,
+        "recordTime": false,
+        "recordTraces": {
+            "V_soma": {
+                "loc": 0.5,
+                "sec": "soma",
+                "var": "v"
+            }
+        },
+        "reducedtestS1": true,
+        "removeM1": false,
+        "removeS1": false,
+        "removeTh": false,
+        "sRE_model": "../cells/sRE_jv_00.json",
+        "sTC_model": "../cells/sTC_jv_00.json",
+        "saveCSV": false,
+        "saveCellConns": true,
+        "saveCellSecs": false,
+        "saveDat": false,
+        "saveDataInclude": [
+            "simData",
+            "simConfig",
+            "netParams",
+            "net"
+        ],
+        "saveDpk": false,
+        "saveFolder": "../data/v1_batch1",
+        "saveHDF5": false,
+        "saveJson": false,
+        "saveLFPCells": false,
+        "saveMat": false,
+        "savePickle": true,
+        "saveTiming": false,
+        "scale": 1.0,
+        "scaleDensity": 0.25,
+        "seeds": {
+            "conn": 4321,
+            "loc": 4321,
+            "stim": 1234
+        },
+        "simLabel": "v1_batch1_0_0",
+        "simType": "M1THS1",
+        "singleCellPops": 0,
+        "sizeX": 300.0,
+        "sizeY": 1350.0,
+        "sizeYS1": 1378.8,
+        "sizeZ": 300.0,
+        "startLong": 0,
+        "strengthFactor": 1.0,
+        "synWeightFractionEE": [
+            0.5,
+            0.5
+        ],
+        "synWeightFractionEI": [
+            0.5,
+            0.5
+        ],
+        "synWeightFractionIE": [
+            0.9,
+            0.1
+        ],
+        "synWeightFractionII": [
+            0.9,
+            0.1
+        ],
+        "synWeightFractionNGF": [
+            0.5,
+            0.5
+        ],
+        "synWeightFractionSOME": [
+            0.9,
+            0.1
+        ],
+        "synsperconn": {
+            "HH_full": 5,
+            "HH_reduced": 1,
+            "HH_simple": 1
+        },
+        "timestampFilename": false,
+        "timing": true,
+        "tstop": 1000.0,
+        "use_fast_imem": false,
+        "verbose": 0,
+        "weightLong": {
+            "M2": 0.5,
+            "OC": 0.5,
+            "POm_sTC_m1": 0.0,
+            "S1": 0.5,
+            "S2": 0.5,
+            "VL_sTC": 0.0,
+            "cM1": 0.5
+        },
+        "weightLong_M1thal": 0.25,
+        "weightLong_thalM1": 1.0,
+        "weightNorm": 1,
+        "weightNormThreshold": 4.0,
+        "yConnFactor": 10
+    }
+}

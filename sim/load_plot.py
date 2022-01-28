@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
     if dataType == 'spont':
         timeRange = [1500, 11500]
-        filenames = ['../data/v1_batch1/v1_batch1_%d_%d_data.pkl' % (iseed, cseed) for iseed in [0] for cseed in [0]] 
+        filenames = ['../data/v1_batch3/v1_batch3_%d_%d_data.pkl' % (iseed, cseed) for iseed in [0] for cseed in [0]] 
 
 
     allpops = ['NGF1', 	'IT2', 	'PV2', 	 'SOM2',  'VIP2', 	'NGF2',
