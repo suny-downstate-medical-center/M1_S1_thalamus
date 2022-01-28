@@ -167,7 +167,7 @@ cfg.analysis['plotRaster'] = {	'include': allpops, 			'orderBy': ['pop', 'y'],
 
 cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.duration], 'ylim': [-100,55],'overlay': False, 'oneFigPer': 'cell', 'figSize': (10,4), 'saveFig': True, 'showFig': False} 
 
-cfg.analysis['plot2Dnet']   = {'include': allpops, 'saveFig': True, 'showConns': False, 'figSize': (24,24), 'fontSize':16}   # Plot 2D cells xy
+# cfg.analysis['plot2Dnet']   = {'include': allpops, 'saveFig': True, 'showConns': False, 'figSize': (24,24), 'fontSize':16}   # Plot 2D cells xy
 
 #select some S1 pops only
 # allpopsplotConn = [	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2', 
@@ -276,8 +276,8 @@ cfg.Th_pops=[
 				'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i']
 
 # ----- Network Parameters ------ #
-cfg.removeM1 = False # removes M1 pops
-cfg.removeS1 = False # removes M1 pops
+cfg.removeM1 = True # removes M1 pops
+cfg.removeS1 = True # removes M1 pops
 cfg.removeTh = False # removes Th pops
 cfg.scaleDensity = 1.0 # 1.0
 
@@ -327,6 +327,17 @@ cfg.connProb_RTN_TC         = 1.0
 cfg.connWeight_RTN_RTN      = 1.0
 cfg.connWeight_TC_RTN       = 1.5
 cfg.connWeight_RTN_TC       = 0.5
+
+# old S1_mouse parameters
+# cfg.yConnFactor             = 10 # y-tolerance form connection distance based on the x and z-plane radial tolerances (1=100%; 2=50%; 5=20%; 10=10%)
+# cfg.connProb_RTN_RTN        = 1.0 #None 
+# cfg.connProb_TC_RTN         = 0.75 #None
+# cfg.connProb_RTN_TC         = 0.75 #None
+# cfg.connWeight_RTN_RTN      = 2.0 # optimized to increase synchrony in (simDate = '2021_04_30' / simCode = 't_allpops_012') - old value: 0.5
+# cfg.connWeight_TC_RTN       = 1.5 #0.5
+# cfg.connWeight_RTN_TC       = 0.25 # optimized to increase synchrony in (simDate = '2021_04_30' / simCode = 't_allpops_013') - old value: 0.83
+
+
 
 cfg.divergenceHO = 10
 

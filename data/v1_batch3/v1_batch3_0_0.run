@@ -1,0 +1,1348 @@
+numprocs=80
+	0 
+	0 
+	0 
+	0 	0 
+
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 	
+0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+		0 
+	0 
+	0 
+0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+		0 
+0 
+		0 
+0 
+		0 
+0 
+	0 
+		0 
+0 
+	0 
+	0 	0 
+
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+		0 
+0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+	0 
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+Balancing each compartment to -73 mV
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 44: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 44: 179826 
+  Number of synaptic contacts on node 44: 762802 
+  Number of stims on node 44: 980 
+Recording 5 traces of 1 types on node 44
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 52: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 52: 180898 
+  Number of synaptic contacts on node 52: 766907 
+  Number of stims on node 52: 980 
+Recording 5 traces of 1 types on node 52
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 53: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 53: 180617 
+  Number of synaptic contacts on node 53: 766310 
+  Number of stims on node 53: 980 
+Recording 3 traces of 1 types on node 53
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 62: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 62: 178941 
+  Number of synaptic contacts on node 62: 754449 
+  Number of stims on node 62: 980 
+Recording 5 traces of 1 types on node 62
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 69: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 69: 179581 
+  Number of synaptic contacts on node 69: 757827 
+  Number of stims on node 69: 980 
+Recording 5 traces of 1 types on node 69
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 40: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 40: 181034 
+  Number of synaptic contacts on node 40: 776912 
+  Number of stims on node 40: 980 
+Recording 6 traces of 1 types on node 40
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 60: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 60: 181861 
+  Number of synaptic contacts on node 60: 775666 
+  Number of stims on node 60: 980 
+Recording 5 traces of 1 types on node 60
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 71: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 71: 181846 
+  Number of synaptic contacts on node 71: 779377 
+  Number of stims on node 71: 990 
+Recording 3 traces of 1 types on node 71
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 72: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 72: 180596 
+  Number of synaptic contacts on node 72: 769076 
+  Number of stims on node 72: 990 
+Recording 3 traces of 1 types on node 72
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 75: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 75: 180368 
+  Number of synaptic contacts on node 75: 766824 
+  Number of stims on node 75: 990 
+Recording 6 traces of 1 types on node 75
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 76: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 76: 182003 
+  Number of synaptic contacts on node 76: 773769 
+  Number of stims on node 76: 990 
+Recording 2 traces of 1 types on node 76
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 45: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 45: 179878 
+  Number of synaptic contacts on node 45: 764181 
+  Number of stims on node 45: 980 
+Recording 2 traces of 1 types on node 45
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 54: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 54: 179814 
+  Number of synaptic contacts on node 54: 762736 
+  Number of stims on node 54: 980 
+Recording 2 traces of 1 types on node 54
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 58: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 58: 181213 
+  Number of synaptic contacts on node 58: 770888 
+  Number of stims on node 58: 980 
+Recording 3 traces of 1 types on node 58
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 63: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 63: 179584 
+  Number of synaptic contacts on node 63: 765662 
+  Number of stims on node 63: 980 
+Recording 0 traces of 0 types on node 63
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 66: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 66: 180100 
+  Number of synaptic contacts on node 66: 748542 
+  Number of stims on node 66: 980 
+Recording 4 traces of 1 types on node 66
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 49: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 49: 178907 
+  Number of synaptic contacts on node 49: 760038 
+  Number of stims on node 49: 980 
+Recording 7 traces of 1 types on node 49
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 50: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 50: 180132 
+  Number of synaptic contacts on node 50: 763636 
+  Number of stims on node 50: 980 
+Recording 2 traces of 1 types on node 50
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 61: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 61: 179690 
+  Number of synaptic contacts on node 61: 763774 
+  Number of stims on node 61: 980 
+Recording 2 traces of 1 types on node 61
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 41: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 41: 179836 
+  Number of synaptic contacts on node 41: 760737 
+  Number of stims on node 41: 980 
+Recording 4 traces of 1 types on node 41
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 43: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 43: 180388 
+  Number of synaptic contacts on node 43: 764787 
+  Number of stims on node 43: 980 
+Recording 4 traces of 1 types on node 43
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 46: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 46: 181328 
+  Number of synaptic contacts on node 46: 776340 
+  Number of stims on node 46: 980 
+Recording 1 traces of 1 types on node 46
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 57: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 57: 180274 
+  Number of synaptic contacts on node 57: 766703 
+  Number of stims on node 57: 980 
+Recording 2 traces of 1 types on node 57
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 51: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 51: 178619 
+  Number of synaptic contacts on node 51: 754796 
+  Number of stims on node 51: 980 
+Recording 4 traces of 1 types on node 51
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 70: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 70: 180015 
+  Number of synaptic contacts on node 70: 762204 
+  Number of stims on node 70: 980 
+Recording 3 traces of 1 types on node 70
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 77: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 77: 180312 
+  Number of synaptic contacts on node 77: 768928 
+  Number of stims on node 77: 990 
+Recording 4 traces of 1 types on node 77
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 59: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 59: 179892 
+  Number of synaptic contacts on node 59: 765101 
+  Number of stims on node 59: 980 
+Recording 4 traces of 1 types on node 59
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 64: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 64: 180614 
+  Number of synaptic contacts on node 64: 773877 
+  Number of stims on node 64: 980 
+Recording 1 traces of 1 types on node 64
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 67: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 67: 180566 
+  Number of synaptic contacts on node 67: 761276 
+  Number of stims on node 67: 980 
+Recording 0 traces of 0 types on node 67
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 79: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 79: 182620 
+  Number of synaptic contacts on node 79: 781758 
+  Number of stims on node 79: 990 
+Recording 2 traces of 1 types on node 79
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 47: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 47: 183079 
+  Number of synaptic contacts on node 47: 791506 
+  Number of stims on node 47: 980 
+Recording 2 traces of 1 types on node 47
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 55: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 55: 181054 
+  Number of synaptic contacts on node 55: 769198 
+  Number of stims on node 55: 980 
+Recording 3 traces of 1 types on node 55
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 42: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 42: 180566 
+  Number of synaptic contacts on node 42: 765628 
+  Number of stims on node 42: 980 
+Recording 5 traces of 1 types on node 42
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 68: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 68: 181486 
+  Number of synaptic contacts on node 68: 770048 
+  Number of stims on node 68: 980 
+Recording 1 traces of 1 types on node 68
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 73: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 73: 181779 
+  Number of synaptic contacts on node 73: 779651 
+  Number of stims on node 73: 990 
+Recording 3 traces of 1 types on node 73
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 56: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 56: 179628 
+  Number of synaptic contacts on node 56: 758843 
+  Number of stims on node 56: 980 
+Recording 3 traces of 1 types on node 56
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 74: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 74: 179477 
+  Number of synaptic contacts on node 74: 762734 
+  Number of stims on node 74: 990 
+Recording 3 traces of 1 types on node 74
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 48: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 48: 179775 
+  Number of synaptic contacts on node 48: 757640 
+  Number of stims on node 48: 980 
+Recording 2 traces of 1 types on node 48
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 78: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 78: 179772 
+  Number of synaptic contacts on node 78: 766393 
+  Number of stims on node 78: 990 
+Recording 3 traces of 1 types on node 78
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 6: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 6: 182174 
+  Number of synaptic contacts on node 6: 778055 
+  Number of stims on node 6: 990 
+Recording 1 traces of 1 types on node 6
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 65: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 65: 180457 
+  Number of synaptic contacts on node 65: 760028 
+  Number of stims on node 65: 980 
+Recording 8 traces of 1 types on node 65
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 22: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 22: 183720 
+  Number of synaptic contacts on node 22: 783752 
+  Number of stims on node 22: 980 
+Recording 3 traces of 1 types on node 22
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 38: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 38: 179198 
+  Number of synaptic contacts on node 38: 763201 
+  Number of stims on node 38: 980 
+Recording 5 traces of 1 types on node 38
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 21: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 21: 181000 
+  Number of synaptic contacts on node 21: 766077 
+  Number of stims on node 21: 980 
+Recording 1 traces of 1 types on node 21
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 32: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 32: 182024 
+  Number of synaptic contacts on node 32: 779488 
+  Number of stims on node 32: 980 
+Recording 5 traces of 1 types on node 32
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 2: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 2: 181646 
+  Number of synaptic contacts on node 2: 772262 
+  Number of stims on node 2: 990 
+Recording 2 traces of 1 types on node 2
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 24: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 24: 180303 
+  Number of synaptic contacts on node 24: 765314 
+  Number of stims on node 24: 980 
+Recording 5 traces of 1 types on node 24
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 5: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 5: 182113 
+  Number of synaptic contacts on node 5: 782072 
+  Number of stims on node 5: 990 
+Recording 1 traces of 1 types on node 5
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 9: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 9: 181660 
+  Number of synaptic contacts on node 9: 775694 
+  Number of stims on node 9: 990 
+Recording 2 traces of 1 types on node 9
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 16: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 16: 183347 
+  Number of synaptic contacts on node 16: 789133 
+  Number of stims on node 16: 980 
+Recording 3 traces of 1 types on node 16
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 17: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 17: 180744 
+  Number of synaptic contacts on node 17: 774309 
+  Number of stims on node 17: 980 
+Recording 0 traces of 0 types on node 17
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 28: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 28: 180548 
+  Number of synaptic contacts on node 28: 768797 
+  Number of stims on node 28: 980 
+Recording 2 traces of 1 types on node 28
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 35: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 35: 179190 
+  Number of synaptic contacts on node 35: 758802 
+  Number of stims on node 35: 980 
+Recording 3 traces of 1 types on node 35
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 7: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 7: 180992 
+  Number of synaptic contacts on node 7: 766154 
+  Number of stims on node 7: 990 
+Recording 4 traces of 1 types on node 7
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 25: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 25: 181315 
+  Number of synaptic contacts on node 25: 769594 
+  Number of stims on node 25: 980 
+Recording 5 traces of 1 types on node 25
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 14: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 14: 180877 
+  Number of synaptic contacts on node 14: 776569 
+  Number of stims on node 14: 980 
+Recording 3 traces of 1 types on node 14
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 13: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 13: 180315 
+  Number of synaptic contacts on node 13: 762710 
+  Number of stims on node 13: 980 
+Recording 2 traces of 1 types on node 13
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 31: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 31: 180971 
+  Number of synaptic contacts on node 31: 771569 
+  Number of stims on node 31: 980 
+Recording 5 traces of 1 types on node 31
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 12: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 12: 180946 
+  Number of synaptic contacts on node 12: 770594 
+  Number of stims on node 12: 980 
+Recording 2 traces of 1 types on node 12
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 18: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 18: 181863 
+  Number of synaptic contacts on node 18: 774335 
+  Number of stims on node 18: 980 
+Recording 3 traces of 1 types on node 18
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 26: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 26: 180520 
+  Number of synaptic contacts on node 26: 765098 
+  Number of stims on node 26: 980 
+Recording 5 traces of 1 types on node 26
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 34: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 34: 180595 
+  Number of synaptic contacts on node 34: 768684 
+  Number of stims on node 34: 980 
+Recording 4 traces of 1 types on node 34
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 20: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 20: 183034 
+  Number of synaptic contacts on node 20: 780963 
+  Number of stims on node 20: 980 
+Recording 4 traces of 1 types on node 20
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 23: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 23: 182310 
+  Number of synaptic contacts on node 23: 779967 
+  Number of stims on node 23: 980 
+Recording 3 traces of 1 types on node 23
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 37: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 37: 179460 
+  Number of synaptic contacts on node 37: 763304 
+  Number of stims on node 37: 980 
+Recording 4 traces of 1 types on node 37
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 39: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 39: 181684 
+  Number of synaptic contacts on node 39: 771391 
+  Number of stims on node 39: 980 
+Recording 3 traces of 1 types on node 39
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 1: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 1: 182627 
+  Number of synaptic contacts on node 1: 774094 
+  Number of stims on node 1: 990 
+Recording 1 traces of 1 types on node 1
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 3: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 3: 184424 
+  Number of synaptic contacts on node 3: 788919 
+  Number of stims on node 3: 990 
+Recording 2 traces of 1 types on node 3
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 4: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 4: 182630 
+  Number of synaptic contacts on node 4: 780012 
+  Number of stims on node 4: 990 
+Recording 2 traces of 1 types on node 4
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 11: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 11: 182494 
+  Number of synaptic contacts on node 11: 779084 
+  Number of stims on node 11: 980 
+Recording 4 traces of 1 types on node 11
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 29: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 29: 181870 
+  Number of synaptic contacts on node 29: 772091 
+  Number of stims on node 29: 980 
+Recording 5 traces of 1 types on node 29
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 30: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 30: 181561 
+  Number of synaptic contacts on node 30: 775065 
+  Number of stims on node 30: 980 
+Recording 1 traces of 1 types on node 30
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 8: 376 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 8: 181535 
+  Number of synaptic contacts on node 8: 763296 
+  Number of stims on node 8: 990 
+Recording 2 traces of 1 types on node 8
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 15: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 15: 178736 
+  Number of synaptic contacts on node 15: 758078 
+  Number of stims on node 15: 980 
+Recording 3 traces of 1 types on node 15
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 19: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 19: 182227 
+  Number of synaptic contacts on node 19: 781766 
+  Number of stims on node 19: 980 
+Recording 0 traces of 0 types on node 19
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 33: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 33: 182747 
+  Number of synaptic contacts on node 33: 786051 
+  Number of stims on node 33: 980 
+Recording 1 traces of 1 types on node 33
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 27: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 27: 182210 
+  Number of synaptic contacts on node 27: 777305 
+  Number of stims on node 27: 980 
+Recording 4 traces of 1 types on node 27
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 36: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 36: 179188 
+  Number of synaptic contacts on node 36: 755339 
+  Number of stims on node 36: 980 
+Recording 2 traces of 1 types on node 36
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+  Number of cells on node 10: 375 
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 10: 181803 
+  Number of synaptic contacts on node 10: 771047 
+  Number of stims on node 10: 980 
+Recording 0 traces of 0 types on node 10
+
+Reading command line arguments using syntax: python file.py [simConfig=filepath] [netParams=filepath]
+Loading file ../data/v1_batch3/v1_batch3_0_0_cfg.json ... 
+Loading simConfig...
+Importing netParams from ../data/v1_batch3/v1_batch3_netParams.py
+
+Start time:  2022-01-28 04:36:05.877765
+
+Creating network of 249 cell populations on 80 hosts...
+  Number of cells on node 0: 376 
+  Done; cell creation time = 25.00 s.
+Making connections...
+  Distributing synapses based on subcellular connectivity rules...
+  Number of connections on node 0: 182280 
+  Number of synaptic contacts on node 0: 776583 
+  Done; cell connection time = 3744.13 s.
+Adding stims...
+  Number of stims on node 0: 990 
+  Done; cell stims creation time = 15.11 s.
+Recording 6 traces of 1 types on node 0
+0.0s
+
+Running simulation using NEURON for 2500.0 ms...
+0.1s
+0.2s
+0.3s
+0.4s
+0.5s
+0.6s
+0.7s
+0.8s
+0.9s
+1.0s
+1.1s
+1.2s
+1.3s
+1.4s
+1.5s
+1.6s
+1.7s
+1.8s
+1.9s
+2.0s
+2.1s
+2.2s
+2.3s
+2.4s
+2.5s
+  Done; run time = 24440.95 s; real-time ratio: 0.00.
+
+Gathering data...
+  Done; gather time = 11.36 s.
+
+Analyzing...
+  Cells: 30010
+  Connections: 0 (0.00 per cell)
+  Spikes: 742439 (9.90 Hz)
+  Simulated time: 2.5 s; 80 workers
+  Run time: 24440.95 s
+   NGF1 : 6.591 Hz
+   IT2 : 5.468 Hz
+   SOM2 : 0.400 Hz
+   PV2 : 30.009 Hz
+   VIP2 : 10.606 Hz
+   NGF2 : 24.279 Hz
+   IT4 : 25.211 Hz
+   SOM4 : 6.000 Hz
+   PV4 : 30.417 Hz
+   VIP4 : 17.800 Hz
+   NGF4 : 61.314 Hz
+   IT5A : 14.371 Hz
+   SOM5A : 2.615 Hz
+   PV5A : 18.457 Hz
+   VIP5A : 11.846 Hz
+   NGF5A : 108.000 Hz
+   IT5B : 8.048 Hz
+   PT5B : 11.389 Hz
+   SOM5B : 5.768 Hz
+   PV5B : 19.942 Hz
+   VIP5B : 5.049 Hz
+   NGF5B : 73.081 Hz
+   IT6 : 4.096 Hz
+   CT6 : 0.560 Hz
+   SOM6 : 0.400 Hz
+   PV6 : 10.414 Hz
+   VIP6 : 93.857 Hz
+   NGF6 : 7.780 Hz
+   VPL_sTC : 1.296 Hz
+   VPM_sTC : 1.302 Hz
+   POm_sTC_s1 : 2.867 Hz
+   VL_sTC : 3.816 Hz
+   VM_sTC_m1 : 7.323 Hz
+   POm_sTC_m1 : 2.259 Hz
+   mt_RTN : 16.482 Hz
+   ss_RTN_o : 18.035 Hz
+   ss_RTN_m : 18.311 Hz
+   ss_RTN_i : 18.095 Hz
+   L1_DAC_bNA : 0.000 Hz
+   L1_DAC_cNA : 0.000 Hz
+   L1_DLAC_cNA : 0.000 Hz
+   L1_HAC_bNA : 0.000 Hz
+   L1_HAC_cIR : 0.000 Hz
+   L1_HAC_cNA : 0.014 Hz
+   L1_NGC-DA_bNA : 0.100 Hz
+   L1_NGC-DA_cAC : 0.000 Hz
+   L1_NGC-DA_cNA : 0.052 Hz
+   L1_NGC-DA_cST : 0.100 Hz
+   L1_NGC-SA_cNA : 0.033 Hz
+   L1_SLAC_bNA : 0.114 Hz
+   L1_SLAC_cAC : 0.000 Hz
+   L1_SLAC_cNA : 0.133 Hz
+   L23_BP_bAC : 11.200 Hz
+   L23_BP_bIR : 12.800 Hz
+   L23_BP_bNA : 95.800 Hz
+   L23_BP_cAC : 28.800 Hz
+   L23_BP_cNA : 78.800 Hz
+   L23_BP_dST : 66.800 Hz
+   L23_BTC_bAC : 10.400 Hz
+   L23_BTC_bIR : 5.400 Hz
+   L23_BTC_bNA : 23.333 Hz
+   L23_BTC_cAC : 16.880 Hz
+   L23_BTC_cNA : 30.500 Hz
+   L23_ChC_cAC : 24.467 Hz
+   L23_ChC_cNA : 54.733 Hz
+   L23_ChC_dNA : 27.700 Hz
+   L23_DBC_bAC : 10.667 Hz
+   L23_DBC_bIR : 11.400 Hz
+   L23_DBC_bNA : 61.153 Hz
+   L23_DBC_cAC : 22.453 Hz
+   L23_LBC_bAC : 8.444 Hz
+   L23_LBC_bNA : 57.429 Hz
+   L23_LBC_cAC : 22.089 Hz
+   L23_LBC_cNA : 65.432 Hz
+   L23_LBC_cST : 50.400 Hz
+   L23_LBC_dNA : 51.711 Hz
+   L23_MC_bAC : 3.400 Hz
+   L23_MC_bNA : 2.000 Hz
+   L23_MC_cAC : 3.576 Hz
+   L23_MC_cNA : 3.000 Hz
+   L23_MC_dNA : 0.000 Hz
+   L23_NBC_bAC : 7.733 Hz
+   L23_NBC_bNA : 8.000 Hz
+   L23_NBC_cAC : 19.000 Hz
+   L23_NBC_cIR : 17.200 Hz
+   L23_NBC_cNA : 41.040 Hz
+   L23_NBC_dNA : 26.467 Hz
+   L23_NGC_bNA : 0.400 Hz
+   L23_NGC_cAC : 20.000 Hz
+   L23_NGC_cNA : 36.560 Hz
+   L23_NGC_cST : 10.800 Hz
+   L23_PC_cAD : 2.448 Hz
+   L23_SBC_bNA : 56.027 Hz
+   L23_SBC_cAC : 27.707 Hz
+   L23_SBC_dNA : 58.473 Hz
+   L4_BP_bAC : 10.400 Hz
+   L4_BP_bIR : 9.200 Hz
+   L4_BP_bNA : 19.200 Hz
+   L4_BP_cAC : 11.600 Hz
+   L4_BP_cNA : 34.800 Hz
+   L4_BP_dST : 2.400 Hz
+   L4_BTC_bAC : 10.000 Hz
+   L4_BTC_bIR : 7.600 Hz
+   L4_BTC_bST : 13.600 Hz
+   L4_BTC_cAC : 20.667 Hz
+   L4_BTC_cNA : 46.800 Hz
+   L4_BTC_dNA : 27.200 Hz
+   L4_ChC_cAC : 42.800 Hz
+   L4_ChC_cNA : 89.600 Hz
+   L4_ChC_dNA : 72.400 Hz
+   L4_DBC_bAC : 16.000 Hz
+   L4_DBC_bIR : 2.600 Hz
+   L4_DBC_bNA : 17.200 Hz
+   L4_DBC_bST : 6.000 Hz
+   L4_DBC_cAC : 17.200 Hz
+   L4_DBC_cIR : 6.200 Hz
+   L4_DBC_cNA : 32.400 Hz
+   L4_LBC_cAC : 29.143 Hz
+   L4_LBC_cNA : 60.900 Hz
+   L4_LBC_cST : 68.622 Hz
+   L4_LBC_dNA : 81.171 Hz
+   L4_LBC_dST : 79.200 Hz
+   L4_MC_bAC : 0.400 Hz
+   L4_MC_bNA : 0.800 Hz
+   L4_MC_cAC : 1.167 Hz
+   L4_MC_cNA : 1.040 Hz
+   L4_MC_dNA : 0.400 Hz
+   L4_NBC_cAC : 42.267 Hz
+   L4_NBC_cIR : 33.200 Hz
+   L4_NBC_cNA : 87.015 Hz
+   L4_NBC_dNA : 81.927 Hz
+   L4_NGC_bNA : 0.400 Hz
+   L4_NGC_cAC : 17.600 Hz
+   L4_NGC_cNA : 32.800 Hz
+   L4_NGC_cST : 0.800 Hz
+   L4_PC_cAD : 6.980 Hz
+   L4_SBC_bNA : 91.333 Hz
+   L4_SBC_cAC : 36.457 Hz
+   L4_SBC_dNA : 81.680 Hz
+   L4_SP_cAD : 9.888 Hz
+   L4_SS_cAD : 8.260 Hz
+   L5_BP_bAC : 24.000 Hz
+   L5_BP_bIR : 14.800 Hz
+   L5_BP_bNA : 76.800 Hz
+   L5_BP_cAC : 51.000 Hz
+   L5_BP_cNA : 99.600 Hz
+   L5_BP_dST : 44.000 Hz
+   L5_BTC_bAC : 10.500 Hz
+   L5_BTC_cAC : 44.743 Hz
+   L5_BTC_cNA : 67.200 Hz
+   L5_ChC_cAC : 45.400 Hz
+   L5_ChC_cNA : 58.800 Hz
+   L5_ChC_dNA : 92.400 Hz
+   L5_DBC_bAC : 7.200 Hz
+   L5_DBC_bIR : 7.511 Hz
+   L5_DBC_bNA : 11.800 Hz
+   L5_DBC_bST : 10.400 Hz
+   L5_DBC_cAC : 20.200 Hz
+   L5_DBC_cIR : 12.080 Hz
+   L5_DBC_cNA : 22.200 Hz
+   L5_LBC_bAC : 18.667 Hz
+   L5_LBC_cAC : 54.914 Hz
+   L5_LBC_cIR : 34.100 Hz
+   L5_LBC_cNA : 91.960 Hz
+   L5_LBC_cST : 109.320 Hz
+   L5_LBC_dNA : 119.760 Hz
+   L5_LBC_dST : 105.286 Hz
+   L5_MC_bAC : 11.870 Hz
+   L5_MC_bIR : 6.933 Hz
+   L5_MC_bST : 3.800 Hz
+   L5_MC_cAC : 18.779 Hz
+   L5_MC_cNA : 26.500 Hz
+   L5_MC_cST : 4.500 Hz
+   L5_MC_dNA : 5.200 Hz
+   L5_NBC_bAC : 17.800 Hz
+   L5_NBC_bIR : 16.800 Hz
+   L5_NBC_bST : 111.657 Hz
+   L5_NBC_cAC : 45.418 Hz
+   L5_NBC_cIR : 47.400 Hz
+   L5_NBC_cNA : 101.091 Hz
+   L5_NBC_cST : 103.491 Hz
+   L5_NBC_dST : 103.100 Hz
+   L5_NGC_bNA : 0.800 Hz
+   L5_NGC_cAC : 26.800 Hz
+   L5_NGC_cNA : 0.400 Hz
+   L5_NGC_cST : 0.400 Hz
+   L5_SBC_bNA : 3.000 Hz
+   L5_SBC_cAC : 44.600 Hz
+   L5_SBC_dNA : 82.600 Hz
+   L5_STPC_cAD : 16.429 Hz
+   L5_TTPC1_cAD : 6.390 Hz
+   L5_TTPC2_cAD : 18.170 Hz
+   L5_UTPC_cAD : 30.991 Hz
+   L6_BPC_cAD : 13.431 Hz
+   L6_BP_bAC : 22.800 Hz
+   L6_BP_bIR : 16.600 Hz
+   L6_BP_bNA : 66.100 Hz
+   L6_BP_cAC : 58.500 Hz
+   L6_BP_cNA : 112.000 Hz
+   L6_BP_dST : 48.400 Hz
+   L6_BTC_bAC : 13.600 Hz
+   L6_BTC_cAC : 53.543 Hz
+   L6_BTC_cNA : 70.200 Hz
+   L6_ChC_cAC : 39.200 Hz
+   L6_ChC_cNA : 6.000 Hz
+   L6_ChC_dNA : 105.600 Hz
+   L6_DBC_bAC : 12.000 Hz
+   L6_DBC_bIR : 8.800 Hz
+   L6_DBC_bNA : 0.800 Hz
+   L6_DBC_bST : 14.800 Hz
+   L6_DBC_cAC : 44.000 Hz
+   L6_DBC_cIR : 26.400 Hz
+   L6_DBC_cNA : 80.800 Hz
+   L6_IPC_cAD : 11.480 Hz
+   L6_LBC_bAC : 14.311 Hz
+   L6_LBC_bIR : 14.214 Hz
+   L6_LBC_bNA : 94.711 Hz
+   L6_LBC_bST : 130.178 Hz
+   L6_LBC_cNA : 103.111 Hz
+   L6_LBC_cST : 94.044 Hz
+   L6_MC_bAC : 1.467 Hz
+   L6_MC_bIR : 0.142 Hz
+   L6_MC_bNA : 5.600 Hz
+   L6_MC_bST : 0.133 Hz
+   L6_MC_cAC : 6.520 Hz
+   L6_MC_cIR : 0.267 Hz
+   L6_MC_cNA : 12.400 Hz
+   L6_NBC_bAC : 12.000 Hz
+   L6_NBC_bIR : 14.933 Hz
+   L6_NBC_bST : 82.000 Hz
+   L6_NBC_cAC : 51.300 Hz
+   L6_NBC_cIR : 48.133 Hz
+   L6_NBC_cNA : 109.000 Hz
+   L6_NBC_cST : 92.000 Hz
+   L6_NBC_dST : 97.600 Hz
+   L6_NGC_bNA : 0.800 Hz
+   L6_NGC_cAC : 32.000 Hz
+   L6_NGC_cNA : 0.600 Hz
+   L6_NGC_cST : 0.400 Hz
+   L6_SBC_bNA : 0.720 Hz
+   L6_SBC_cAC : 64.640 Hz
+   L6_SBC_dNA : 72.300 Hz
+   L6_TPC_L1_cAD : 10.752 Hz
+   L6_TPC_L4_cAD : 18.181 Hz
+   L6_UTPC_cAD : 16.490 Hz
+   S2 : 2.262 Hz
+   cM1 : 2.255 Hz
+   M2 : 2.297 Hz
+   OC : 2.286 Hz
+Saving output as ../data/v1_batch3/v1_batch3_0_0_data.pkl ... 
+Finished saving!
+  Done; saving time = 15.65 s.
+Plotting 2D representation of network cell locations and connections...
+Preparing spike data...
+Plotting raster...
+Plotting recorded cell traces ... cell
+  Done; plotting time = 2449.91 s
+
+Total time = 30949.63 s

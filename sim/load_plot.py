@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
     if dataType == 'spont':
         timeRange = [1500, 11500]
-        filenames = ['../data/v1_batch3/v1_batch3_%d_%d_data.pkl' % (iseed, cseed) for iseed in [0] for cseed in [0]] 
+        filenames = ['../../VMdata/v1_batch3/v1_batch3_%d_%d_data.pkl' % (iseed, cseed) for iseed in [0] for cseed in [0]] 
 
 
     allpops = ['NGF1', 	'IT2', 	'PV2', 	 'SOM2',  'VIP2', 	'NGF2',
@@ -88,7 +88,13 @@ if __name__ == '__main__':
         sim.load(filename, instantiate=False)
 
         # standardd plots
-        sim.analysis.plotRaster(**{'include': allpops, 'saveFig': filename[:-8]+'_raster_M1TH', 'showFig': False, 'popRates': 'minimal', 'orderInverse': True, 'timeRange': [0,1000], 'figSize': (24,12), 'lw': 0.3, 'markerSize': 3, 'marker': '.', 'dpi': 300})
+        sim.analysis.plotRaster(**{'include': allpops, 'saveFig': filename[:-8]+'_raster_M1TH', 'showFig': False, 'popRates': 'minimal', 'orderInverse': True, 'timeRange': [0,2500], 'figSize': (24,12), 'lw': 0.3, 'markerSize': 3, 'marker': '.', 'dpi': 300})
  
-        sim.analysis.plotRaster(**{'include': cellParamS1, 'saveFig': filename[:-8]+'_raster_S1TH', 'showFig': False, 'popRates': 'minimal', 'orderInverse': True, 'timeRange': [0,1000], 'figSize': (24,12), 'lw': 0.3, 'markerSize': 3, 'marker': '.', 'dpi': 300})
+        sim.analysis.plotRaster(**{'include': cellParamS1, 'saveFig': filename[:-8]+'_raster_S1TH', 'showFig': False, 'popRates': 'minimal', 'orderInverse': True, 'timeRange': [0,2500], 'figSize': (24,12), 'lw': 0.3, 'markerSize': 3, 'marker': '.', 'dpi': 300})
+
+        for mtype in cellParamS1: # No diversity
+            allpops.append(mtype)
+
+        # full plot
+        sim.analysis.plotRaster(**{'include': allpops, 'saveFig': filename[:-8]+'_raster_M1S1TH', 'showFig': False, 'popRates': 'minimal', 'orderInverse': True, 'timeRange': [0,2500], 'figSize': (24,12), 'lw': 0.3, 'markerSize': 3, 'marker': '.', 'dpi': 300})
  
