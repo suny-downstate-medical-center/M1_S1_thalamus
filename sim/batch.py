@@ -15,8 +15,12 @@ import numpy as np
 def custom():
     params = specs.ODict()
     
-    params['weightLong_thalM1']=[1.0]
-    params['weightLong_M1thal']=[0.25]
+    # params['connWeight_RTN_RTN']=[1.0]
+    params['connWeight_TC_RTN']=[1.25, 1.5, 2.0]
+    params['connWeight_RTN_TC']=[0.25, 0.5, 1.0]
+
+    # params['weightLong_thalM1']=[1.0]
+    # params['weightLong_M1thal']=[0.25]
 
     b = Batch(params=params, netParamsFile='netParams.py', cfgFile='cfg.py')
 
@@ -40,7 +44,7 @@ def setRunCfg(b, type='mpi_bulletin'):
 
     elif type=='mpi_direct':
         b.runCfg = {'type': 'mpi_direct',
-            'cores': 80,
+            'cores': 8,
             'script': 'init.py',
             'mpiCommand': 'mpiexec',
             'skip': True}
@@ -63,7 +67,7 @@ def setRunCfg(b, type='mpi_bulletin'):
 if __name__ == '__main__': 
     b = custom() #
 
-    b.batchLabel = 'v1_batch5'  
+    b.batchLabel = 'v1_batch4'  
     b.saveFolder = '../data/'+b.batchLabel
     b.method = 'grid'
     setRunCfg(b, 'mpi_direct')

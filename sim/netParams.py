@@ -1035,8 +1035,13 @@ if cfg.connect_S1_Th:
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 
+thalamictest = ['sTC_cell', 'sRE_cell']
+
 if cfg.singleCellPops:
-    for pop in netParams.popParams.values(): pop['numCells'] = 1
+    for pop in netParams.popParams.values(): 
+        if pop['cellType'] not in thalamictest:
+            pop['numCells'] = 1
+            # print(pop['cellType'])
 
 # Removes a specific model from the simulation (M1/S1/Thalamus)
 if cfg.removeM1:

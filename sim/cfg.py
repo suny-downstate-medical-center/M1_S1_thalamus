@@ -24,7 +24,7 @@ cfg.coreneuron = False
 #------------------------------------------------------------------------------
 # Run parameters
 #------------------------------------------------------------------------------
-cfg.duration = 2.5*1e3
+cfg.duration = 5.0*1e3
 cfg.dt = 0.025
 cfg.seeds = {'conn': 4321, 'stim': 1234, 'loc': 4321} 
 cfg.hParams = {'celsius': 34, 'v_init': -80}  
@@ -118,10 +118,15 @@ allpops = ['NGF1', 	'IT2', 	'PV2', 	 'SOM2',  'VIP2', 	'NGF2',
 			'mt_RTN',	'ss_RTN_o',		'ss_RTN_m',		'ss_RTN_i'
 	   ]
 
+allpopsTH = [			'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
+			'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
+			'mt_RTN',	'ss_RTN_o',		'ss_RTN_m',		'ss_RTN_i'
+	   ]
+
 for metype in cfg.S1cells:
 	allpops.append(metype)
 
-cfg.cellsrec = 1
+cfg.cellsrec = 5
 if cfg.cellsrec == 0:  cfg.recordCells = ['all'] # record all cells
 elif cfg.cellsrec == 1: cfg.recordCells = [(pop,0) for pop in allpops] # record one cell of each pop
 elif cfg.cellsrec == 2: cfg.recordCells = [('IT2',10), ('IT5A',10), ('PT5B',10), ('PV5B',10), ('SOM5B',10)] # record selected cells
@@ -131,7 +136,7 @@ elif cfg.cellsrec == 4: cfg.recordCells = [(pop,50) for pop in ['IT2', 'IT4', 'I
 										+ [('PT5B',x) for x in [393,447,579,19,104,214,1138,979,799]] # record selected cells
 elif cfg.cellsrec == 5: 
 	cfg.recordCells = [] # record 5 cells of each pop
-	for pop in allpops:
+	for pop in allpopsTH:
 		for x in range(5):
 			cfg.recordCells.append((pop,x))
 
@@ -152,7 +157,7 @@ cfg.saveDataInclude = ['simData', 'simConfig', 'netParams', 'net'] ## , 'simConf
 cfg.backupCfgFile = None 		##  
 cfg.gatherOnlySimData = False	##  
 cfg.saveCellSecs = False			
-cfg.saveCellConns = True	
+cfg.saveCellConns = False	
 
 #------------------------------------------------------------------------------
 # Analysis and plotting 
@@ -170,31 +175,31 @@ cfg.analysis['plotTraces'] = {'include': cfg.recordCells, 'timeRange': [0,cfg.du
 # cfg.analysis['plot2Dnet']   = {'include': allpops, 'saveFig': True, 'showConns': False, 'figSize': (24,24), 'fontSize':16}   # Plot 2D cells xy
 
 #select some S1 pops only
-allpopsplotConn = [	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2', 
-				'IT4', 'SOM4', 'PV4', 'VIP4', 'NGF4', 'IT5A', 
-				'SOM5A', 'PV5A', 'VIP5A', 'NGF5A', 'IT5B', 
-				'PT5B', 'SOM5B', 'PV5B', 'VIP5B', 'NGF5B', 
-				'IT6', 'CT6', 'SOM6', 'PV6', 'VIP6', 'NGF6',	
-				'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
-				'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
-				'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i',
-				'L1_HAC_cNA', 'L23_LBC_dNA', 'L23_MC_cAC', 'L4_LBC_dNA', 'L4_MC_cAC', 'L5_LBC_dST', 'L5_MC_bAC', 'L6_LBC_bIR', 'L6_MC_bIR',
-				'L23_PC_cAD', 'L4_PC_cAD', 'L4_SS_cAD', 'L4_SP_cAD', 
-             	'L5_TTPC1_cAD', 'L5_TTPC2_cAD', 'L5_STPC_cAD', 'L5_UTPC_cAD',
-             	'L6_TPC_L1_cAD', 'L6_TPC_L4_cAD', 'L6_BPC_cAD', 'L6_IPC_cAD', 'L6_UTPC_cAD']
+# allpopsplotConn = [	'NGF1', 'IT2', 'SOM2', 'PV2', 'VIP2', 'NGF2', 
+# 				'IT4', 'SOM4', 'PV4', 'VIP4', 'NGF4', 'IT5A', 
+# 				'SOM5A', 'PV5A', 'VIP5A', 'NGF5A', 'IT5B', 
+# 				'PT5B', 'SOM5B', 'PV5B', 'VIP5B', 'NGF5B', 
+# 				'IT6', 'CT6', 'SOM6', 'PV6', 'VIP6', 'NGF6',	
+# 				'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1', 
+# 				'VL_sTC', 	'VM_sTC_m1', 	'POm_sTC_m1',
+# 				'mt_RTN', 	'ss_RTN_o', 	'ss_RTN_m', 	'ss_RTN_i',
+# 				'L1_HAC_cNA', 'L23_LBC_dNA', 'L23_MC_cAC', 'L4_LBC_dNA', 'L4_MC_cAC', 'L5_LBC_dST', 'L5_MC_bAC', 'L6_LBC_bIR', 'L6_MC_bIR',
+# 				'L23_PC_cAD', 'L4_PC_cAD', 'L4_SS_cAD', 'L4_SP_cAD', 
+#              	'L5_TTPC1_cAD', 'L5_TTPC2_cAD', 'L5_STPC_cAD', 'L5_UTPC_cAD',
+#              	'L6_TPC_L1_cAD', 'L6_TPC_L4_cAD', 'L6_BPC_cAD', 'L6_IPC_cAD', 'L6_UTPC_cAD']
 
-cfg.analysis['plotConn'] = {'includePre': allpopsplotConn, 
-							'includePost': allpopsplotConn, 
-							'feature': 'probability', 
-							'figSize': (20,20), 
-							'groupBy': 'pop', \
- 							# 'graphType': 'bar', 
-							'synOrConn': 'conn', 
-							'synMech': None, 
-							'saveData': True, 
-							'saveFig': True, 
-							'showFig': False, 'clim': [0,0.2]
-							}
+# cfg.analysis['plotConn'] = {'includePre': allpopsplotConn, 
+# 							'includePost': allpopsplotConn, 
+# 							'feature': 'probability', 
+# 							'figSize': (20,20), 
+# 							'groupBy': 'pop', \
+#  							# 'graphType': 'bar', 
+# 							'synOrConn': 'conn', 
+# 							'synMech': None, 
+# 							'saveData': True, 
+# 							'saveFig': True, 
+# 							'showFig': False, 'clim': [0,0.2]
+# 							}
 #------------------------------------------------------------------------------
 # Synapses
 #------------------------------------------------------------------------------
@@ -255,7 +260,7 @@ cfg.connect_S1_M1 = False
 #------------------------------------------------------------------------------
 # Network 
 #------------------------------------------------------------------------------
-cfg.singleCellPops = 0  # Create pops with 1 single cell (to debug)
+cfg.singleCellPops = 1  # Create pops with 1 single cell (to debug)
 cfg.weightNorm = 1  # use weight normalization
 cfg.weightNormThreshold = 4.0  # weight normalization factor threshold
 
@@ -281,8 +286,8 @@ cfg.removeS1 = False # removes M1 pops
 cfg.removeTh = False # removes Th pops
 cfg.scaleDensity = 1.0 # 1.0
 
-cfg.addThalSs=1
-cfg.addThalMt=1
+cfg.addThalSs=True
+cfg.addThalMt=True
 
 # ----- Network Connections ----- #
 cfg.addConn 				= False
@@ -291,11 +296,11 @@ cfg.addLongConn 			= False
 cfg.connectThalamusNetwork 	= True
 
 # Connections under cfg.connectThalamusNetwork
-cfg.connect_RTN_RTN     = 1
-cfg.connect_TC_RTN      = 1
-cfg.connect_RTN_TC      = 1
-cfg.connect_TC_CTX      = 1
-cfg.connect_CTX_TC      = 1
+cfg.connect_RTN_RTN     = True
+cfg.connect_TC_RTN      = True
+cfg.connect_RTN_TC      = True
+cfg.connect_TC_CTX      = False
+cfg.connect_CTX_TC      = False
 # ------------------------------- #
 
 cfg.allowConnsWithWeight0 = True
@@ -327,17 +332,6 @@ cfg.connProb_RTN_TC         = 1.0
 cfg.connWeight_RTN_RTN      = 1.0
 cfg.connWeight_TC_RTN       = 1.5
 cfg.connWeight_RTN_TC       = 0.5
-
-# old S1_mouse parameters
-# cfg.yConnFactor             = 10 # y-tolerance form connection distance based on the x and z-plane radial tolerances (1=100%; 2=50%; 5=20%; 10=10%)
-# cfg.connProb_RTN_RTN        = 1.0 #None 
-# cfg.connProb_TC_RTN         = 0.75 #None
-# cfg.connProb_RTN_TC         = 0.75 #None
-# cfg.connWeight_RTN_RTN      = 2.0 # optimized to increase synchrony in (simDate = '2021_04_30' / simCode = 't_allpops_012') - old value: 0.5
-# cfg.connWeight_TC_RTN       = 1.5 #0.5
-# cfg.connWeight_RTN_TC       = 0.25 # optimized to increase synchrony in (simDate = '2021_04_30' / simCode = 't_allpops_013') - old value: 0.83
-
-
 
 cfg.divergenceHO = 10
 
@@ -380,8 +374,8 @@ cfg.ratesLong = {	'POm_sTC_m1': [0,0.005],
 					'M2': [0,5], 
 					'OC': [0,5]}
 
-cfg.weightLong_thalM1=0.5
-cfg.weightLong_M1thal=0.5
+cfg.weightLong_thalM1=1.0
+cfg.weightLong_M1thal=0.25
 
 cfg.ratesLong_thalM1 = {	
 							'POm_sTC_m1': [0,0.005], 
