@@ -64,7 +64,7 @@ cfg.poptypeNumberS1 = 55 # max 55
 cfg.celltypeNumberS1 = 207 # max 207
 
 # TO DEBUG - import and simulate only the Cell soma (to study only the Net)
-cfg.reducedtestS1 = True    
+cfg.reducedtestS1 = False    
 
 with open('../info/anatomy/S1-cells-distributions-Mouse.txt') as mtype_file:
     mtype_content = mtype_file.read()       
@@ -126,7 +126,7 @@ allpopsTH = [			'VPL_sTC', 	'VPM_sTC', 		'POm_sTC_s1',
 for metype in cfg.S1cells:
 	allpops.append(metype)
 
-cfg.cellsrec = 5
+cfg.cellsrec = 1
 if cfg.cellsrec == 0:  cfg.recordCells = ['all'] # record all cells
 elif cfg.cellsrec == 1: cfg.recordCells = [(pop,0) for pop in allpops] # record one cell of each pop
 elif cfg.cellsrec == 2: cfg.recordCells = [('IT2',10), ('IT5A',10), ('PT5B',10), ('PV5B',10), ('SOM5B',10)] # record selected cells
@@ -136,7 +136,7 @@ elif cfg.cellsrec == 4: cfg.recordCells = [(pop,50) for pop in ['IT2', 'IT4', 'I
 										+ [('PT5B',x) for x in [393,447,579,19,104,214,1138,979,799]] # record selected cells
 elif cfg.cellsrec == 5: 
 	cfg.recordCells = [] # record 5 cells of each pop
-	for pop in allpopsTH:
+	for pop in allpops:
 		for x in range(5):
 			cfg.recordCells.append((pop,x))
 
@@ -227,22 +227,22 @@ cfg.distributeSynsUniformly = True
 #------------------------------------------------------------------------------
 
 # S1 Spontaneous synapses + background - data from Rat
-cfg.addStimSynS1 = False
+cfg.addStimSynS1 = True
 cfg.rateStimES1= 9.0
 cfg.rateStimIS1 = 6.0
 #---------------------
 ## S1->S1
-cfg.connect_S1_S1 = False
+cfg.connect_S1_S1 = True
 #------------------------------------------------------------------------------
 ## Th->S1
-cfg.connect_Th_S1 = False
+cfg.connect_Th_S1 = True
 cfg.TC_S1 = {}
 cfg.TC_S1['VPL_sTC'] = True
 cfg.TC_S1['VPM_sTC'] = True
 cfg.TC_S1['POm_sTC_s1'] = True
 #------------------------------------------------------------------------------
 ## S1->Th 
-cfg.connect_S1_Th = False
+cfg.connect_S1_Th = True
 
 cfg.connect_S1_RTN = True
 cfg.convergence_S1_RTN         = 30.0  # dist_2D<R
@@ -254,14 +254,14 @@ cfg.connWeight_S1_TC       = 0.250
 
 #------------------------------------------------------------------------------
 ## Cortico-cortical connections - 2022_01_21
-cfg.connect_M1_S1 = False
-cfg.connect_S1_M1 = False
+cfg.connect_M1_S1 = True
+cfg.connect_S1_M1 = True
 
 #------------------------------------------------------------------------------
 # Network 
 #------------------------------------------------------------------------------
-cfg.singleCellPops = 1  # Create pops with 1 single cell (to debug)
-cfg.weightNorm = 1  # use weight normalization
+cfg.singleCellPops = False  # Create pops with 1 single cell (to debug)
+cfg.weightNorm = True  # use weight normalization
 cfg.weightNormThreshold = 4.0  # weight normalization factor threshold
 
 
@@ -290,17 +290,17 @@ cfg.addThalSs=True
 cfg.addThalMt=True
 
 # ----- Network Connections ----- #
-cfg.addConn 				= False
-cfg.addSubConn 				= False
-cfg.addLongConn 			= False
+cfg.addConn 				= True
+cfg.addSubConn 				= True
+cfg.addLongConn 			= True
 cfg.connectThalamusNetwork 	= True
 
 # Connections under cfg.connectThalamusNetwork
 cfg.connect_RTN_RTN     = True
 cfg.connect_TC_RTN      = True
 cfg.connect_RTN_TC      = True
-cfg.connect_TC_CTX      = False
-cfg.connect_CTX_TC      = False
+cfg.connect_TC_CTX      = True
+cfg.connect_CTX_TC      = True
 # ------------------------------- #
 
 cfg.allowConnsWithWeight0 = True
